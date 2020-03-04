@@ -1,2 +1,2 @@
-# ppc-4000
-Processador AOC - Pica pra Carai 4000
+# RISC Multiciclo 32bits
+Processador AOC
