@@ -1,2 +1,1 @@
-# RISC Multiciclo 32bits
-Processador AOC
+# Processador RISC Multiciclo 32bits
