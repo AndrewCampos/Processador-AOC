@@ -1,0 +1,98 @@
+Archive Project report for teste
+Sat Aug 03 00:25:22 2019
+Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Archive Project Summary
+  3. Archive Project Messages
+  4. Files Archived
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2018  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++----------------------------------------------------------------+
+; Archive Project Summary                                        ;
++------------------------+---------------------------------------+
+; Archive Project Status ; Successful - Sat Aug 03 00:25:22 2019 ;
+; Revision Name          ; teste                                 ;
+; Top-level Entity Name  ; processador                           ;
+; Family                 ; MAX 10                                ;
++------------------------+---------------------------------------+
+
+
++--------------------------+
+; Archive Project Messages ;
++--------------------------+
+Info: File Set 'Source control' contains:
+    Info: Project source and settings files
+    Info: Automatically detected source files
+Warning: Hierarchical Platform Designer systems and custom IP components(_hw.tcl and associated files) are not archived by the Quartus Archiver
+Info: Archive will store files relative to the closest common parent directory
+Info (13213): Using common directory C:/Users/M A C/Desktop/Unifesp/AOC/ProcessadorFinal_restored/
+Info: ----------------------------------------------------------
+Info: ----------------------------------------------------------
+Info: Generated archive 'C:/Users/M A C/Desktop/ProcessadorFinal.qar'
+Info: ----------------------------------------------------------
+Info: ----------------------------------------------------------
+Info: Generated report 'teste.archive.rpt'
+Info (23030): Evaluation of Tcl script c:/intelfpga_lite/18.1/quartus/common/tcl/apps/qpm/qar.tcl was successful
+Info: Quartus Prime Shell was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 4878 megabytes
+    Info: Processing ended: Sat Aug 03 00:25:22 2019
+    Info: Elapsed time: 00:00:04
+    Info: Total CPU time (on all processors): 00:00:04
+
+
++-------------------------------+
+; Files Archived                ;
++-------------------------------+
+; File Name                     ;
++-------------------------------+
+; assignment_defaults.qdf       ;
+; bancoreg.v                    ;
+; ctrl_undd.v                   ;
+; DeBounce.v                    ;
+; decodDisplay.v                ;
+; divisor.v                     ;
+; extensor.v                    ;
+; memoria.v                     ;
+; moduloSaida.v                 ;
+; mux2_5b.v                     ;
+; mux2_32b.v                    ;
+; mux4_32b.v                    ;
+; processador.v                 ;
+; registrador32b.v              ;
+; shiftl2.v                     ;
+; teste.qpf                     ;
+; teste.qsf                     ;
+; teste_assignment_defaults.qdf ;
+; ula.v                         ;
+; ula_ctrl.v                    ;
+; Waveform.vwf                  ;
+; Waveform1.vwf                 ;
+; Waveform2.vwf                 ;
++-------------------------------+
+
+

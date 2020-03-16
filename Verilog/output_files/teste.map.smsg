@@ -1,0 +1,2 @@
+Warning (10268): Verilog HDL information at moduloSaida.v(19): always construct contains both blocking and non-blocking assignments File: C:/Users/M A C/Desktop/Unifesp/AOC/ProcessadorFinal_restored/moduloSaida.v Line: 19
+Info (10281): Verilog HDL Declaration information at processador.v(16): object "mem" differs only in case from object "MEM" in the same scope File: C:/Users/M A C/Desktop/Unifesp/AOC/ProcessadorFinal_restored/processador.v Line: 16
