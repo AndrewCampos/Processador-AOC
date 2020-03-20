@@ -4,7 +4,7 @@ JedecChain;
 	DefaultMfr(6E);
 
 	P ActionCode(Cfg)
-		Device PartName(10M50DAF484) Path("C:/Users/M A C/Desktop/Unifesp/AOC/ProcessadorFinal_restored/output_files/") File("teste.sof") MfrSpec(OpMask(1));
+		Device PartName(10M50DAF484) Path("C:/Users/M A C/Desktop/proc/Processador-AOC/Verilog/output_files/") File("teste.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 

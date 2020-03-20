@@ -162,7 +162,7 @@ RESERVED_INPUT               : C2        :        :                   :         
 RESERVED_INPUT               : C3        :        :                   :         : 8         :                
 RESERVED_INPUT               : C4        :        :                   :         : 8         :                
 RESERVED_INPUT               : C5        :        :                   :         : 8         :                
-RESERVED_INPUT               : C6        :        :                   :         : 8         :                
+ov                           : C6        : output : 2.5 V             :         : 8         : N              
 RESERVED_INPUT               : C7        :        :                   :         : 8         :                
 RESERVED_INPUT               : C8        :        :                   :         : 8         :                
 RESERVED_INPUT               : C9        :        :                   :         : 7         :                
@@ -525,7 +525,7 @@ RESERVED_INPUT               : W13       :        :                   :         
 RESERVED_INPUT               : W14       :        :                   :         : 4         :                
 RESERVED_INPUT               : W15       :        :                   :         : 4         :                
 RESERVED_INPUT               : W16       :        :                   :         : 4         :                
-RESERVED_INPUT               : W17       :        :                   :         : 4         :                
+un                           : W17       : output : 2.5 V             :         : 4         : N              
 RESERVED_INPUT               : W18       :        :                   :         : 4         :                
 RESERVED_INPUT               : W19       :        :                   :         : 5         :                
 RESERVED_INPUT               : W20       :        :                   :         : 5         :                

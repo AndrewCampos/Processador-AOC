@@ -16,7 +16,9 @@ module ctrl_undd(opcode,
 					  zero,
 					  controleULA,
 					  controleOUT,
-					  SelMuxIn);
+					  SelMuxIn,
+					  pop,
+					  push);
 
 	input clk, zero, enter;
 	input [5:0] opcode;
@@ -25,7 +27,7 @@ module ctrl_undd(opcode,
 	reg [3:0] prox_estado;
 	 
 	//sinais de controle de memoria
-	output reg EscrevePC, EscreveRI, EscreveReg, EscreveMem, controleOUT;
+	output reg pop, push, EscrevePC, EscreveRI, EscreveReg, EscreveMem, controleOUT;
 
 	//seletores de multiplexadores
 	output reg SelMuxMem, SelMuxReg1, SelMuxReg2, SelMuxUlaA, SelMuxIn;
@@ -57,6 +59,8 @@ module ctrl_undd(opcode,
 			EscreveMem  <=  1'b0;
 			controleOUT <=  1'b0;
 			OpULA       <= 2'b01;
+			pop         <=  1'b0;
+			push        <=  1'b0;
 		// mux
 			SelMuxPC    <= 2'b00;
 			SelMuxMem   <=  1'b0;
@@ -77,7 +81,9 @@ module ctrl_undd(opcode,
 			EscreveMem  <=  1'b0;
 			if(opcode == 6'b100001) controleOUT <=  1'b1;
 			else controleOUT <=  1'b0;
-			OpULA <= 2'b00;
+			OpULA       <= 2'b00;
+			pop         <=  1'b0;
+			push        <=  1'b0;
 		// mux
 			SelMuxPC    <= 2'b00;
 			SelMuxMem   <=  1'b0;
@@ -113,8 +119,13 @@ module ctrl_undd(opcode,
 				6'b111110: begin
 					prox_estado <= ESTADO9; //jmp
 				end
-				6'b111100: begin
+				
+				6'b111101: begin
 					prox_estado <= ESTADO9; //jal
+				end
+				
+				6'b111100: begin
+					prox_estado <= ESTADO10; //jst
 				end
 				
 				6'b101000: begin
@@ -143,6 +154,8 @@ module ctrl_undd(opcode,
 			EscreveMem  <=  1'b0;
 			controleOUT <=  1'b0;
 			OpULA       <= 2'b11;
+			pop         <=  1'b0;
+			push        <=  1'b0;
 		// mux
 			SelMuxPC    <= 2'b00;
 			SelMuxMem   <=  1'b1;
@@ -169,6 +182,8 @@ module ctrl_undd(opcode,
 			EscreveMem  <=  1'b0;
 			controleOUT <=  1'b0;
 			OpULA       <= 2'b00;
+			pop         <=  1'b0;
+			push        <=  1'b0;
 		// mux
 			SelMuxPC    <= 2'b00;
 			SelMuxMem   <=  1'b1;
@@ -188,6 +203,8 @@ module ctrl_undd(opcode,
 			EscreveMem  <=  1'b0;
 			controleOUT <=  1'b0;
 			OpULA       <= 2'b00;
+			pop         <=  1'b0;
+			push        <=  1'b0;
 		// mux
 			SelMuxPC    <= 2'b00;
 			SelMuxMem   <=  1'b1;
@@ -207,6 +224,8 @@ module ctrl_undd(opcode,
 			EscreveMem  <=  1'b1; // salva valor na memoria
 			controleOUT <=  1'b0;
 			OpULA       <= 2'b11;
+			pop         <=  1'b0;
+			push        <=  1'b0;
 		// mux
 			SelMuxPC    <= 2'b00;
 			SelMuxMem   <=  1'b1;
@@ -225,6 +244,8 @@ module ctrl_undd(opcode,
 			EscreveMem  <=  1'b0;
 			controleOUT <=  1'b0;
 			OpULA       <= 2'b00;
+			pop         <=  1'b0;
+			push        <=  1'b0;
 		// mux
 			SelMuxPC    <= 2'b00;
 			SelMuxMem   <=  1'b0;
@@ -243,6 +264,8 @@ module ctrl_undd(opcode,
 			EscreveMem  <=  1'b0;
 			controleOUT <=  1'b0;
 			OpULA       <= 2'b00;
+			pop         <=  1'b0;
+			push        <=  1'b0;
 		// mux
 			SelMuxPC    <= 2'b00;
 			SelMuxMem   <=  1'b0;
@@ -264,6 +287,8 @@ module ctrl_undd(opcode,
 			EscreveMem  <=  1'b0;
 			controleOUT <=  1'b0;
 			OpULA       <= 2'b00;
+			pop         <=  1'b0;
+			push        <=  1'b0;
 		// mux
 			SelMuxPC    <= 2'b01;
 			SelMuxMem   <=  1'b0;
@@ -281,6 +306,8 @@ module ctrl_undd(opcode,
 			EscreveMem  <=  1'b0;
 			controleOUT <=  1'b0;
 			OpULA       <= 2'b11;
+			pop         <=  1'b0;
+			push        <=  1'b0;
 		// mux
 			SelMuxPC    <= 2'b00;
 			SelMuxMem   <=  1'b0;
@@ -293,15 +320,20 @@ module ctrl_undd(opcode,
 		end		
 		
 		ESTADO10: begin //atualiza pc
-			if(zero == 1'b1)EscrevePC   <=  1'b1;
+			if(zero == 1'b1) EscrevePC   <=  1'b1; // faz o branch?
+			else if (opcode == 6'b111100) EscrevePC   <=  1'b1; //jst
 			else EscrevePC   <=  1'b0;
 			EscreveRI   <=  1'b0;
 			EscreveReg  <=  1'b0;
 			EscreveMem  <=  1'b0;
 			controleOUT <=  1'b0;
 			OpULA       <= 2'b11;
+			if (opcode == 6'b111100) pop <=  1'b1; //jst
+			else pop    <=  1'b0;
+			push        <=  1'b0;
 		// mux
-			SelMuxPC    <= 2'b10;
+			if (opcode == 6'b111100) SelMuxPC <= 2'b11; //jst
+			else SelMuxPC <= 2'b10;
 			SelMuxMem   <=  1'b0;
 			SelMuxReg1  <=  1'b0;
 			SelMuxReg2  <=  1'b0;
@@ -318,6 +350,8 @@ module ctrl_undd(opcode,
 			EscreveMem  <=  1'b0;
 			controleOUT <=  1'b0;
 			OpULA       <= 2'b00;
+			pop         <=  1'b0;
+			push        <=  1'b0;
 		// mux
 			SelMuxPC    <= 2'b00;
 			SelMuxMem   <=  1'b0;
@@ -336,6 +370,8 @@ module ctrl_undd(opcode,
 			EscreveMem  <=  1'b0;
 			controleOUT <=  1'b0;
 			OpULA       <= 2'b00;
+			pop         <=  1'b0;
+			push        <=  1'b0;
 		// mux
 			SelMuxPC    <= 2'b00;
 			SelMuxMem   <=  1'b0;
@@ -349,14 +385,18 @@ module ctrl_undd(opcode,
 		end
 		
 		ESTADO13: begin // finaliza jmp, sw e lw
-			if(opcode == 6'b111110) EscrevePC   <=  1'b1;
+			if(opcode == 6'b111110) EscrevePC   <=  1'b1; //jmp
+			else if(opcode == 6'b111101) EscrevePC <= 1'b1; //jal
 			else EscrevePC <= 1'b0;
 			EscreveRI   <=  1'b0;
-			if(opcode == 6'b000111) EscreveReg  <=  1'b1;
+			if(opcode == 6'b000111) EscreveReg  <=  1'b1; //lw
 			else EscreveReg <= 1'b0;
 			EscreveMem <= 1'b0;
 			controleOUT <=  1'b0;
 			OpULA       <= 2'b00;
+			pop         <=  1'b0;
+			if(opcode == 6'b111101) push <=  1'b1;// jal
+			else push        <=  1'b0;
 		// mux
 			SelMuxPC    <= 2'b00;
 			SelMuxMem   <=  1'b0;
@@ -375,6 +415,8 @@ module ctrl_undd(opcode,
 			EscreveMem  <=  1'b0;
 			controleOUT <=  1'b0;
 			OpULA       <=  2'b00;
+			pop         <=  1'b0;
+			push        <=  1'b0;
 		// mux
 			SelMuxPC    <= 2'b00;
 			SelMuxMem   <=  1'b0;
@@ -396,6 +438,8 @@ module ctrl_undd(opcode,
 			EscreveMem  <=  1'b0;
 			controleOUT <=  1'b0;
 			OpULA       <= 2'b00;
+			pop         <=  1'b0;
+			push        <=  1'b0;
 		// mux
 			SelMuxPC    <= 2'b00;
 			SelMuxMem   <=  1'b0;

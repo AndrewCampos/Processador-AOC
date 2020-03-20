@@ -3,35 +3,35 @@ Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1200mV 85C Model Setup 'divisor:divFreq|div_clk'
-Slack : -120.695
-TNS   : -27253.902
-
-Type  : Slow 1200mV 85C Model Setup 'ctrl_undd:Controle|controleOUT'
-Slack : -6.276
-TNS   : -164.812
+Slack : -124.175
+TNS   : -41984.195
 
 Type  : Slow 1200mV 85C Model Setup 'ctrl_undd:Controle|OpULA[0]'
-Slack : -6.104
-TNS   : -24.856
+Slack : -5.508
+TNS   : -22.449
+
+Type  : Slow 1200mV 85C Model Setup 'ctrl_undd:Controle|controleOUT'
+Slack : -5.292
+TNS   : -153.124
 
 Type  : Slow 1200mV 85C Model Setup 'realClk'
-Slack : -2.620
-TNS   : -49.936
+Slack : -2.631
+TNS   : -49.979
 
 Type  : Slow 1200mV 85C Model Hold 'divisor:divFreq|div_clk'
-Slack : 0.626
+Slack : 0.484
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'realClk'
-Slack : 0.638
+Slack : 0.630
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'ctrl_undd:Controle|OpULA[0]'
-Slack : 1.190
+Slack : 1.149
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'ctrl_undd:Controle|controleOUT'
-Slack : 1.340
+Slack : 1.644
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'realClk'
@@ -40,46 +40,46 @@ TNS   : -42.284
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'divisor:divFreq|div_clk'
 Slack : -2.422
-TNS   : -4441.632
+TNS   : -6195.249
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'ctrl_undd:Controle|controleOUT'
 Slack : -1.403
 TNS   : -44.896
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'ctrl_undd:Controle|OpULA[0]'
-Slack : 0.335
+Slack : 0.444
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Setup 'divisor:divFreq|div_clk'
-Slack : -109.420
-TNS   : -24997.060
+Slack : -112.666
+TNS   : -38388.734
 
 Type  : Slow 1200mV 0C Model Setup 'ctrl_undd:Controle|OpULA[0]'
-Slack : -5.865
-TNS   : -23.683
+Slack : -5.247
+TNS   : -21.392
 
 Type  : Slow 1200mV 0C Model Setup 'ctrl_undd:Controle|controleOUT'
-Slack : -5.722
-TNS   : -149.631
+Slack : -4.825
+TNS   : -139.423
 
 Type  : Slow 1200mV 0C Model Setup 'realClk'
-Slack : -2.360
-TNS   : -42.953
+Slack : -2.363
+TNS   : -42.855
 
 Type  : Slow 1200mV 0C Model Hold 'divisor:divFreq|div_clk'
-Slack : 0.578
+Slack : 0.449
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'realClk'
-Slack : 0.591
+Slack : 0.584
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'ctrl_undd:Controle|OpULA[0]'
-Slack : 0.998
+Slack : 0.979
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'ctrl_undd:Controle|controleOUT'
-Slack : 1.239
+Slack : 1.551
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'realClk'
@@ -88,62 +88,62 @@ TNS   : -42.284
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'divisor:divFreq|div_clk'
 Slack : -2.333
-TNS   : -4440.920
+TNS   : -6194.181
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'ctrl_undd:Controle|controleOUT'
 Slack : -1.403
 TNS   : -44.896
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'ctrl_undd:Controle|OpULA[0]'
-Slack : 0.326
+Slack : 0.406
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Setup 'divisor:divFreq|div_clk'
-Slack : -48.779
-TNS   : -12396.559
+Slack : -50.623
+TNS   : -19106.139
 
 Type  : Fast 1200mV 0C Model Setup 'ctrl_undd:Controle|OpULA[0]'
-Slack : -2.409
-TNS   : -9.306
+Slack : -2.157
+TNS   : -8.060
 
 Type  : Fast 1200mV 0C Model Setup 'ctrl_undd:Controle|controleOUT'
-Slack : -2.341
-TNS   : -57.209
+Slack : -1.822
+TNS   : -50.424
 
 Type  : Fast 1200mV 0C Model Setup 'realClk'
-Slack : -0.554
-TNS   : -5.672
+Slack : -0.546
+TNS   : -5.204
 
 Type  : Fast 1200mV 0C Model Hold 'divisor:divFreq|div_clk'
-Slack : 0.240
+Slack : 0.197
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'realClk'
-Slack : 0.245
+Slack : 0.244
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'ctrl_undd:Controle|OpULA[0]'
-Slack : 0.553
+Slack : 0.461
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'ctrl_undd:Controle|controleOUT'
-Slack : 0.563
+Slack : 0.634
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'realClk'
 Slack : -3.000
-TNS   : -32.026
+TNS   : -31.932
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'divisor:divFreq|div_clk'
 Slack : -1.000
-TNS   : -3160.000
+TNS   : -4407.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'ctrl_undd:Controle|controleOUT'
 Slack : -1.000
 TNS   : -32.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'ctrl_undd:Controle|OpULA[0]'
-Slack : 0.382
+Slack : 0.398
 TNS   : 0.000
 
 ------------------------------------------------------------

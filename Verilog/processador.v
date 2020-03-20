@@ -5,20 +5,23 @@ module processador(dadosIN,
 						 disp4, 
 						 disp3, 
 						 disp2, 
-						 disp1);
+						 disp1,
+						 un,
+						 ov);
 
 input realClk;
 input enter;
 input [8:0] dadosIN;
 output [3:0] estado;
 output [0:6] disp4, disp3, disp2, disp1;
+output un, ov;
 
-wire [31:0] sregB, sMEM, saidaEXT, sregA, ULA1, ULA2, sULA,  valorPC, toOUT, carregaDados, sValorPC, sregULA, endereco, dadosMEM, mem, instr, dadosEscrita, sA, sB;
+wire [31:0] sPilha, sregB, sMEM, saidaEXT, sregA, ULA1, ULA2, sULA,  valorPC, toOUT, carregaDados, sValorPC, sregULA, endereco, dadosMEM, mem, instr, dadosEscrita, sA, sB;
 wire [4:0] regEscrita;
 
 // SINAIS DE CONTROLE
 //sinais de controle de memoria
-wire clk, EscrevePC, SetPC, LeMem, EscreveRI, EscreveReg, controleOUT, EscreveMem, ovrflw, zero;
+wire clk, pop, push, EscrevePC, SetPC, LeMem, EscreveRI, EscreveReg, controleOUT, EscreveMem, ovrflw, zero;
 	
 //seletores de multiplexadores
 wire SelMuxMem, SelReg1, SelReg2, SelMuxUlaA, SelMuxIn;
@@ -37,6 +40,15 @@ registrador32b PC(.controle(EscrevePC),
 						.clk(clk),
 						.entrada(valorPC),
 						.saida(sValorPC)); // PC
+						
+stack Pilha(.dado(sValorPC),
+				.pop(pop),
+				.push(push),
+				.wclk(clk),
+				.rclk(clk),
+				.saida(sPilha),
+				.ovrflw(ov),
+				.undrflw(un)); // pilha de recusrsao
 						
 
 mux2_32b MuxMem(.seletor(SelMuxMem),
@@ -152,7 +164,7 @@ mux4_32b MuxPC(.seletor(SelMuxPC),
 				   .entrada1(sULA),
 				   .entrada2(sregULA),
 				   .entrada3({26'b0, instr[6:0]}),
-				   .entrada4(sregULA),
+				   .entrada4(sPilha),
 				   .saida(valorPC)); // para PC
 
 //CONTROLE
@@ -174,6 +186,8 @@ ctrl_undd Controle(.opcode(instr[31:26]),
 						 .SelMuxUlaB(SelMuxUlaB),
 						 .controleULA(controleULA),
 						 .SelMuxIn(SelMuxIn),
-						 .controleOUT(controleOUT));
+						 .controleOUT(controleOUT),
+						 .pop(pop),
+						 .push(push));
 
 endmodule

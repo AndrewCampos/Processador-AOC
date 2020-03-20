@@ -132,6 +132,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "ov",
+					"strict" : false
+				},
+				{
 					"name" : "enter",
 					"strict" : false
 				},
