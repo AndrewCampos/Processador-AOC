@@ -82,8 +82,18 @@ always @(posedge clk) begin
 			else
 				zero = 1'b0;
 		end
-
-		5'd11: //slt
+		
+		5'd11: //blt
+		begin
+			if(A < B)
+				zero = 1'b1;
+			else
+				zero = 1'b0;
+			overflow = 1'b0;
+			saida = B;
+			end
+			
+		5'd12: //slt
 		begin
 			overflow = 1'b0;
 			zero = 1'b0;
@@ -93,7 +103,7 @@ always @(posedge clk) begin
 				saida = 1'b0;
 		end
 
-		5'd12: //sle
+		5'd13: //sle
 		begin
 			overflow = 1'b0;
 			zero = 1'b0;
@@ -103,15 +113,15 @@ always @(posedge clk) begin
 				saida = 1'b1;
 		end
 		
-		5'd13: //blt
+		5'd14: //sge
 		begin
-			if(A < B)
-				zero = 1'b1;
-			else
-				zero = 1'b0;
 			overflow = 1'b0;
-			saida = B;
-			end
+			zero = 1'b0;
+			if(A >= B)
+				saida = 1'b1;
+			else
+				saida = 1'b0;
+		end
 			
 		5'd31: begin
 			zero = 1'b0;

@@ -1,6 +1,6 @@
 Timing Analyzer report for teste
-Fri Mar 20 04:33:14 2020
-Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+Thu Oct 29 19:34:58 2020
+Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
 ---------------------
@@ -53,9 +53,9 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 2018  Intel Corporation. All rights reserved.
+Copyright (C) 2020  Intel Corporation. All rights reserved.
 Your use of Intel Corporation's design tools, logic functions 
-and other software and tools, and its AMPP partner logic 
+and other software and tools, and any partner logic 
 functions, and any output files from any of the foregoing 
 (including device programming or simulation files), and any 
 associated documentation or information are expressly subject 
@@ -65,14 +65,15 @@ the Intel FPGA IP License Agreement, or other applicable license
 agreement, including, without limitation, that your use is for
 the sole purpose of programming logic devices manufactured by
 Intel and sold by Intel or its authorized distributors.  Please
-refer to the applicable agreement for further details.
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
 
 
 
 +-----------------------------------------------------------------------------+
 ; Timing Analyzer Summary                                                     ;
 +-----------------------+-----------------------------------------------------+
-; Quartus Prime Version ; Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
+; Quartus Prime Version ; Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Timing Analyzer       ; Legacy Timing Analyzer                              ;
 ; Revision Name         ; teste                                               ;
 ; Device Family         ; MAX 10                                              ;
@@ -91,12 +92,12 @@ refer to the applicable agreement for further details.
 ; Number detected on machine ; 4           ;
 ; Maximum allowed            ; 2           ;
 ;                            ;             ;
-; Average used               ; 1.58        ;
+; Average used               ; 1.60        ;
 ; Maximum used               ; 2           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;  57.5%      ;
+;     Processor 2            ;  60.0%      ;
 +----------------------------+-------------+
 
 
@@ -117,9 +118,9 @@ refer to the applicable agreement for further details.
 +------------+-----------------+-----------------------------+---------------------------------------------------------------+
 ; Fmax       ; Restricted Fmax ; Clock Name                  ; Note                                                          ;
 +------------+-----------------+-----------------------------+---------------------------------------------------------------+
-; 4.1 MHz    ; 4.1 MHz         ; divisor:divFreq|div_clk     ;                                                               ;
-; 138.27 MHz ; 138.27 MHz      ; ctrl_undd:Controle|OpULA[0] ;                                                               ;
-; 275.41 MHz ; 250.0 MHz       ; realClk                     ; limit due to minimum period restriction (max I/O toggle rate) ;
+; 4.15 MHz   ; 4.15 MHz        ; divisor:divFreq|div_clk     ;                                                               ;
+; 133.33 MHz ; 133.33 MHz      ; ctrl_undd:Controle|OpULA[0] ;                                                               ;
+; 266.88 MHz ; 250.0 MHz       ; realClk                     ; limit due to minimum period restriction (max I/O toggle rate) ;
 +------------+-----------------+-----------------------------+---------------------------------------------------------------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -129,10 +130,10 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +--------------------------------+----------+---------------+
 ; Clock                          ; Slack    ; End Point TNS ;
 +--------------------------------+----------+---------------+
-; divisor:divFreq|div_clk        ; -124.175 ; -41984.195    ;
-; ctrl_undd:Controle|OpULA[0]    ; -5.508   ; -22.449       ;
-; ctrl_undd:Controle|controleOUT ; -5.292   ; -153.124      ;
-; realClk                        ; -2.631   ; -49.979       ;
+; divisor:divFreq|div_clk        ; -121.247 ; -36311.577    ;
+; ctrl_undd:Controle|OpULA[0]    ; -5.164   ; -19.886       ;
+; ctrl_undd:Controle|controleOUT ; -4.939   ; -134.108      ;
+; realClk                        ; -2.747   ; -53.914       ;
 +--------------------------------+----------+---------------+
 
 
@@ -141,10 +142,10 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +--------------------------------+-------+---------------+
 ; Clock                          ; Slack ; End Point TNS ;
 +--------------------------------+-------+---------------+
-; divisor:divFreq|div_clk        ; 0.484 ; 0.000         ;
-; realClk                        ; 0.630 ; 0.000         ;
-; ctrl_undd:Controle|OpULA[0]    ; 1.149 ; 0.000         ;
-; ctrl_undd:Controle|controleOUT ; 1.644 ; 0.000         ;
+; divisor:divFreq|div_clk        ; 0.307 ; 0.000         ;
+; realClk                        ; 0.582 ; 0.000         ;
+; ctrl_undd:Controle|OpULA[0]    ; 0.631 ; 0.000         ;
+; ctrl_undd:Controle|controleOUT ; 1.391 ; 0.000         ;
 +--------------------------------+-------+---------------+
 
 
@@ -168,7 +169,7 @@ No paths to report.
 ; realClk                        ; -3.000 ; -42.284       ;
 ; divisor:divFreq|div_clk        ; -2.422 ; -6195.249     ;
 ; ctrl_undd:Controle|controleOUT ; -1.403 ; -44.896       ;
-; ctrl_undd:Controle|OpULA[0]    ; 0.444  ; 0.000         ;
+; ctrl_undd:Controle|OpULA[0]    ; 0.410  ; 0.000         ;
 +--------------------------------+--------+---------------+
 
 
@@ -184,9 +185,9 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +------------+-----------------+-----------------------------+---------------------------------------------------------------+
 ; Fmax       ; Restricted Fmax ; Clock Name                  ; Note                                                          ;
 +------------+-----------------+-----------------------------+---------------------------------------------------------------+
-; 4.52 MHz   ; 4.52 MHz        ; divisor:divFreq|div_clk     ;                                                               ;
-; 150.6 MHz  ; 150.6 MHz       ; ctrl_undd:Controle|OpULA[0] ;                                                               ;
-; 297.35 MHz ; 250.0 MHz       ; realClk                     ; limit due to minimum period restriction (max I/O toggle rate) ;
+; 4.59 MHz   ; 4.59 MHz        ; divisor:divFreq|div_clk     ;                                                               ;
+; 141.52 MHz ; 141.52 MHz      ; ctrl_undd:Controle|OpULA[0] ;                                                               ;
+; 291.21 MHz ; 250.0 MHz       ; realClk                     ; limit due to minimum period restriction (max I/O toggle rate) ;
 +------------+-----------------+-----------------------------+---------------------------------------------------------------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -196,10 +197,10 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +--------------------------------+----------+---------------+
 ; Clock                          ; Slack    ; End Point TNS ;
 +--------------------------------+----------+---------------+
-; divisor:divFreq|div_clk        ; -112.666 ; -38388.734    ;
-; ctrl_undd:Controle|OpULA[0]    ; -5.247   ; -21.392       ;
-; ctrl_undd:Controle|controleOUT ; -4.825   ; -139.423      ;
-; realClk                        ; -2.363   ; -42.855       ;
+; divisor:divFreq|div_clk        ; -109.809 ; -33311.603    ;
+; ctrl_undd:Controle|OpULA[0]    ; -4.798   ; -18.535       ;
+; ctrl_undd:Controle|controleOUT ; -4.474   ; -121.307      ;
+; realClk                        ; -2.434   ; -46.778       ;
 +--------------------------------+----------+---------------+
 
 
@@ -208,10 +209,10 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +--------------------------------+-------+---------------+
 ; Clock                          ; Slack ; End Point TNS ;
 +--------------------------------+-------+---------------+
-; divisor:divFreq|div_clk        ; 0.449 ; 0.000         ;
-; realClk                        ; 0.584 ; 0.000         ;
-; ctrl_undd:Controle|OpULA[0]    ; 0.979 ; 0.000         ;
-; ctrl_undd:Controle|controleOUT ; 1.551 ; 0.000         ;
+; divisor:divFreq|div_clk        ; 0.306 ; 0.000         ;
+; ctrl_undd:Controle|OpULA[0]    ; 0.506 ; 0.000         ;
+; realClk                        ; 0.547 ; 0.000         ;
+; ctrl_undd:Controle|controleOUT ; 1.239 ; 0.000         ;
 +--------------------------------+-------+---------------+
 
 
@@ -235,7 +236,7 @@ No paths to report.
 ; realClk                        ; -3.000 ; -42.284       ;
 ; divisor:divFreq|div_clk        ; -2.333 ; -6194.181     ;
 ; ctrl_undd:Controle|controleOUT ; -1.403 ; -44.896       ;
-; ctrl_undd:Controle|OpULA[0]    ; 0.406  ; 0.000         ;
+; ctrl_undd:Controle|OpULA[0]    ; 0.391  ; 0.000         ;
 +--------------------------------+--------+---------------+
 
 
@@ -251,10 +252,10 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +--------------------------------+---------+---------------+
 ; Clock                          ; Slack   ; End Point TNS ;
 +--------------------------------+---------+---------------+
-; divisor:divFreq|div_clk        ; -50.623 ; -19106.139    ;
-; ctrl_undd:Controle|OpULA[0]    ; -2.157  ; -8.060        ;
-; ctrl_undd:Controle|controleOUT ; -1.822  ; -50.424       ;
-; realClk                        ; -0.546  ; -5.204        ;
+; divisor:divFreq|div_clk        ; -49.231 ; -16412.391    ;
+; ctrl_undd:Controle|OpULA[0]    ; -1.998  ; -6.937        ;
+; ctrl_undd:Controle|controleOUT ; -1.605  ; -40.555       ;
+; realClk                        ; -0.605  ; -7.729        ;
 +--------------------------------+---------+---------------+
 
 
@@ -263,10 +264,10 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +--------------------------------+-------+---------------+
 ; Clock                          ; Slack ; End Point TNS ;
 +--------------------------------+-------+---------------+
-; divisor:divFreq|div_clk        ; 0.197 ; 0.000         ;
-; realClk                        ; 0.244 ; 0.000         ;
-; ctrl_undd:Controle|OpULA[0]    ; 0.461 ; 0.000         ;
-; ctrl_undd:Controle|controleOUT ; 0.634 ; 0.000         ;
+; divisor:divFreq|div_clk        ; 0.134 ; 0.000         ;
+; realClk                        ; 0.227 ; 0.000         ;
+; ctrl_undd:Controle|OpULA[0]    ; 0.318 ; 0.000         ;
+; ctrl_undd:Controle|controleOUT ; 0.460 ; 0.000         ;
 +--------------------------------+-------+---------------+
 
 
@@ -287,10 +288,10 @@ No paths to report.
 +--------------------------------+--------+---------------+
 ; Clock                          ; Slack  ; End Point TNS ;
 +--------------------------------+--------+---------------+
-; realClk                        ; -3.000 ; -31.932       ;
+; realClk                        ; -3.000 ; -32.021       ;
 ; divisor:divFreq|div_clk        ; -1.000 ; -4407.000     ;
 ; ctrl_undd:Controle|controleOUT ; -1.000 ; -32.000       ;
-; ctrl_undd:Controle|OpULA[0]    ; 0.398  ; 0.000         ;
+; ctrl_undd:Controle|OpULA[0]    ; 0.333  ; 0.000         ;
 +--------------------------------+--------+---------------+
 
 
@@ -306,16 +307,16 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +---------------------------------+------------+-------+----------+---------+---------------------+
 ; Clock                           ; Setup      ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
 +---------------------------------+------------+-------+----------+---------+---------------------+
-; Worst-case Slack                ; -124.175   ; 0.197 ; N/A      ; N/A     ; -3.000              ;
-;  ctrl_undd:Controle|OpULA[0]    ; -5.508     ; 0.461 ; N/A      ; N/A     ; 0.398               ;
-;  ctrl_undd:Controle|controleOUT ; -5.292     ; 0.634 ; N/A      ; N/A     ; -1.403              ;
-;  divisor:divFreq|div_clk        ; -124.175   ; 0.197 ; N/A      ; N/A     ; -2.422              ;
-;  realClk                        ; -2.631     ; 0.244 ; N/A      ; N/A     ; -3.000              ;
-; Design-wide TNS                 ; -42209.747 ; 0.0   ; 0.0      ; 0.0     ; -6282.429           ;
-;  ctrl_undd:Controle|OpULA[0]    ; -22.449    ; 0.000 ; N/A      ; N/A     ; 0.000               ;
-;  ctrl_undd:Controle|controleOUT ; -153.124   ; 0.000 ; N/A      ; N/A     ; -44.896             ;
-;  divisor:divFreq|div_clk        ; -41984.195 ; 0.000 ; N/A      ; N/A     ; -6195.249           ;
-;  realClk                        ; -49.979    ; 0.000 ; N/A      ; N/A     ; -42.284             ;
+; Worst-case Slack                ; -121.247   ; 0.134 ; N/A      ; N/A     ; -3.000              ;
+;  ctrl_undd:Controle|OpULA[0]    ; -5.164     ; 0.318 ; N/A      ; N/A     ; 0.333               ;
+;  ctrl_undd:Controle|controleOUT ; -4.939     ; 0.460 ; N/A      ; N/A     ; -1.403              ;
+;  divisor:divFreq|div_clk        ; -121.247   ; 0.134 ; N/A      ; N/A     ; -2.422              ;
+;  realClk                        ; -2.747     ; 0.227 ; N/A      ; N/A     ; -3.000              ;
+; Design-wide TNS                 ; -36519.485 ; 0.0   ; 0.0      ; 0.0     ; -6282.429           ;
+;  ctrl_undd:Controle|OpULA[0]    ; -19.886    ; 0.000 ; N/A      ; N/A     ; 0.000               ;
+;  ctrl_undd:Controle|controleOUT ; -134.108   ; 0.000 ; N/A      ; N/A     ; -44.896             ;
+;  divisor:divFreq|div_clk        ; -36311.577 ; 0.000 ; N/A      ; N/A     ; -6195.249           ;
+;  realClk                        ; -53.914    ; 0.000 ; N/A      ; N/A     ; -42.284             ;
 +---------------------------------+------------+-------+----------+---------+---------------------+
 
 
@@ -520,9 +521,9 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +-----------------------------+--------------------------------+--------------+--------------+----------+----------+
 ; divisor:divFreq|div_clk     ; ctrl_undd:Controle|controleOUT ; 425          ; 0            ; 0        ; 0        ;
 ; ctrl_undd:Controle|OpULA[0] ; ctrl_undd:Controle|OpULA[0]    ; 0            ; 0            ; 8        ; 8        ;
-; divisor:divFreq|div_clk     ; ctrl_undd:Controle|OpULA[0]    ; 0            ; 0            ; 88       ; 8        ;
-; ctrl_undd:Controle|OpULA[0] ; divisor:divFreq|div_clk        ; 0            ; 1499         ; 0        ; 0        ;
-; divisor:divFreq|div_clk     ; divisor:divFreq|div_clk        ; > 2147483647 ; > 2147483647 ; 12556    ; 4064     ;
+; divisor:divFreq|div_clk     ; ctrl_undd:Controle|OpULA[0]    ; 0            ; 0            ; 57       ; 8        ;
+; ctrl_undd:Controle|OpULA[0] ; divisor:divFreq|div_clk        ; 0            ; 1445         ; 0        ; 0        ;
+; divisor:divFreq|div_clk     ; divisor:divFreq|div_clk        ; > 2147483647 ; > 2147483647 ; 12519    ; 4065     ;
 ; realClk                     ; realClk                        ; 729          ; 0            ; 0        ; 0        ;
 +-----------------------------+--------------------------------+--------------+--------------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
@@ -535,9 +536,9 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +-----------------------------+--------------------------------+--------------+--------------+----------+----------+
 ; divisor:divFreq|div_clk     ; ctrl_undd:Controle|controleOUT ; 425          ; 0            ; 0        ; 0        ;
 ; ctrl_undd:Controle|OpULA[0] ; ctrl_undd:Controle|OpULA[0]    ; 0            ; 0            ; 8        ; 8        ;
-; divisor:divFreq|div_clk     ; ctrl_undd:Controle|OpULA[0]    ; 0            ; 0            ; 88       ; 8        ;
-; ctrl_undd:Controle|OpULA[0] ; divisor:divFreq|div_clk        ; 0            ; 1499         ; 0        ; 0        ;
-; divisor:divFreq|div_clk     ; divisor:divFreq|div_clk        ; > 2147483647 ; > 2147483647 ; 12556    ; 4064     ;
+; divisor:divFreq|div_clk     ; ctrl_undd:Controle|OpULA[0]    ; 0            ; 0            ; 57       ; 8        ;
+; ctrl_undd:Controle|OpULA[0] ; divisor:divFreq|div_clk        ; 0            ; 1445         ; 0        ; 0        ;
+; divisor:divFreq|div_clk     ; divisor:divFreq|div_clk        ; > 2147483647 ; > 2147483647 ; 12519    ; 4065     ;
 ; realClk                     ; realClk                        ; 729          ; 0            ; 0        ; 0        ;
 +-----------------------------+--------------------------------+--------------+--------------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
@@ -704,8 +705,8 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +--------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
-    Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Fri Mar 20 04:32:54 2020
+    Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+    Info: Processing started: Thu Oct 29 19:34:39 2020
 Info: Command: quartus_sta teste -c teste
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -726,20 +727,20 @@ Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1200mV 85C Model
 Info: Can't run Report Timing Closure Recommendations. The current device family is not supported.
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -124.175
+Info (332146): Worst-case setup slack is -121.247
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):  -124.175          -41984.195 divisor:divFreq|div_clk 
-    Info (332119):    -5.508             -22.449 ctrl_undd:Controle|OpULA[0] 
-    Info (332119):    -5.292            -153.124 ctrl_undd:Controle|controleOUT 
-    Info (332119):    -2.631             -49.979 realClk 
-Info (332146): Worst-case hold slack is 0.484
+    Info (332119):  -121.247          -36311.577 divisor:divFreq|div_clk 
+    Info (332119):    -5.164             -19.886 ctrl_undd:Controle|OpULA[0] 
+    Info (332119):    -4.939            -134.108 ctrl_undd:Controle|controleOUT 
+    Info (332119):    -2.747             -53.914 realClk 
+Info (332146): Worst-case hold slack is 0.307
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.484               0.000 divisor:divFreq|div_clk 
-    Info (332119):     0.630               0.000 realClk 
-    Info (332119):     1.149               0.000 ctrl_undd:Controle|OpULA[0] 
-    Info (332119):     1.644               0.000 ctrl_undd:Controle|controleOUT 
+    Info (332119):     0.307               0.000 divisor:divFreq|div_clk 
+    Info (332119):     0.582               0.000 realClk 
+    Info (332119):     0.631               0.000 ctrl_undd:Controle|OpULA[0] 
+    Info (332119):     1.391               0.000 ctrl_undd:Controle|controleOUT 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -3.000
@@ -748,28 +749,28 @@ Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):    -3.000             -42.284 realClk 
     Info (332119):    -2.422           -6195.249 divisor:divFreq|div_clk 
     Info (332119):    -1.403             -44.896 ctrl_undd:Controle|controleOUT 
-    Info (332119):     0.444               0.000 ctrl_undd:Controle|OpULA[0] 
-Info (332114): Report Metastability: Found 4 synchronizer chains.
+    Info (332119):     0.410               0.000 ctrl_undd:Controle|OpULA[0] 
+Info (332114): Report Metastability: Found 3 synchronizer chains.
     Info (332114): Design MTBF is not calculated because the design doesn't meet its timing requirements.
 Info: Analyzing Slow 1200mV 0C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -112.666
+Info (332146): Worst-case setup slack is -109.809
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):  -112.666          -38388.734 divisor:divFreq|div_clk 
-    Info (332119):    -5.247             -21.392 ctrl_undd:Controle|OpULA[0] 
-    Info (332119):    -4.825            -139.423 ctrl_undd:Controle|controleOUT 
-    Info (332119):    -2.363             -42.855 realClk 
-Info (332146): Worst-case hold slack is 0.449
+    Info (332119):  -109.809          -33311.603 divisor:divFreq|div_clk 
+    Info (332119):    -4.798             -18.535 ctrl_undd:Controle|OpULA[0] 
+    Info (332119):    -4.474            -121.307 ctrl_undd:Controle|controleOUT 
+    Info (332119):    -2.434             -46.778 realClk 
+Info (332146): Worst-case hold slack is 0.306
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.449               0.000 divisor:divFreq|div_clk 
-    Info (332119):     0.584               0.000 realClk 
-    Info (332119):     0.979               0.000 ctrl_undd:Controle|OpULA[0] 
-    Info (332119):     1.551               0.000 ctrl_undd:Controle|controleOUT 
+    Info (332119):     0.306               0.000 divisor:divFreq|div_clk 
+    Info (332119):     0.506               0.000 ctrl_undd:Controle|OpULA[0] 
+    Info (332119):     0.547               0.000 realClk 
+    Info (332119):     1.239               0.000 ctrl_undd:Controle|controleOUT 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -3.000
@@ -778,43 +779,43 @@ Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):    -3.000             -42.284 realClk 
     Info (332119):    -2.333           -6194.181 divisor:divFreq|div_clk 
     Info (332119):    -1.403             -44.896 ctrl_undd:Controle|controleOUT 
-    Info (332119):     0.406               0.000 ctrl_undd:Controle|OpULA[0] 
-Info (332114): Report Metastability: Found 4 synchronizer chains.
+    Info (332119):     0.391               0.000 ctrl_undd:Controle|OpULA[0] 
+Info (332114): Report Metastability: Found 3 synchronizer chains.
     Info (332114): Design MTBF is not calculated because the design doesn't meet its timing requirements.
 Info: Analyzing Fast 1200mV 0C Model
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -50.623
+Info (332146): Worst-case setup slack is -49.231
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):   -50.623          -19106.139 divisor:divFreq|div_clk 
-    Info (332119):    -2.157              -8.060 ctrl_undd:Controle|OpULA[0] 
-    Info (332119):    -1.822             -50.424 ctrl_undd:Controle|controleOUT 
-    Info (332119):    -0.546              -5.204 realClk 
-Info (332146): Worst-case hold slack is 0.197
+    Info (332119):   -49.231          -16412.391 divisor:divFreq|div_clk 
+    Info (332119):    -1.998              -6.937 ctrl_undd:Controle|OpULA[0] 
+    Info (332119):    -1.605             -40.555 ctrl_undd:Controle|controleOUT 
+    Info (332119):    -0.605              -7.729 realClk 
+Info (332146): Worst-case hold slack is 0.134
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.197               0.000 divisor:divFreq|div_clk 
-    Info (332119):     0.244               0.000 realClk 
-    Info (332119):     0.461               0.000 ctrl_undd:Controle|OpULA[0] 
-    Info (332119):     0.634               0.000 ctrl_undd:Controle|controleOUT 
+    Info (332119):     0.134               0.000 divisor:divFreq|div_clk 
+    Info (332119):     0.227               0.000 realClk 
+    Info (332119):     0.318               0.000 ctrl_undd:Controle|OpULA[0] 
+    Info (332119):     0.460               0.000 ctrl_undd:Controle|controleOUT 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.000             -31.932 realClk 
+    Info (332119):    -3.000             -32.021 realClk 
     Info (332119):    -1.000           -4407.000 divisor:divFreq|div_clk 
     Info (332119):    -1.000             -32.000 ctrl_undd:Controle|controleOUT 
-    Info (332119):     0.398               0.000 ctrl_undd:Controle|OpULA[0] 
-Info (332114): Report Metastability: Found 4 synchronizer chains.
+    Info (332119):     0.333               0.000 ctrl_undd:Controle|OpULA[0] 
+Info (332114): Report Metastability: Found 3 synchronizer chains.
     Info (332114): Design MTBF is not calculated because the design doesn't meet its timing requirements.
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 4873 megabytes
-    Info: Processing ended: Fri Mar 20 04:33:14 2020
-    Info: Elapsed time: 00:00:20
+    Info: Peak virtual memory: 4877 megabytes
+    Info: Processing ended: Thu Oct 29 19:34:58 2020
+    Info: Elapsed time: 00:00:19
     Info: Total CPU time (on all processors): 00:00:28
 
 

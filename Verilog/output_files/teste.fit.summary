@@ -1,12 +1,12 @@
-Fitter Status : Successful - Fri Mar 20 04:32:43 2020
-Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+Fitter Status : Successful - Thu Oct 29 19:34:28 2020
+Quartus Prime Version : 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 Revision Name : teste
 Top-level Entity Name : processador
 Family : MAX 10
 Device : 10M50DAF484C7G
 Timing Models : Final
-Total logic elements : 10,013 / 49,760 ( 20 % )
-    Total combinational functions : 7,942 / 49,760 ( 16 % )
+Total logic elements : 10,087 / 49,760 ( 20 % )
+    Total combinational functions : 8,226 / 49,760 ( 17 % )
     Dedicated logic registers : 4,455 / 49,760 ( 9 % )
 Total registers : 4455
 Total pins : 45 / 360 ( 13 % )

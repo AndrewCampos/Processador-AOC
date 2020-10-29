@@ -1,6 +1,6 @@
 Flow report for teste
-Fri Mar 20 04:33:19 2020
-Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+Thu Oct 29 19:35:04 2020
+Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
 ---------------------
@@ -21,9 +21,9 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 2018  Intel Corporation. All rights reserved.
+Copyright (C) 2020  Intel Corporation. All rights reserved.
 Your use of Intel Corporation's design tools, logic functions 
-and other software and tools, and its AMPP partner logic 
+and other software and tools, and any partner logic 
 functions, and any output files from any of the foregoing 
 (including device programming or simulation files), and any 
 associated documentation or information are expressly subject 
@@ -33,22 +33,23 @@ the Intel FPGA IP License Agreement, or other applicable license
 agreement, including, without limitation, that your use is for
 the sole purpose of programming logic devices manufactured by
 Intel and sold by Intel or its authorized distributors.  Please
-refer to the applicable agreement for further details.
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
 
 
 
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Fri Mar 20 04:33:19 2020       ;
-; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
+; Flow Status                        ; Successful - Thu Oct 29 19:35:04 2020       ;
+; Quartus Prime Version              ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                      ; teste                                       ;
 ; Top-level Entity Name              ; processador                                 ;
 ; Family                             ; MAX 10                                      ;
 ; Device                             ; 10M50DAF484C7G                              ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 10,013 / 49,760 ( 20 % )                    ;
-;     Total combinational functions  ; 7,942 / 49,760 ( 16 % )                     ;
+; Total logic elements               ; 10,087 / 49,760 ( 20 % )                    ;
+;     Total combinational functions  ; 8,226 / 49,760 ( 17 % )                     ;
 ;     Dedicated logic registers      ; 4,455 / 49,760 ( 9 % )                      ;
 ; Total registers                    ; 4455                                        ;
 ; Total pins                         ; 45 / 360 ( 13 % )                           ;
@@ -66,7 +67,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 03/20/2020 04:29:09 ;
+; Start date & time ; 10/29/2020 19:31:03 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; teste               ;
 +-------------------+---------------------+
@@ -77,7 +78,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id     ;
 +-------------------------------------+----------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 2543711158273.158468934800608          ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 2543711158273.160401066211108          ; --            ; --          ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Verilog Hdl                            ; --            ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (Verilog)              ; <None>        ; --          ; --             ;
 ; EDA_TIME_SCALE                      ; 1 ps                                   ; --            ; --          ; eda_simulation ;
@@ -102,12 +103,12 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:37     ; 1.0                     ; 4844 MB             ; 00:01:01                           ;
-; Fitter               ; 00:02:54     ; 1.2                     ; 5462 MB             ; 00:04:06                           ;
-; Assembler            ; 00:00:06     ; 1.0                     ; 4712 MB             ; 00:00:05                           ;
-; Timing Analyzer      ; 00:00:19     ; 1.6                     ; 4873 MB             ; 00:00:27                           ;
-; EDA Netlist Writer   ; 00:00:04     ; 1.0                     ; 4740 MB             ; 00:00:04                           ;
-; Total                ; 00:04:00     ; --                      ; --                  ; 00:05:43                           ;
+; Analysis & Synthesis ; 00:00:39     ; 1.0                     ; 4833 MB             ; 00:01:01                           ;
+; Fitter               ; 00:02:43     ; 1.2                     ; 5408 MB             ; 00:04:01                           ;
+; Assembler            ; 00:00:06     ; 1.0                     ; 4715 MB             ; 00:00:06                           ;
+; Timing Analyzer      ; 00:00:19     ; 1.6                     ; 4877 MB             ; 00:00:28                           ;
+; EDA Netlist Writer   ; 00:00:04     ; 1.0                     ; 4742 MB             ; 00:00:04                           ;
+; Total                ; 00:03:51     ; --                      ; --                  ; 00:05:40                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
