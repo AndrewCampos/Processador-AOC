@@ -73,7 +73,7 @@ Pin Name/Usage               : Location  : Dir.   : I/O Standard      : Voltage 
 GND                          : A1        : gnd    :                   :         :           :                
 RESERVED_INPUT               : A2        :        :                   :         : 8         :                
 RESERVED_INPUT               : A3        :        :                   :         : 8         :                
-RESERVED_INPUT               : A4        :        :                   :         : 8         :                
+ov                           : A4        : output : 2.5 V             :         : 8         : N              
 RESERVED_INPUT               : A5        :        :                   :         : 8         :                
 RESERVED_INPUT               : A6        :        :                   :         : 8         :                
 RESERVED_INPUT               : A7        :        :                   :         : 7         :                
@@ -142,7 +142,7 @@ RESERVED_INPUT               : B3        :        :                   :         
 RESERVED_INPUT               : B4        :        :                   :         : 8         :                
 RESERVED_INPUT               : B5        :        :                   :         : 8         :                
 GND                          : B6        : gnd    :                   :         :           :                
-ov                           : B7        : output : 2.5 V             :         : 8         : N              
+RESERVED_INPUT               : B7        :        :                   :         : 8         :                
 RESERVED_INPUT               : B8        :        :                   :         : 7         :                
 GND                          : B9        : gnd    :                   :         :           :                
 estado[3]                    : B10       : output : 2.5 V             :         : 7         : Y              

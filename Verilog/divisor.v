@@ -5,7 +5,7 @@ output reg div_clk ;
 reg [26:0] cont ;
 
 always @( posedge clk ) begin
-	if(cont == 26'd100000000) begin
+	if(cont == 26'd1000000) begin
 		div_clk = 1'b1;
 		cont = 26'd0;
 	end else begin

@@ -1,5 +1,5 @@
 Timing Analyzer report for teste
-Thu Oct 29 19:34:58 2020
+Mon Nov 16 18:32:53 2020
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -92,12 +92,12 @@ https://fpgasoftware.intel.com/eula.
 ; Number detected on machine ; 4           ;
 ; Maximum allowed            ; 2           ;
 ;                            ;             ;
-; Average used               ; 1.60        ;
+; Average used               ; 1.61        ;
 ; Maximum used               ; 2           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;  60.0%      ;
+;     Processor 2            ;  61.2%      ;
 +----------------------------+-------------+
 
 
@@ -118,9 +118,9 @@ https://fpgasoftware.intel.com/eula.
 +------------+-----------------+-----------------------------+---------------------------------------------------------------+
 ; Fmax       ; Restricted Fmax ; Clock Name                  ; Note                                                          ;
 +------------+-----------------+-----------------------------+---------------------------------------------------------------+
-; 4.15 MHz   ; 4.15 MHz        ; divisor:divFreq|div_clk     ;                                                               ;
-; 133.33 MHz ; 133.33 MHz      ; ctrl_undd:Controle|OpULA[0] ;                                                               ;
-; 266.88 MHz ; 250.0 MHz       ; realClk                     ; limit due to minimum period restriction (max I/O toggle rate) ;
+; 4.08 MHz   ; 4.08 MHz        ; divisor:divFreq|div_clk     ;                                                               ;
+; 147.89 MHz ; 147.89 MHz      ; ctrl_undd:Controle|OpULA[0] ;                                                               ;
+; 272.26 MHz ; 250.0 MHz       ; realClk                     ; limit due to minimum period restriction (max I/O toggle rate) ;
 +------------+-----------------+-----------------------------+---------------------------------------------------------------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -130,10 +130,10 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +--------------------------------+----------+---------------+
 ; Clock                          ; Slack    ; End Point TNS ;
 +--------------------------------+----------+---------------+
-; divisor:divFreq|div_clk        ; -121.247 ; -36311.577    ;
-; ctrl_undd:Controle|OpULA[0]    ; -5.164   ; -19.886       ;
-; ctrl_undd:Controle|controleOUT ; -4.939   ; -134.108      ;
-; realClk                        ; -2.747   ; -53.914       ;
+; divisor:divFreq|div_clk        ; -123.166 ; -35187.055    ;
+; ctrl_undd:Controle|OpULA[0]    ; -5.857   ; -20.773       ;
+; ctrl_undd:Controle|controleOUT ; -5.217   ; -148.194      ;
+; realClk                        ; -2.673   ; -50.548       ;
 +--------------------------------+----------+---------------+
 
 
@@ -142,10 +142,10 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +--------------------------------+-------+---------------+
 ; Clock                          ; Slack ; End Point TNS ;
 +--------------------------------+-------+---------------+
-; divisor:divFreq|div_clk        ; 0.307 ; 0.000         ;
-; realClk                        ; 0.582 ; 0.000         ;
-; ctrl_undd:Controle|OpULA[0]    ; 0.631 ; 0.000         ;
-; ctrl_undd:Controle|controleOUT ; 1.391 ; 0.000         ;
+; divisor:divFreq|div_clk        ; 0.343 ; 0.000         ;
+; realClk                        ; 0.576 ; 0.000         ;
+; ctrl_undd:Controle|OpULA[0]    ; 0.783 ; 0.000         ;
+; ctrl_undd:Controle|controleOUT ; 1.414 ; 0.000         ;
 +--------------------------------+-------+---------------+
 
 
@@ -169,7 +169,7 @@ No paths to report.
 ; realClk                        ; -3.000 ; -42.284       ;
 ; divisor:divFreq|div_clk        ; -2.422 ; -6195.249     ;
 ; ctrl_undd:Controle|controleOUT ; -1.403 ; -44.896       ;
-; ctrl_undd:Controle|OpULA[0]    ; 0.410  ; 0.000         ;
+; ctrl_undd:Controle|OpULA[0]    ; 0.352  ; 0.000         ;
 +--------------------------------+--------+---------------+
 
 
@@ -185,9 +185,9 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +------------+-----------------+-----------------------------+---------------------------------------------------------------+
 ; Fmax       ; Restricted Fmax ; Clock Name                  ; Note                                                          ;
 +------------+-----------------+-----------------------------+---------------------------------------------------------------+
-; 4.59 MHz   ; 4.59 MHz        ; divisor:divFreq|div_clk     ;                                                               ;
-; 141.52 MHz ; 141.52 MHz      ; ctrl_undd:Controle|OpULA[0] ;                                                               ;
-; 291.21 MHz ; 250.0 MHz       ; realClk                     ; limit due to minimum period restriction (max I/O toggle rate) ;
+; 4.5 MHz    ; 4.5 MHz         ; divisor:divFreq|div_clk     ;                                                               ;
+; 155.96 MHz ; 155.96 MHz      ; ctrl_undd:Controle|OpULA[0] ;                                                               ;
+; 297.18 MHz ; 250.0 MHz       ; realClk                     ; limit due to minimum period restriction (max I/O toggle rate) ;
 +------------+-----------------+-----------------------------+---------------------------------------------------------------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -197,10 +197,10 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +--------------------------------+----------+---------------+
 ; Clock                          ; Slack    ; End Point TNS ;
 +--------------------------------+----------+---------------+
-; divisor:divFreq|div_clk        ; -109.809 ; -33311.603    ;
-; ctrl_undd:Controle|OpULA[0]    ; -4.798   ; -18.535       ;
-; ctrl_undd:Controle|controleOUT ; -4.474   ; -121.307      ;
-; realClk                        ; -2.434   ; -46.778       ;
+; divisor:divFreq|div_clk        ; -111.743 ; -32187.179    ;
+; ctrl_undd:Controle|OpULA[0]    ; -5.560   ; -19.421       ;
+; ctrl_undd:Controle|controleOUT ; -4.765   ; -134.586      ;
+; realClk                        ; -2.365   ; -43.276       ;
 +--------------------------------+----------+---------------+
 
 
@@ -209,10 +209,10 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +--------------------------------+-------+---------------+
 ; Clock                          ; Slack ; End Point TNS ;
 +--------------------------------+-------+---------------+
-; divisor:divFreq|div_clk        ; 0.306 ; 0.000         ;
-; ctrl_undd:Controle|OpULA[0]    ; 0.506 ; 0.000         ;
-; realClk                        ; 0.547 ; 0.000         ;
-; ctrl_undd:Controle|controleOUT ; 1.239 ; 0.000         ;
+; divisor:divFreq|div_clk        ; 0.308 ; 0.000         ;
+; realClk                        ; 0.544 ; 0.000         ;
+; ctrl_undd:Controle|OpULA[0]    ; 0.659 ; 0.000         ;
+; ctrl_undd:Controle|controleOUT ; 1.333 ; 0.000         ;
 +--------------------------------+-------+---------------+
 
 
@@ -236,7 +236,7 @@ No paths to report.
 ; realClk                        ; -3.000 ; -42.284       ;
 ; divisor:divFreq|div_clk        ; -2.333 ; -6194.181     ;
 ; ctrl_undd:Controle|controleOUT ; -1.403 ; -44.896       ;
-; ctrl_undd:Controle|OpULA[0]    ; 0.391  ; 0.000         ;
+; ctrl_undd:Controle|OpULA[0]    ; 0.389  ; 0.000         ;
 +--------------------------------+--------+---------------+
 
 
@@ -252,10 +252,10 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +--------------------------------+---------+---------------+
 ; Clock                          ; Slack   ; End Point TNS ;
 +--------------------------------+---------+---------------+
-; divisor:divFreq|div_clk        ; -49.231 ; -16412.391    ;
-; ctrl_undd:Controle|OpULA[0]    ; -1.998  ; -6.937        ;
-; ctrl_undd:Controle|controleOUT ; -1.605  ; -40.555       ;
-; realClk                        ; -0.605  ; -7.729        ;
+; divisor:divFreq|div_clk        ; -50.009 ; -15350.177    ;
+; ctrl_undd:Controle|OpULA[0]    ; -2.287  ; -7.209        ;
+; ctrl_undd:Controle|controleOUT ; -1.751  ; -48.277       ;
+; realClk                        ; -0.585  ; -5.540        ;
 +--------------------------------+---------+---------------+
 
 
@@ -264,10 +264,10 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +--------------------------------+-------+---------------+
 ; Clock                          ; Slack ; End Point TNS ;
 +--------------------------------+-------+---------------+
-; divisor:divFreq|div_clk        ; 0.134 ; 0.000         ;
-; realClk                        ; 0.227 ; 0.000         ;
-; ctrl_undd:Controle|OpULA[0]    ; 0.318 ; 0.000         ;
-; ctrl_undd:Controle|controleOUT ; 0.460 ; 0.000         ;
+; divisor:divFreq|div_clk        ; 0.150 ; 0.000         ;
+; realClk                        ; 0.225 ; 0.000         ;
+; ctrl_undd:Controle|OpULA[0]    ; 0.430 ; 0.000         ;
+; ctrl_undd:Controle|controleOUT ; 0.528 ; 0.000         ;
 +--------------------------------+-------+---------------+
 
 
@@ -288,10 +288,10 @@ No paths to report.
 +--------------------------------+--------+---------------+
 ; Clock                          ; Slack  ; End Point TNS ;
 +--------------------------------+--------+---------------+
-; realClk                        ; -3.000 ; -32.021       ;
+; realClk                        ; -3.000 ; -32.045       ;
 ; divisor:divFreq|div_clk        ; -1.000 ; -4407.000     ;
 ; ctrl_undd:Controle|controleOUT ; -1.000 ; -32.000       ;
-; ctrl_undd:Controle|OpULA[0]    ; 0.333  ; 0.000         ;
+; ctrl_undd:Controle|OpULA[0]    ; 0.383  ; 0.000         ;
 +--------------------------------+--------+---------------+
 
 
@@ -307,16 +307,16 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +---------------------------------+------------+-------+----------+---------+---------------------+
 ; Clock                           ; Setup      ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
 +---------------------------------+------------+-------+----------+---------+---------------------+
-; Worst-case Slack                ; -121.247   ; 0.134 ; N/A      ; N/A     ; -3.000              ;
-;  ctrl_undd:Controle|OpULA[0]    ; -5.164     ; 0.318 ; N/A      ; N/A     ; 0.333               ;
-;  ctrl_undd:Controle|controleOUT ; -4.939     ; 0.460 ; N/A      ; N/A     ; -1.403              ;
-;  divisor:divFreq|div_clk        ; -121.247   ; 0.134 ; N/A      ; N/A     ; -2.422              ;
-;  realClk                        ; -2.747     ; 0.227 ; N/A      ; N/A     ; -3.000              ;
-; Design-wide TNS                 ; -36519.485 ; 0.0   ; 0.0      ; 0.0     ; -6282.429           ;
-;  ctrl_undd:Controle|OpULA[0]    ; -19.886    ; 0.000 ; N/A      ; N/A     ; 0.000               ;
-;  ctrl_undd:Controle|controleOUT ; -134.108   ; 0.000 ; N/A      ; N/A     ; -44.896             ;
-;  divisor:divFreq|div_clk        ; -36311.577 ; 0.000 ; N/A      ; N/A     ; -6195.249           ;
-;  realClk                        ; -53.914    ; 0.000 ; N/A      ; N/A     ; -42.284             ;
+; Worst-case Slack                ; -123.166   ; 0.150 ; N/A      ; N/A     ; -3.000              ;
+;  ctrl_undd:Controle|OpULA[0]    ; -5.857     ; 0.430 ; N/A      ; N/A     ; 0.352               ;
+;  ctrl_undd:Controle|controleOUT ; -5.217     ; 0.528 ; N/A      ; N/A     ; -1.403              ;
+;  divisor:divFreq|div_clk        ; -123.166   ; 0.150 ; N/A      ; N/A     ; -2.422              ;
+;  realClk                        ; -2.673     ; 0.225 ; N/A      ; N/A     ; -3.000              ;
+; Design-wide TNS                 ; -35406.57  ; 0.0   ; 0.0      ; 0.0     ; -6282.429           ;
+;  ctrl_undd:Controle|OpULA[0]    ; -20.773    ; 0.000 ; N/A      ; N/A     ; 0.000               ;
+;  ctrl_undd:Controle|controleOUT ; -148.194   ; 0.000 ; N/A      ; N/A     ; -44.896             ;
+;  divisor:divFreq|div_clk        ; -35187.055 ; 0.000 ; N/A      ; N/A     ; -6195.249           ;
+;  realClk                        ; -50.548    ; 0.000 ; N/A      ; N/A     ; -42.284             ;
 +---------------------------------+------------+-------+----------+---------+---------------------+
 
 
@@ -423,7 +423,7 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 ; disp1[1]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 8.25e-09 V                   ; 2.41 V              ; -0.0859 V           ; 0.289 V                              ; 0.136 V                              ; 3.15e-10 s                  ; 4.16e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 8.25e-09 V                  ; 2.41 V             ; -0.0859 V          ; 0.289 V                             ; 0.136 V                             ; 3.15e-10 s                 ; 4.16e-10 s                 ; No                        ; Yes                       ;
 ; disp1[0]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 8.25e-09 V                   ; 2.41 V              ; -0.0871 V           ; 0.291 V                              ; 0.138 V                              ; 3.15e-10 s                  ; 4.16e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 8.25e-09 V                  ; 2.41 V             ; -0.0871 V          ; 0.291 V                             ; 0.138 V                             ; 3.15e-10 s                 ; 4.16e-10 s                 ; No                        ; Yes                       ;
 ; un           ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 8.26e-09 V                   ; 2.4 V               ; -0.0783 V           ; 0.157 V                              ; 0.167 V                              ; 4.55e-10 s                  ; 4.33e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 8.26e-09 V                  ; 2.4 V              ; -0.0783 V          ; 0.157 V                             ; 0.167 V                             ; 4.55e-10 s                 ; 4.33e-10 s                 ; No                        ; Yes                       ;
-; ov           ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 8.25e-09 V                   ; 2.41 V              ; -0.0871 V           ; 0.291 V                              ; 0.138 V                              ; 3.15e-10 s                  ; 4.16e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 8.25e-09 V                  ; 2.41 V             ; -0.0871 V          ; 0.291 V                             ; 0.138 V                             ; 3.15e-10 s                 ; 4.16e-10 s                 ; No                        ; Yes                       ;
+; ov           ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 8.25e-09 V                   ; 2.41 V              ; -0.0859 V           ; 0.289 V                              ; 0.136 V                              ; 3.15e-10 s                  ; 4.16e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 8.25e-09 V                  ; 2.41 V             ; -0.0859 V          ; 0.289 V                             ; 0.136 V                             ; 3.15e-10 s                 ; 4.16e-10 s                 ; No                        ; Yes                       ;
 ; ~ALTERA_TDO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.39e-08 V                   ; 2.39 V              ; -0.0409 V           ; 0.21 V                               ; 0.121 V                              ; 4.7e-10 s                   ; 5.93e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 1.39e-08 V                  ; 2.39 V             ; -0.0409 V          ; 0.21 V                              ; 0.121 V                             ; 4.7e-10 s                  ; 5.93e-10 s                 ; No                        ; Yes                       ;
 +--------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 
@@ -466,7 +466,7 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 ; disp1[1]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.16e-06 V                   ; 2.37 V              ; -0.049 V            ; 0.154 V                              ; 0.186 V                              ; 4.63e-10 s                  ; 4.5e-10 s                   ; Yes                        ; Yes                        ; 2.32 V                      ; 1.16e-06 V                  ; 2.37 V             ; -0.049 V           ; 0.154 V                             ; 0.186 V                             ; 4.63e-10 s                 ; 4.5e-10 s                  ; Yes                       ; Yes                       ;
 ; disp1[0]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.16e-06 V                   ; 2.37 V              ; -0.0508 V           ; 0.153 V                              ; 0.187 V                              ; 4.63e-10 s                  ; 4.49e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.16e-06 V                  ; 2.37 V             ; -0.0508 V          ; 0.153 V                             ; 0.187 V                             ; 4.63e-10 s                 ; 4.49e-10 s                 ; Yes                       ; Yes                       ;
 ; un           ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.16e-06 V                   ; 2.37 V              ; -0.0459 V           ; 0.201 V                              ; 0.093 V                              ; 4.9e-10 s                   ; 5.83e-10 s                  ; Yes                        ; No                         ; 2.32 V                      ; 1.16e-06 V                  ; 2.37 V             ; -0.0459 V          ; 0.201 V                             ; 0.093 V                             ; 4.9e-10 s                  ; 5.83e-10 s                 ; Yes                       ; No                        ;
-; ov           ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.16e-06 V                   ; 2.37 V              ; -0.0508 V           ; 0.153 V                              ; 0.187 V                              ; 4.63e-10 s                  ; 4.49e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.16e-06 V                  ; 2.37 V             ; -0.0508 V          ; 0.153 V                             ; 0.187 V                             ; 4.63e-10 s                 ; 4.49e-10 s                 ; Yes                       ; Yes                       ;
+; ov           ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.16e-06 V                   ; 2.37 V              ; -0.049 V            ; 0.154 V                              ; 0.186 V                              ; 4.63e-10 s                  ; 4.5e-10 s                   ; Yes                        ; Yes                        ; 2.32 V                      ; 1.16e-06 V                  ; 2.37 V             ; -0.049 V           ; 0.154 V                             ; 0.186 V                             ; 4.63e-10 s                 ; 4.5e-10 s                  ; Yes                       ; Yes                       ;
 ; ~ALTERA_TDO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.97e-06 V                   ; 2.36 V              ; -0.0173 V           ; 0.144 V                              ; 0.094 V                              ; 6.44e-10 s                  ; 7.2e-10 s                   ; No                         ; Yes                        ; 2.32 V                      ; 1.97e-06 V                  ; 2.36 V             ; -0.0173 V          ; 0.144 V                             ; 0.094 V                             ; 6.44e-10 s                 ; 7.2e-10 s                  ; No                        ; Yes                       ;
 +--------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 
@@ -509,7 +509,7 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 ; disp1[1]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.95e-08 V                   ; 2.78 V              ; -0.0452 V           ; 0.248 V                              ; 0.108 V                              ; 2.67e-10 s                  ; 2.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.95e-08 V                  ; 2.78 V             ; -0.0452 V          ; 0.248 V                             ; 0.108 V                             ; 2.67e-10 s                 ; 2.75e-10 s                 ; No                        ; Yes                       ;
 ; disp1[0]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.94e-08 V                   ; 2.78 V              ; -0.0444 V           ; 0.25 V                               ; 0.107 V                              ; 2.67e-10 s                  ; 2.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.94e-08 V                  ; 2.78 V             ; -0.0444 V          ; 0.25 V                              ; 0.107 V                             ; 2.67e-10 s                 ; 2.75e-10 s                 ; No                        ; Yes                       ;
 ; un           ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.94e-08 V                   ; 2.77 V              ; -0.0485 V           ; 0.289 V                              ; 0.058 V                              ; 2.81e-10 s                  ; 3.04e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.94e-08 V                  ; 2.77 V             ; -0.0485 V          ; 0.289 V                             ; 0.058 V                             ; 2.81e-10 s                 ; 3.04e-10 s                 ; No                        ; Yes                       ;
-; ov           ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.94e-08 V                   ; 2.78 V              ; -0.0444 V           ; 0.25 V                               ; 0.107 V                              ; 2.67e-10 s                  ; 2.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.94e-08 V                  ; 2.78 V             ; -0.0444 V          ; 0.25 V                              ; 0.107 V                             ; 2.67e-10 s                 ; 2.75e-10 s                 ; No                        ; Yes                       ;
+; ov           ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.95e-08 V                   ; 2.78 V              ; -0.0452 V           ; 0.248 V                              ; 0.108 V                              ; 2.67e-10 s                  ; 2.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.95e-08 V                  ; 2.78 V             ; -0.0452 V          ; 0.248 V                             ; 0.108 V                             ; 2.67e-10 s                 ; 2.75e-10 s                 ; No                        ; Yes                       ;
 ; ~ALTERA_TDO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 1.68e-07 V                   ; 2.73 V              ; -0.0395 V           ; 0.361 V                              ; 0.109 V                              ; 3.1e-10 s                   ; 4.41e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 1.68e-07 V                  ; 2.73 V             ; -0.0395 V          ; 0.361 V                             ; 0.109 V                             ; 3.1e-10 s                  ; 4.41e-10 s                 ; No                        ; Yes                       ;
 +--------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 
@@ -522,9 +522,9 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 ; divisor:divFreq|div_clk     ; ctrl_undd:Controle|controleOUT ; 425          ; 0            ; 0        ; 0        ;
 ; ctrl_undd:Controle|OpULA[0] ; ctrl_undd:Controle|OpULA[0]    ; 0            ; 0            ; 8        ; 8        ;
 ; divisor:divFreq|div_clk     ; ctrl_undd:Controle|OpULA[0]    ; 0            ; 0            ; 57       ; 8        ;
-; ctrl_undd:Controle|OpULA[0] ; divisor:divFreq|div_clk        ; 0            ; 1445         ; 0        ; 0        ;
+; ctrl_undd:Controle|OpULA[0] ; divisor:divFreq|div_clk        ; 0            ; 1467         ; 0        ; 0        ;
 ; divisor:divFreq|div_clk     ; divisor:divFreq|div_clk        ; > 2147483647 ; > 2147483647 ; 12519    ; 4065     ;
-; realClk                     ; realClk                        ; 729          ; 0            ; 0        ; 0        ;
+; realClk                     ; realClk                        ; 621          ; 0            ; 0        ; 0        ;
 +-----------------------------+--------------------------------+--------------+--------------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -537,9 +537,9 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 ; divisor:divFreq|div_clk     ; ctrl_undd:Controle|controleOUT ; 425          ; 0            ; 0        ; 0        ;
 ; ctrl_undd:Controle|OpULA[0] ; ctrl_undd:Controle|OpULA[0]    ; 0            ; 0            ; 8        ; 8        ;
 ; divisor:divFreq|div_clk     ; ctrl_undd:Controle|OpULA[0]    ; 0            ; 0            ; 57       ; 8        ;
-; ctrl_undd:Controle|OpULA[0] ; divisor:divFreq|div_clk        ; 0            ; 1445         ; 0        ; 0        ;
+; ctrl_undd:Controle|OpULA[0] ; divisor:divFreq|div_clk        ; 0            ; 1467         ; 0        ; 0        ;
 ; divisor:divFreq|div_clk     ; divisor:divFreq|div_clk        ; > 2147483647 ; > 2147483647 ; 12519    ; 4065     ;
-; realClk                     ; realClk                        ; 729          ; 0            ; 0        ; 0        ;
+; realClk                     ; realClk                        ; 621          ; 0            ; 0        ; 0        ;
 +-----------------------------+--------------------------------+--------------+--------------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -706,7 +706,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Thu Oct 29 19:34:39 2020
+    Info: Processing started: Mon Nov 16 18:32:33 2020
 Info: Command: quartus_sta teste -c teste
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -727,20 +727,20 @@ Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1200mV 85C Model
 Info: Can't run Report Timing Closure Recommendations. The current device family is not supported.
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -121.247
+Info (332146): Worst-case setup slack is -123.166
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):  -121.247          -36311.577 divisor:divFreq|div_clk 
-    Info (332119):    -5.164             -19.886 ctrl_undd:Controle|OpULA[0] 
-    Info (332119):    -4.939            -134.108 ctrl_undd:Controle|controleOUT 
-    Info (332119):    -2.747             -53.914 realClk 
-Info (332146): Worst-case hold slack is 0.307
+    Info (332119):  -123.166          -35187.055 divisor:divFreq|div_clk 
+    Info (332119):    -5.857             -20.773 ctrl_undd:Controle|OpULA[0] 
+    Info (332119):    -5.217            -148.194 ctrl_undd:Controle|controleOUT 
+    Info (332119):    -2.673             -50.548 realClk 
+Info (332146): Worst-case hold slack is 0.343
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.307               0.000 divisor:divFreq|div_clk 
-    Info (332119):     0.582               0.000 realClk 
-    Info (332119):     0.631               0.000 ctrl_undd:Controle|OpULA[0] 
-    Info (332119):     1.391               0.000 ctrl_undd:Controle|controleOUT 
+    Info (332119):     0.343               0.000 divisor:divFreq|div_clk 
+    Info (332119):     0.576               0.000 realClk 
+    Info (332119):     0.783               0.000 ctrl_undd:Controle|OpULA[0] 
+    Info (332119):     1.414               0.000 ctrl_undd:Controle|controleOUT 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -3.000
@@ -749,7 +749,7 @@ Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):    -3.000             -42.284 realClk 
     Info (332119):    -2.422           -6195.249 divisor:divFreq|div_clk 
     Info (332119):    -1.403             -44.896 ctrl_undd:Controle|controleOUT 
-    Info (332119):     0.410               0.000 ctrl_undd:Controle|OpULA[0] 
+    Info (332119):     0.352               0.000 ctrl_undd:Controle|OpULA[0] 
 Info (332114): Report Metastability: Found 3 synchronizer chains.
     Info (332114): Design MTBF is not calculated because the design doesn't meet its timing requirements.
 Info: Analyzing Slow 1200mV 0C Model
@@ -757,20 +757,20 @@ Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -109.809
+Info (332146): Worst-case setup slack is -111.743
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):  -109.809          -33311.603 divisor:divFreq|div_clk 
-    Info (332119):    -4.798             -18.535 ctrl_undd:Controle|OpULA[0] 
-    Info (332119):    -4.474            -121.307 ctrl_undd:Controle|controleOUT 
-    Info (332119):    -2.434             -46.778 realClk 
-Info (332146): Worst-case hold slack is 0.306
+    Info (332119):  -111.743          -32187.179 divisor:divFreq|div_clk 
+    Info (332119):    -5.560             -19.421 ctrl_undd:Controle|OpULA[0] 
+    Info (332119):    -4.765            -134.586 ctrl_undd:Controle|controleOUT 
+    Info (332119):    -2.365             -43.276 realClk 
+Info (332146): Worst-case hold slack is 0.308
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.306               0.000 divisor:divFreq|div_clk 
-    Info (332119):     0.506               0.000 ctrl_undd:Controle|OpULA[0] 
-    Info (332119):     0.547               0.000 realClk 
-    Info (332119):     1.239               0.000 ctrl_undd:Controle|controleOUT 
+    Info (332119):     0.308               0.000 divisor:divFreq|div_clk 
+    Info (332119):     0.544               0.000 realClk 
+    Info (332119):     0.659               0.000 ctrl_undd:Controle|OpULA[0] 
+    Info (332119):     1.333               0.000 ctrl_undd:Controle|controleOUT 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -3.000
@@ -779,43 +779,43 @@ Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):    -3.000             -42.284 realClk 
     Info (332119):    -2.333           -6194.181 divisor:divFreq|div_clk 
     Info (332119):    -1.403             -44.896 ctrl_undd:Controle|controleOUT 
-    Info (332119):     0.391               0.000 ctrl_undd:Controle|OpULA[0] 
+    Info (332119):     0.389               0.000 ctrl_undd:Controle|OpULA[0] 
 Info (332114): Report Metastability: Found 3 synchronizer chains.
     Info (332114): Design MTBF is not calculated because the design doesn't meet its timing requirements.
 Info: Analyzing Fast 1200mV 0C Model
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -49.231
+Info (332146): Worst-case setup slack is -50.009
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):   -49.231          -16412.391 divisor:divFreq|div_clk 
-    Info (332119):    -1.998              -6.937 ctrl_undd:Controle|OpULA[0] 
-    Info (332119):    -1.605             -40.555 ctrl_undd:Controle|controleOUT 
-    Info (332119):    -0.605              -7.729 realClk 
-Info (332146): Worst-case hold slack is 0.134
+    Info (332119):   -50.009          -15350.177 divisor:divFreq|div_clk 
+    Info (332119):    -2.287              -7.209 ctrl_undd:Controle|OpULA[0] 
+    Info (332119):    -1.751             -48.277 ctrl_undd:Controle|controleOUT 
+    Info (332119):    -0.585              -5.540 realClk 
+Info (332146): Worst-case hold slack is 0.150
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.134               0.000 divisor:divFreq|div_clk 
-    Info (332119):     0.227               0.000 realClk 
-    Info (332119):     0.318               0.000 ctrl_undd:Controle|OpULA[0] 
-    Info (332119):     0.460               0.000 ctrl_undd:Controle|controleOUT 
+    Info (332119):     0.150               0.000 divisor:divFreq|div_clk 
+    Info (332119):     0.225               0.000 realClk 
+    Info (332119):     0.430               0.000 ctrl_undd:Controle|OpULA[0] 
+    Info (332119):     0.528               0.000 ctrl_undd:Controle|controleOUT 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.000             -32.021 realClk 
+    Info (332119):    -3.000             -32.045 realClk 
     Info (332119):    -1.000           -4407.000 divisor:divFreq|div_clk 
     Info (332119):    -1.000             -32.000 ctrl_undd:Controle|controleOUT 
-    Info (332119):     0.333               0.000 ctrl_undd:Controle|OpULA[0] 
+    Info (332119):     0.383               0.000 ctrl_undd:Controle|OpULA[0] 
 Info (332114): Report Metastability: Found 3 synchronizer chains.
     Info (332114): Design MTBF is not calculated because the design doesn't meet its timing requirements.
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 4877 megabytes
-    Info: Processing ended: Thu Oct 29 19:34:58 2020
-    Info: Elapsed time: 00:00:19
-    Info: Total CPU time (on all processors): 00:00:28
+    Info: Peak virtual memory: 4876 megabytes
+    Info: Processing ended: Mon Nov 16 18:32:53 2020
+    Info: Elapsed time: 00:00:20
+    Info: Total CPU time (on all processors): 00:00:29
 
 
