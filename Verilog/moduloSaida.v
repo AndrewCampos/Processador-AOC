@@ -18,7 +18,7 @@ end
 always @(*) begin
 	temp = entrada;
 		
-		if(temp / 32'd10000 > 0) begin
+		if(temp > 32'd9999) begin
 			n1 <= 32'd14;
 			n2 <= 32'd14;
 			n3 <= 32'd14;

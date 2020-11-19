@@ -1,5 +1,6 @@
 module ctrl_undd(opcode,
 					  funct,
+					  reset,
 					  enter,
 					  clk,
 					  estado,
@@ -20,7 +21,7 @@ module ctrl_undd(opcode,
 					  pop,
 					  push);
 
-	input clk, zero, enter;
+	input clk, zero, enter, reset;
 	input [5:0] opcode;
 	input [5:0] funct;
 	output reg [3:0] estado;
@@ -475,8 +476,8 @@ module ctrl_undd(opcode,
 	end //fim always
 	
 always @(posedge clk) begin
-	
-		estado <= prox_estado;
+		if(reset == 1'b1) estado <= ESTADO0;
+		else estado <= prox_estado;
 	
 	end//fim always
 endmodule

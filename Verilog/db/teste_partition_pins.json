@@ -20,6 +20,30 @@
 					"strict" : false
 				},
 				{
+					"name" : "estado[4]",
+					"strict" : false
+				},
+				{
+					"name" : "estado[5]",
+					"strict" : false
+				},
+				{
+					"name" : "estado[6]",
+					"strict" : false
+				},
+				{
+					"name" : "estado[7]",
+					"strict" : false
+				},
+				{
+					"name" : "estado[8]",
+					"strict" : false
+				},
+				{
+					"name" : "estado[9]",
+					"strict" : false
+				},
+				{
 					"name" : "disp4[6]",
 					"strict" : false
 				},
@@ -136,15 +160,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "enter",
+					"name" : "rst",
 					"strict" : false
 				},
 				{
 					"name" : "realClk",
-					"strict" : false
-				},
-				{
-					"name" : "dadosIN[8]",
 					"strict" : false
 				},
 				{
@@ -177,6 +197,10 @@
 				},
 				{
 					"name" : "dadosIN[0]",
+					"strict" : false
+				},
+				{
+					"name" : "enter",
 					"strict" : false
 				}
 			]

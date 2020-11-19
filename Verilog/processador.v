@@ -1,5 +1,6 @@
 module processador(dadosIN,
-						 enter, 
+						 enter,
+						 rst, 
 						 realClk, 
 						 estado, 
 						 disp4, 
@@ -10,9 +11,9 @@ module processador(dadosIN,
 						 ov);
 
 input realClk;
-input enter;
-input [8:0] dadosIN;
-output [3:0] estado;
+input enter,rst;
+input [7:0] dadosIN;
+output [9:0] estado;
 output [0:6] disp4, disp3, disp2, disp1;
 output un, ov;
 
@@ -36,8 +37,10 @@ wire [4:0]controleULA;
 divisor divFreq(.clk(realClk),
 					 .div_clk(clk));
 
-registrador32b PC(.controle(EscrevePC), 
+registradorPC PC(.controle(EscrevePC), 
+						.reset(rst),
 						.clk(clk),
+						.led(estado),
 						.entrada(valorPC),
 						.saida(sValorPC)); // PC
 						
@@ -67,7 +70,7 @@ memoria MEM(.dado(sregB),
 				
 mux2_32b MuxIn(.seletor(SelMuxIn),
 				   .entrada1(carregaDados),
-				   .entrada2({23'd0,dadosIN}),
+				   .entrada2({24'd0,dadosIN}),
 				   .saida(sMEM)); // para r-mem
 
 				  
@@ -172,8 +175,9 @@ ctrl_undd Controle(.opcode(instr[31:26]),
                    .funct(instr[5:0]),
 						 .zero(zero),
 						 .enter(enter),
+						 .reset(rst),
 						 .clk(clk),
-						 .estado(estado),
+						 //.estado(estado),
 						 .SelMuxPC(SelMuxPC),
 						 .EscrevePC(EscrevePC),
 						 .SelMuxMem(SelMuxMem),

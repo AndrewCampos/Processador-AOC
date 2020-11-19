@@ -1,5 +1,5 @@
 Analysis & Synthesis report for teste
-Mon Nov 16 18:29:55 2020
+Thu Nov 19 20:34:29 2020
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -22,25 +22,25 @@ Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
  14. Registers Packed Into Inferred Megafunctions
  15. Multiplexer Restructuring Statistics (Restructuring Performed)
  16. Source assignments for bancoReg:banco|altsyncram:registradores_rtl_0|altsyncram_bmh1:auto_generated
- 17. Source assignments for bancoReg:banco|altsyncram:registradores_rtl_1|altsyncram_47g1:auto_generated
- 18. Source assignments for stack:Pilha|altsyncram:stack_rtl_0|altsyncram_0ac1:auto_generated
+ 17. Source assignments for stack:Pilha|altsyncram:stack_rtl_0|altsyncram_0ac1:auto_generated
+ 18. Source assignments for bancoReg:banco|altsyncram:registradores_rtl_1|altsyncram_47g1:auto_generated
  19. Parameter Settings for User Entity Instance: ctrl_undd:Controle
  20. Parameter Settings for User Entity Instance: ctrl_undd:Controle|ULA_ctrl:ctrlULA
  21. Parameter Settings for Inferred Entity Instance: bancoReg:banco|altsyncram:registradores_rtl_0
- 22. Parameter Settings for Inferred Entity Instance: bancoReg:banco|altsyncram:registradores_rtl_1
- 23. Parameter Settings for Inferred Entity Instance: stack:Pilha|altsyncram:stack_rtl_0
- 24. Parameter Settings for Inferred Entity Instance: moduloSaida:ModOUT|lpm_divide:Div1
- 25. Parameter Settings for Inferred Entity Instance: moduloSaida:ModOUT|lpm_divide:Div2
- 26. Parameter Settings for Inferred Entity Instance: moduloSaida:ModOUT|lpm_divide:Div3
+ 22. Parameter Settings for Inferred Entity Instance: stack:Pilha|altsyncram:stack_rtl_0
+ 23. Parameter Settings for Inferred Entity Instance: bancoReg:banco|altsyncram:registradores_rtl_1
+ 24. Parameter Settings for Inferred Entity Instance: moduloSaida:ModOUT|lpm_divide:Div0
+ 25. Parameter Settings for Inferred Entity Instance: moduloSaida:ModOUT|lpm_divide:Div1
+ 26. Parameter Settings for Inferred Entity Instance: moduloSaida:ModOUT|lpm_divide:Div2
  27. Parameter Settings for Inferred Entity Instance: moduloSaida:ModOUT|lpm_divide:Mod3
- 28. Parameter Settings for Inferred Entity Instance: moduloSaida:ModOUT|lpm_divide:Div0
- 29. Parameter Settings for Inferred Entity Instance: moduloSaida:ModOUT|lpm_divide:Mod2
- 30. Parameter Settings for Inferred Entity Instance: moduloSaida:ModOUT|lpm_divide:Mod1
- 31. Parameter Settings for Inferred Entity Instance: moduloSaida:ModOUT|lpm_divide:Mod0
- 32. Parameter Settings for Inferred Entity Instance: ULA:ALU|lpm_divide:Div0
- 33. Parameter Settings for Inferred Entity Instance: ULA:ALU|lpm_mult:Mult0
- 34. altsyncram Parameter Settings by Entity Instance
- 35. lpm_mult Parameter Settings by Entity Instance
+ 28. Parameter Settings for Inferred Entity Instance: moduloSaida:ModOUT|lpm_divide:Mod2
+ 29. Parameter Settings for Inferred Entity Instance: moduloSaida:ModOUT|lpm_divide:Mod1
+ 30. Parameter Settings for Inferred Entity Instance: moduloSaida:ModOUT|lpm_divide:Mod0
+ 31. Parameter Settings for Inferred Entity Instance: ULA:ALU|lpm_divide:Div0
+ 32. Parameter Settings for Inferred Entity Instance: ULA:ALU|lpm_mult:Mult0
+ 33. altsyncram Parameter Settings by Entity Instance
+ 34. lpm_mult Parameter Settings by Entity Instance
+ 35. Port Connectivity Checks: "ctrl_undd:Controle"
  36. Port Connectivity Checks: "mux4_32b:MuxPC"
  37. Port Connectivity Checks: "registrador32b:saidaUla"
  38. Port Connectivity Checks: "ULA:ALU"
@@ -51,11 +51,10 @@ Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
  43. Port Connectivity Checks: "registrador32b:Rmem"
  44. Port Connectivity Checks: "mux2_32b:MuxIn"
  45. Port Connectivity Checks: "memoria:MEM"
- 46. Port Connectivity Checks: "registrador32b:PC"
- 47. Post-Synthesis Netlist Statistics for Top Partition
- 48. Elapsed Time Per Partition
- 49. Analysis & Synthesis Messages
- 50. Analysis & Synthesis Suppressed Messages
+ 46. Post-Synthesis Netlist Statistics for Top Partition
+ 47. Elapsed Time Per Partition
+ 48. Analysis & Synthesis Messages
+ 49. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -82,16 +81,16 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Nov 16 18:29:54 2020       ;
+; Analysis & Synthesis Status        ; Successful - Thu Nov 19 20:34:29 2020       ;
 ; Quartus Prime Version              ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                      ; teste                                       ;
 ; Top-level Entity Name              ; processador                                 ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 12,127                                      ;
-;     Total combinational functions  ; 8,282                                       ;
-;     Dedicated logic registers      ; 4,455                                       ;
-; Total registers                    ; 4455                                        ;
-; Total pins                         ; 45                                          ;
+; Total logic elements               ; 11,387                                      ;
+;     Total combinational functions  ; 7,535                                       ;
+;     Dedicated logic registers      ; 4,465                                       ;
+; Total registers                    ; 4465                                        ;
+; Total pins                         ; 51                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 2,368                                       ;
 ; Embedded Multiplier 9-bit elements ; 6                                           ;
@@ -204,60 +203,58 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                     ;
-+----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                 ; Library ;
-+----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------+---------+
-; divisor.v                        ; yes             ; User Verilog HDL File        ; C:/Users/M A C/Desktop/Processador-AOC/Verilog/divisor.v                     ;         ;
-; mux2_5b.v                        ; yes             ; User Verilog HDL File        ; C:/Users/M A C/Desktop/Processador-AOC/Verilog/mux2_5b.v                     ;         ;
-; ula_ctrl.v                       ; yes             ; User Verilog HDL File        ; C:/Users/M A C/Desktop/Processador-AOC/Verilog/ula_ctrl.v                    ;         ;
-; moduloSaida.v                    ; yes             ; User Verilog HDL File        ; C:/Users/M A C/Desktop/Processador-AOC/Verilog/moduloSaida.v                 ;         ;
-; mux4_32b.v                       ; yes             ; User Verilog HDL File        ; C:/Users/M A C/Desktop/Processador-AOC/Verilog/mux4_32b.v                    ;         ;
-; bancoreg.v                       ; yes             ; User Verilog HDL File        ; C:/Users/M A C/Desktop/Processador-AOC/Verilog/bancoreg.v                    ;         ;
-; decodDisplay.v                   ; yes             ; User Verilog HDL File        ; C:/Users/M A C/Desktop/Processador-AOC/Verilog/decodDisplay.v                ;         ;
-; registrador32b.v                 ; yes             ; User Verilog HDL File        ; C:/Users/M A C/Desktop/Processador-AOC/Verilog/registrador32b.v              ;         ;
-; mux2_32b.v                       ; yes             ; User Verilog HDL File        ; C:/Users/M A C/Desktop/Processador-AOC/Verilog/mux2_32b.v                    ;         ;
-; memoria.v                        ; yes             ; User Verilog HDL File        ; C:/Users/M A C/Desktop/Processador-AOC/Verilog/memoria.v                     ;         ;
-; extensor.v                       ; yes             ; User Verilog HDL File        ; C:/Users/M A C/Desktop/Processador-AOC/Verilog/extensor.v                    ;         ;
-; ula.v                            ; yes             ; User Verilog HDL File        ; C:/Users/M A C/Desktop/Processador-AOC/Verilog/ula.v                         ;         ;
-; ctrl_undd.v                      ; yes             ; User Verilog HDL File        ; C:/Users/M A C/Desktop/Processador-AOC/Verilog/ctrl_undd.v                   ;         ;
-; processador.v                    ; yes             ; User Verilog HDL File        ; C:/Users/M A C/Desktop/Processador-AOC/Verilog/processador.v                 ;         ;
-; stack.v                          ; yes             ; User Verilog HDL File        ; C:/Users/M A C/Desktop/Processador-AOC/Verilog/stack.v                       ;         ;
-; altsyncram.tdf                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altsyncram.tdf        ;         ;
-; stratix_ram_block.inc            ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/stratix_ram_block.inc ;         ;
-; lpm_mux.inc                      ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_mux.inc           ;         ;
-; lpm_decode.inc                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_decode.inc        ;         ;
-; aglobal201.inc                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/aglobal201.inc        ;         ;
-; a_rdenreg.inc                    ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/a_rdenreg.inc         ;         ;
-; altrom.inc                       ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altrom.inc            ;         ;
-; altram.inc                       ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altram.inc            ;         ;
-; altdpram.inc                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altdpram.inc          ;         ;
-; db/altsyncram_bmh1.tdf           ; yes             ; Auto-Generated Megafunction  ; C:/Users/M A C/Desktop/Processador-AOC/Verilog/db/altsyncram_bmh1.tdf        ;         ;
-; db/altsyncram_47g1.tdf           ; yes             ; Auto-Generated Megafunction  ; C:/Users/M A C/Desktop/Processador-AOC/Verilog/db/altsyncram_47g1.tdf        ;         ;
-; db/altsyncram_0ac1.tdf           ; yes             ; Auto-Generated Megafunction  ; C:/Users/M A C/Desktop/Processador-AOC/Verilog/db/altsyncram_0ac1.tdf        ;         ;
-; lpm_divide.tdf                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_divide.tdf        ;         ;
-; abs_divider.inc                  ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/abs_divider.inc       ;         ;
-; sign_div_unsign.inc              ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sign_div_unsign.inc   ;         ;
-; db/lpm_divide_mtl.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/M A C/Desktop/Processador-AOC/Verilog/db/lpm_divide_mtl.tdf         ;         ;
-; db/sign_div_unsign_olh.tdf       ; yes             ; Auto-Generated Megafunction  ; C:/Users/M A C/Desktop/Processador-AOC/Verilog/db/sign_div_unsign_olh.tdf    ;         ;
-; db/alt_u_div_qhe.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/M A C/Desktop/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf          ;         ;
-; db/add_sub_t3c.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/M A C/Desktop/Processador-AOC/Verilog/db/add_sub_t3c.tdf            ;         ;
-; db/add_sub_u3c.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/M A C/Desktop/Processador-AOC/Verilog/db/add_sub_u3c.tdf            ;         ;
-; db/lpm_divide_pll.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/M A C/Desktop/Processador-AOC/Verilog/db/lpm_divide_pll.tdf         ;         ;
-; db/lpm_divide_7vl.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/M A C/Desktop/Processador-AOC/Verilog/db/lpm_divide_7vl.tdf         ;         ;
-; db/sign_div_unsign_9nh.tdf       ; yes             ; Auto-Generated Megafunction  ; C:/Users/M A C/Desktop/Processador-AOC/Verilog/db/sign_div_unsign_9nh.tdf    ;         ;
-; db/alt_u_div_ske.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/M A C/Desktop/Processador-AOC/Verilog/db/alt_u_div_ske.tdf          ;         ;
-; db/lpm_divide_8vl.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/M A C/Desktop/Processador-AOC/Verilog/db/lpm_divide_8vl.tdf         ;         ;
-; db/sign_div_unsign_anh.tdf       ; yes             ; Auto-Generated Megafunction  ; C:/Users/M A C/Desktop/Processador-AOC/Verilog/db/sign_div_unsign_anh.tdf    ;         ;
-; db/alt_u_div_tke.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/M A C/Desktop/Processador-AOC/Verilog/db/alt_u_div_tke.tdf          ;         ;
-; lpm_mult.tdf                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_mult.tdf          ;         ;
-; lpm_add_sub.inc                  ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_add_sub.inc       ;         ;
-; multcore.inc                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/multcore.inc          ;         ;
-; bypassff.inc                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/bypassff.inc          ;         ;
-; altshift.inc                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altshift.inc          ;         ;
-; db/mult_tns.tdf                  ; yes             ; Auto-Generated Megafunction  ; C:/Users/M A C/Desktop/Processador-AOC/Verilog/db/mult_tns.tdf               ;         ;
-+----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------+---------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                     ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                 ; Library ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------------------+---------+
+; divisor.v                        ; yes             ; User Verilog HDL File        ; /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/divisor.v                            ;         ;
+; mux2_5b.v                        ; yes             ; User Verilog HDL File        ; /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/mux2_5b.v                            ;         ;
+; ula_ctrl.v                       ; yes             ; User Verilog HDL File        ; /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/ula_ctrl.v                           ;         ;
+; moduloSaida.v                    ; yes             ; User Verilog HDL File        ; /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/moduloSaida.v                        ;         ;
+; mux4_32b.v                       ; yes             ; User Verilog HDL File        ; /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/mux4_32b.v                           ;         ;
+; bancoreg.v                       ; yes             ; User Verilog HDL File        ; /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/bancoreg.v                           ;         ;
+; decodDisplay.v                   ; yes             ; User Verilog HDL File        ; /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/decodDisplay.v                       ;         ;
+; registrador32b.v                 ; yes             ; User Verilog HDL File        ; /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/registrador32b.v                     ;         ;
+; mux2_32b.v                       ; yes             ; User Verilog HDL File        ; /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/mux2_32b.v                           ;         ;
+; memoria.v                        ; yes             ; User Verilog HDL File        ; /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/memoria.v                            ;         ;
+; extensor.v                       ; yes             ; User Verilog HDL File        ; /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/extensor.v                           ;         ;
+; ula.v                            ; yes             ; User Verilog HDL File        ; /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/ula.v                                ;         ;
+; ctrl_undd.v                      ; yes             ; User Verilog HDL File        ; /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/ctrl_undd.v                          ;         ;
+; processador.v                    ; yes             ; User Verilog HDL File        ; /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/processador.v                        ;         ;
+; stack.v                          ; yes             ; User Verilog HDL File        ; /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/stack.v                              ;         ;
+; registradorPC.v                  ; yes             ; User Verilog HDL File        ; /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/registradorPC.v                      ;         ;
+; altsyncram.tdf                   ; yes             ; Megafunction                 ; /home/andrew/Documentos/intelFPGA/20.1/quartus/libraries/megafunctions/altsyncram.tdf        ;         ;
+; stratix_ram_block.inc            ; yes             ; Megafunction                 ; /home/andrew/Documentos/intelFPGA/20.1/quartus/libraries/megafunctions/stratix_ram_block.inc ;         ;
+; lpm_mux.inc                      ; yes             ; Megafunction                 ; /home/andrew/Documentos/intelFPGA/20.1/quartus/libraries/megafunctions/lpm_mux.inc           ;         ;
+; lpm_decode.inc                   ; yes             ; Megafunction                 ; /home/andrew/Documentos/intelFPGA/20.1/quartus/libraries/megafunctions/lpm_decode.inc        ;         ;
+; aglobal201.inc                   ; yes             ; Megafunction                 ; /home/andrew/Documentos/intelFPGA/20.1/quartus/libraries/megafunctions/aglobal201.inc        ;         ;
+; a_rdenreg.inc                    ; yes             ; Megafunction                 ; /home/andrew/Documentos/intelFPGA/20.1/quartus/libraries/megafunctions/a_rdenreg.inc         ;         ;
+; altrom.inc                       ; yes             ; Megafunction                 ; /home/andrew/Documentos/intelFPGA/20.1/quartus/libraries/megafunctions/altrom.inc            ;         ;
+; altram.inc                       ; yes             ; Megafunction                 ; /home/andrew/Documentos/intelFPGA/20.1/quartus/libraries/megafunctions/altram.inc            ;         ;
+; altdpram.inc                     ; yes             ; Megafunction                 ; /home/andrew/Documentos/intelFPGA/20.1/quartus/libraries/megafunctions/altdpram.inc          ;         ;
+; db/altsyncram_bmh1.tdf           ; yes             ; Auto-Generated Megafunction  ; /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/db/altsyncram_bmh1.tdf               ;         ;
+; db/altsyncram_0ac1.tdf           ; yes             ; Auto-Generated Megafunction  ; /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/db/altsyncram_0ac1.tdf               ;         ;
+; db/altsyncram_47g1.tdf           ; yes             ; Auto-Generated Megafunction  ; /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/db/altsyncram_47g1.tdf               ;         ;
+; lpm_divide.tdf                   ; yes             ; Megafunction                 ; /home/andrew/Documentos/intelFPGA/20.1/quartus/libraries/megafunctions/lpm_divide.tdf        ;         ;
+; abs_divider.inc                  ; yes             ; Megafunction                 ; /home/andrew/Documentos/intelFPGA/20.1/quartus/libraries/megafunctions/abs_divider.inc       ;         ;
+; sign_div_unsign.inc              ; yes             ; Megafunction                 ; /home/andrew/Documentos/intelFPGA/20.1/quartus/libraries/megafunctions/sign_div_unsign.inc   ;         ;
+; db/lpm_divide_mtl.tdf            ; yes             ; Auto-Generated Megafunction  ; /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/db/lpm_divide_mtl.tdf                ;         ;
+; db/sign_div_unsign_olh.tdf       ; yes             ; Auto-Generated Megafunction  ; /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/db/sign_div_unsign_olh.tdf           ;         ;
+; db/alt_u_div_qhe.tdf             ; yes             ; Auto-Generated Megafunction  ; /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf                 ;         ;
+; db/add_sub_t3c.tdf               ; yes             ; Auto-Generated Megafunction  ; /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/db/add_sub_t3c.tdf                   ;         ;
+; db/add_sub_u3c.tdf               ; yes             ; Auto-Generated Megafunction  ; /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/db/add_sub_u3c.tdf                   ;         ;
+; db/lpm_divide_pll.tdf            ; yes             ; Auto-Generated Megafunction  ; /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/db/lpm_divide_pll.tdf                ;         ;
+; db/lpm_divide_8vl.tdf            ; yes             ; Auto-Generated Megafunction  ; /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/db/lpm_divide_8vl.tdf                ;         ;
+; db/sign_div_unsign_anh.tdf       ; yes             ; Auto-Generated Megafunction  ; /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/db/sign_div_unsign_anh.tdf           ;         ;
+; db/alt_u_div_tke.tdf             ; yes             ; Auto-Generated Megafunction  ; /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/db/alt_u_div_tke.tdf                 ;         ;
+; lpm_mult.tdf                     ; yes             ; Megafunction                 ; /home/andrew/Documentos/intelFPGA/20.1/quartus/libraries/megafunctions/lpm_mult.tdf          ;         ;
+; lpm_add_sub.inc                  ; yes             ; Megafunction                 ; /home/andrew/Documentos/intelFPGA/20.1/quartus/libraries/megafunctions/lpm_add_sub.inc       ;         ;
+; multcore.inc                     ; yes             ; Megafunction                 ; /home/andrew/Documentos/intelFPGA/20.1/quartus/libraries/megafunctions/multcore.inc          ;         ;
+; bypassff.inc                     ; yes             ; Megafunction                 ; /home/andrew/Documentos/intelFPGA/20.1/quartus/libraries/megafunctions/bypassff.inc          ;         ;
+; altshift.inc                     ; yes             ; Megafunction                 ; /home/andrew/Documentos/intelFPGA/20.1/quartus/libraries/megafunctions/altshift.inc          ;         ;
+; db/mult_tns.tdf                  ; yes             ; Auto-Generated Megafunction  ; /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/db/mult_tns.tdf                      ;         ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------------------+---------+
 
 
 +-----------------------------------------------------------------------+
@@ -265,31 +262,31 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-------------------------+
 ; Resource                                    ; Usage                   ;
 +---------------------------------------------+-------------------------+
-; Estimated Total logic elements              ; 12,127                  ;
+; Estimated Total logic elements              ; 11,387                  ;
 ;                                             ;                         ;
-; Total combinational functions               ; 8282                    ;
+; Total combinational functions               ; 7535                    ;
 ; Logic element usage by number of LUT inputs ;                         ;
-;     -- 4 input functions                    ; 4333                    ;
-;     -- 3 input functions                    ; 1785                    ;
-;     -- <=2 input functions                  ; 2164                    ;
+;     -- 4 input functions                    ; 4081                    ;
+;     -- 3 input functions                    ; 1552                    ;
+;     -- <=2 input functions                  ; 1902                    ;
 ;                                             ;                         ;
 ; Logic elements by mode                      ;                         ;
-;     -- normal mode                          ; 6698                    ;
-;     -- arithmetic mode                      ; 1584                    ;
+;     -- normal mode                          ; 6159                    ;
+;     -- arithmetic mode                      ; 1376                    ;
 ;                                             ;                         ;
-; Total registers                             ; 4455                    ;
-;     -- Dedicated logic registers            ; 4455                    ;
+; Total registers                             ; 4465                    ;
+;     -- Dedicated logic registers            ; 4465                    ;
 ;     -- I/O registers                        ; 0                       ;
 ;                                             ;                         ;
-; I/O pins                                    ; 45                      ;
+; I/O pins                                    ; 51                      ;
 ; Total memory bits                           ; 2368                    ;
 ;                                             ;                         ;
 ; Embedded Multiplier 9-bit elements          ; 6                       ;
 ;                                             ;                         ;
 ; Maximum fan-out node                        ; divisor:divFreq|div_clk ;
-; Maximum fan-out                             ; 4491                    ;
-; Total fan-out                               ; 40680                   ;
-; Average fan-out                             ; 3.15                    ;
+; Maximum fan-out                             ; 4501                    ;
+; Total fan-out                               ; 38520                   ;
+; Average fan-out                             ; 3.16                    ;
 +---------------------------------------------+-------------------------+
 
 
@@ -298,45 +295,41 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
 ; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                                                                                                        ; Entity Name         ; Library Name ;
 +-------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
-; |processador                              ; 8282 (0)            ; 4455 (0)                  ; 2368        ; 0          ; 6            ; 0       ; 3         ; 45   ; 0            ; 0          ; |processador                                                                                                                               ; processador         ; work         ;
-;    |ULA:ALU|                              ; 1480 (341)          ; 33 (33)                   ; 0           ; 0          ; 6            ; 0       ; 3         ; 0    ; 0            ; 0          ; |processador|ULA:ALU                                                                                                                       ; ULA                 ; work         ;
-;       |lpm_divide:Div0|                   ; 1111 (0)            ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |processador|ULA:ALU|lpm_divide:Div0                                                                                                       ; lpm_divide          ; work         ;
-;          |lpm_divide_8vl:auto_generated|  ; 1111 (0)            ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |processador|ULA:ALU|lpm_divide:Div0|lpm_divide_8vl:auto_generated                                                                         ; lpm_divide_8vl      ; work         ;
-;             |sign_div_unsign_anh:divider| ; 1111 (0)            ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |processador|ULA:ALU|lpm_divide:Div0|lpm_divide_8vl:auto_generated|sign_div_unsign_anh:divider                                             ; sign_div_unsign_anh ; work         ;
-;                |alt_u_div_tke:divider|    ; 1111 (1110)         ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |processador|ULA:ALU|lpm_divide:Div0|lpm_divide_8vl:auto_generated|sign_div_unsign_anh:divider|alt_u_div_tke:divider                       ; alt_u_div_tke       ; work         ;
+; |processador                              ; 7535 (0)            ; 4465 (0)                  ; 2368        ; 0          ; 6            ; 0       ; 3         ; 51   ; 0            ; 0          ; |processador                                                                                                                               ; processador         ; work         ;
+;    |ULA:ALU|                              ; 1477 (335)          ; 33 (33)                   ; 0           ; 0          ; 6            ; 0       ; 3         ; 0    ; 0            ; 0          ; |processador|ULA:ALU                                                                                                                       ; ULA                 ; work         ;
+;       |lpm_divide:Div0|                   ; 1114 (0)            ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |processador|ULA:ALU|lpm_divide:Div0                                                                                                       ; lpm_divide          ; work         ;
+;          |lpm_divide_8vl:auto_generated|  ; 1114 (0)            ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |processador|ULA:ALU|lpm_divide:Div0|lpm_divide_8vl:auto_generated                                                                         ; lpm_divide_8vl      ; work         ;
+;             |sign_div_unsign_anh:divider| ; 1114 (0)            ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |processador|ULA:ALU|lpm_divide:Div0|lpm_divide_8vl:auto_generated|sign_div_unsign_anh:divider                                             ; sign_div_unsign_anh ; work         ;
+;                |alt_u_div_tke:divider|    ; 1114 (1113)         ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |processador|ULA:ALU|lpm_divide:Div0|lpm_divide_8vl:auto_generated|sign_div_unsign_anh:divider|alt_u_div_tke:divider                       ; alt_u_div_tke       ; work         ;
 ;                   |add_sub_u3c:add_sub_1| ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |processador|ULA:ALU|lpm_divide:Div0|lpm_divide_8vl:auto_generated|sign_div_unsign_anh:divider|alt_u_div_tke:divider|add_sub_u3c:add_sub_1 ; add_sub_u3c         ; work         ;
 ;       |lpm_mult:Mult0|                    ; 28 (0)              ; 0 (0)                     ; 0           ; 0          ; 6            ; 0       ; 3         ; 0    ; 0            ; 0          ; |processador|ULA:ALU|lpm_mult:Mult0                                                                                                        ; lpm_mult            ; work         ;
 ;          |mult_tns:auto_generated|        ; 28 (28)             ; 0 (0)                     ; 0           ; 0          ; 6            ; 0       ; 3         ; 0    ; 0            ; 0          ; |processador|ULA:ALU|lpm_mult:Mult0|mult_tns:auto_generated                                                                                ; mult_tns            ; work         ;
-;    |bancoReg:banco|                       ; 45 (45)             ; 75 (75)                   ; 2048        ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |processador|bancoReg:banco                                                                                                                ; bancoReg            ; work         ;
+;    |bancoReg:banco|                       ; 51 (51)             ; 75 (75)                   ; 2048        ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |processador|bancoReg:banco                                                                                                                ; bancoReg            ; work         ;
 ;       |altsyncram:registradores_rtl_0|    ; 0 (0)               ; 0 (0)                     ; 1024        ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |processador|bancoReg:banco|altsyncram:registradores_rtl_0                                                                                 ; altsyncram          ; work         ;
 ;          |altsyncram_bmh1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 1024        ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |processador|bancoReg:banco|altsyncram:registradores_rtl_0|altsyncram_bmh1:auto_generated                                                  ; altsyncram_bmh1     ; work         ;
 ;       |altsyncram:registradores_rtl_1|    ; 0 (0)               ; 0 (0)                     ; 1024        ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |processador|bancoReg:banco|altsyncram:registradores_rtl_1                                                                                 ; altsyncram          ; work         ;
 ;          |altsyncram_47g1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 1024        ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |processador|bancoReg:banco|altsyncram:registradores_rtl_1|altsyncram_47g1:auto_generated                                                  ; altsyncram_47g1     ; work         ;
-;    |ctrl_undd:Controle|                   ; 95 (64)             ; 26 (26)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |processador|ctrl_undd:Controle                                                                                                            ; ctrl_undd           ; work         ;
-;       |ULA_ctrl:ctrlULA|                  ; 31 (31)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |processador|ctrl_undd:Controle|ULA_ctrl:ctrlULA                                                                                           ; ULA_ctrl            ; work         ;
+;    |ctrl_undd:Controle|                   ; 99 (67)             ; 26 (26)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |processador|ctrl_undd:Controle                                                                                                            ; ctrl_undd           ; work         ;
+;       |ULA_ctrl:ctrlULA|                  ; 32 (32)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |processador|ctrl_undd:Controle|ULA_ctrl:ctrlULA                                                                                           ; ULA_ctrl            ; work         ;
 ;    |divisor:divFreq|                      ; 44 (44)             ; 28 (28)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |processador|divisor:divFreq                                                                                                               ; divisor             ; work         ;
-;    |memoria:MEM|                          ; 3226 (3226)         ; 4128 (4128)               ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |processador|memoria:MEM                                                                                                                   ; memoria             ; work         ;
-;    |moduloSaida:ModOUT|                   ; 3174 (33)           ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |processador|moduloSaida:ModOUT                                                                                                            ; moduloSaida         ; work         ;
+;    |memoria:MEM|                          ; 3228 (3228)         ; 4128 (4128)               ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |processador|memoria:MEM                                                                                                                   ; memoria             ; work         ;
+;    |moduloSaida:ModOUT|                   ; 2410 (36)           ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |processador|moduloSaida:ModOUT                                                                                                            ; moduloSaida         ; work         ;
 ;       |decodDisplay:dispay1|              ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |processador|moduloSaida:ModOUT|decodDisplay:dispay1                                                                                       ; decodDisplay        ; work         ;
 ;       |decodDisplay:dispay2|              ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |processador|moduloSaida:ModOUT|decodDisplay:dispay2                                                                                       ; decodDisplay        ; work         ;
 ;       |decodDisplay:dispay3|              ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |processador|moduloSaida:ModOUT|decodDisplay:dispay3                                                                                       ; decodDisplay        ; work         ;
 ;       |decodDisplay:dispay4|              ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |processador|moduloSaida:ModOUT|decodDisplay:dispay4                                                                                       ; decodDisplay        ; work         ;
-;       |lpm_divide:Div0|                   ; 767 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |processador|moduloSaida:ModOUT|lpm_divide:Div0                                                                                            ; lpm_divide          ; work         ;
-;          |lpm_divide_7vl:auto_generated|  ; 767 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |processador|moduloSaida:ModOUT|lpm_divide:Div0|lpm_divide_7vl:auto_generated                                                              ; lpm_divide_7vl      ; work         ;
-;             |sign_div_unsign_9nh:divider| ; 767 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |processador|moduloSaida:ModOUT|lpm_divide:Div0|lpm_divide_7vl:auto_generated|sign_div_unsign_9nh:divider                                  ; sign_div_unsign_9nh ; work         ;
-;                |alt_u_div_ske:divider|    ; 767 (767)           ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |processador|moduloSaida:ModOUT|lpm_divide:Div0|lpm_divide_7vl:auto_generated|sign_div_unsign_9nh:divider|alt_u_div_ske:divider            ; alt_u_div_ske       ; work         ;
-;       |lpm_divide:Div1|                   ; 368 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |processador|moduloSaida:ModOUT|lpm_divide:Div1                                                                                            ; lpm_divide          ; work         ;
-;          |lpm_divide_mtl:auto_generated|  ; 368 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |processador|moduloSaida:ModOUT|lpm_divide:Div1|lpm_divide_mtl:auto_generated                                                              ; lpm_divide_mtl      ; work         ;
-;             |sign_div_unsign_olh:divider| ; 368 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |processador|moduloSaida:ModOUT|lpm_divide:Div1|lpm_divide_mtl:auto_generated|sign_div_unsign_olh:divider                                  ; sign_div_unsign_olh ; work         ;
-;                |alt_u_div_qhe:divider|    ; 368 (368)           ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |processador|moduloSaida:ModOUT|lpm_divide:Div1|lpm_divide_mtl:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider            ; alt_u_div_qhe       ; work         ;
-;       |lpm_divide:Div2|                   ; 355 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |processador|moduloSaida:ModOUT|lpm_divide:Div2                                                                                            ; lpm_divide          ; work         ;
-;          |lpm_divide_mtl:auto_generated|  ; 355 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |processador|moduloSaida:ModOUT|lpm_divide:Div2|lpm_divide_mtl:auto_generated                                                              ; lpm_divide_mtl      ; work         ;
-;             |sign_div_unsign_olh:divider| ; 355 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |processador|moduloSaida:ModOUT|lpm_divide:Div2|lpm_divide_mtl:auto_generated|sign_div_unsign_olh:divider                                  ; sign_div_unsign_olh ; work         ;
-;                |alt_u_div_qhe:divider|    ; 355 (355)           ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |processador|moduloSaida:ModOUT|lpm_divide:Div2|lpm_divide_mtl:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider            ; alt_u_div_qhe       ; work         ;
-;       |lpm_divide:Div3|                   ; 313 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |processador|moduloSaida:ModOUT|lpm_divide:Div3                                                                                            ; lpm_divide          ; work         ;
-;          |lpm_divide_mtl:auto_generated|  ; 313 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |processador|moduloSaida:ModOUT|lpm_divide:Div3|lpm_divide_mtl:auto_generated                                                              ; lpm_divide_mtl      ; work         ;
-;             |sign_div_unsign_olh:divider| ; 313 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |processador|moduloSaida:ModOUT|lpm_divide:Div3|lpm_divide_mtl:auto_generated|sign_div_unsign_olh:divider                                  ; sign_div_unsign_olh ; work         ;
-;                |alt_u_div_qhe:divider|    ; 313 (313)           ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |processador|moduloSaida:ModOUT|lpm_divide:Div3|lpm_divide_mtl:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider            ; alt_u_div_qhe       ; work         ;
+;       |lpm_divide:Div0|                   ; 368 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |processador|moduloSaida:ModOUT|lpm_divide:Div0                                                                                            ; lpm_divide          ; work         ;
+;          |lpm_divide_mtl:auto_generated|  ; 368 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |processador|moduloSaida:ModOUT|lpm_divide:Div0|lpm_divide_mtl:auto_generated                                                              ; lpm_divide_mtl      ; work         ;
+;             |sign_div_unsign_olh:divider| ; 368 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |processador|moduloSaida:ModOUT|lpm_divide:Div0|lpm_divide_mtl:auto_generated|sign_div_unsign_olh:divider                                  ; sign_div_unsign_olh ; work         ;
+;                |alt_u_div_qhe:divider|    ; 368 (368)           ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |processador|moduloSaida:ModOUT|lpm_divide:Div0|lpm_divide_mtl:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider            ; alt_u_div_qhe       ; work         ;
+;       |lpm_divide:Div1|                   ; 355 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |processador|moduloSaida:ModOUT|lpm_divide:Div1                                                                                            ; lpm_divide          ; work         ;
+;          |lpm_divide_mtl:auto_generated|  ; 355 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |processador|moduloSaida:ModOUT|lpm_divide:Div1|lpm_divide_mtl:auto_generated                                                              ; lpm_divide_mtl      ; work         ;
+;             |sign_div_unsign_olh:divider| ; 355 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |processador|moduloSaida:ModOUT|lpm_divide:Div1|lpm_divide_mtl:auto_generated|sign_div_unsign_olh:divider                                  ; sign_div_unsign_olh ; work         ;
+;                |alt_u_div_qhe:divider|    ; 355 (355)           ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |processador|moduloSaida:ModOUT|lpm_divide:Div1|lpm_divide_mtl:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider            ; alt_u_div_qhe       ; work         ;
+;       |lpm_divide:Div2|                   ; 313 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |processador|moduloSaida:ModOUT|lpm_divide:Div2                                                                                            ; lpm_divide          ; work         ;
+;          |lpm_divide_mtl:auto_generated|  ; 313 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |processador|moduloSaida:ModOUT|lpm_divide:Div2|lpm_divide_mtl:auto_generated                                                              ; lpm_divide_mtl      ; work         ;
+;             |sign_div_unsign_olh:divider| ; 313 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |processador|moduloSaida:ModOUT|lpm_divide:Div2|lpm_divide_mtl:auto_generated|sign_div_unsign_olh:divider                                  ; sign_div_unsign_olh ; work         ;
+;                |alt_u_div_qhe:divider|    ; 313 (313)           ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |processador|moduloSaida:ModOUT|lpm_divide:Div2|lpm_divide_mtl:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider            ; alt_u_div_qhe       ; work         ;
 ;       |lpm_divide:Mod0|                   ; 368 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |processador|moduloSaida:ModOUT|lpm_divide:Mod0                                                                                            ; lpm_divide          ; work         ;
 ;          |lpm_divide_pll:auto_generated|  ; 368 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |processador|moduloSaida:ModOUT|lpm_divide:Mod0|lpm_divide_pll:auto_generated                                                              ; lpm_divide_pll      ; work         ;
 ;             |sign_div_unsign_olh:divider| ; 368 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |processador|moduloSaida:ModOUT|lpm_divide:Mod0|lpm_divide_pll:auto_generated|sign_div_unsign_olh:divider                                  ; sign_div_unsign_olh ; work         ;
@@ -358,13 +351,12 @@ https://fpgasoftware.intel.com/eula.
 ;    |mux2_32b:MuxReg2|                     ; 32 (32)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |processador|mux2_32b:MuxReg2                                                                                                              ; mux2_32b            ; work         ;
 ;    |mux2_32b:MuxUlaA|                     ; 58 (58)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |processador|mux2_32b:MuxUlaA                                                                                                              ; mux2_32b            ; work         ;
 ;    |mux2_5b:MuxReg1|                      ; 5 (5)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |processador|mux2_5b:MuxReg1                                                                                                               ; mux2_5b             ; work         ;
-;    |mux4_32b:MuxPC|                       ; 14 (14)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |processador|mux4_32b:MuxPC                                                                                                                ; mux4_32b            ; work         ;
 ;    |mux4_32b:MuxUlaB|                     ; 32 (32)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |processador|mux4_32b:MuxUlaB                                                                                                              ; mux4_32b            ; work         ;
 ;    |registrador32b:B|                     ; 0 (0)               ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |processador|registrador32b:B                                                                                                              ; registrador32b      ; work         ;
-;    |registrador32b:PC|                    ; 26 (26)             ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |processador|registrador32b:PC                                                                                                             ; registrador32b      ; work         ;
 ;    |registrador32b:Rmem|                  ; 0 (0)               ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |processador|registrador32b:Rmem                                                                                                           ; registrador32b      ; work         ;
 ;    |registrador32b:ri|                    ; 0 (0)               ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |processador|registrador32b:ri                                                                                                             ; registrador32b      ; work         ;
 ;    |registrador32b:saidaUla|              ; 0 (0)               ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |processador|registrador32b:saidaUla                                                                                                       ; registrador32b      ; work         ;
+;    |registradorPC:PC|                     ; 48 (48)             ; 42 (42)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |processador|registradorPC:PC                                                                                                              ; registradorPC       ; work         ;
 ;    |stack:Pilha|                          ; 12 (12)             ; 5 (5)                     ; 320         ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |processador|stack:Pilha                                                                                                                   ; stack               ; work         ;
 ;       |altsyncram:stack_rtl_0|            ; 0 (0)               ; 0 (0)                     ; 320         ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |processador|stack:Pilha|altsyncram:stack_rtl_0                                                                                            ; altsyncram          ; work         ;
 ;          |altsyncram_0ac1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 320         ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |processador|stack:Pilha|altsyncram:stack_rtl_0|altsyncram_0ac1:auto_generated                                                             ; altsyncram_0ac1     ; work         ;
@@ -431,7 +423,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 4455  ;
+; Total registers                              ; 4465  ;
 ; Number of registers using Synchronous Clear  ; 26    ;
 ; Number of registers using Synchronous Load   ; 29    ;
 ; Number of registers using Asynchronous Clear ; 0     ;
@@ -497,9 +489,9 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +--------------------------------------------+------------------------------------+------+
 ; Register Name                              ; Megafunction                       ; Type ;
 +--------------------------------------------+------------------------------------+------+
+; stack:Pilha|saida[0..31]                   ; stack:Pilha|stack_rtl_0            ; RAM  ;
 ; registrador32b:A|saida[0..31]              ; bancoReg:banco|registradores_rtl_1 ; RAM  ;
 ; bancoReg:banco|registradores[0..31][0..31] ; bancoReg:banco|registradores_rtl_1 ; RAM  ;
-; stack:Pilha|saida[0..31]                   ; stack:Pilha|stack_rtl_0            ; RAM  ;
 +--------------------------------------------+------------------------------------+------+
 
 
@@ -508,29 +500,20 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                   ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------+
-; 4:1                ; 25 bits   ; 50 LEs        ; 50 LEs               ; 0 LEs                  ; Yes        ; |processador|registrador32b:PC|saida[24]                     ;
-; 4:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; Yes        ; |processador|registrador32b:PC|saida[6]                      ;
 ; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |processador|stack:Pilha|pointer[2]                          ;
+; 6:1                ; 25 bits   ; 100 LEs       ; 50 LEs               ; 50 LEs                 ; Yes        ; |processador|registradorPC:PC|saida[17]                      ;
+; 6:1                ; 7 bits    ; 28 LEs        ; 21 LEs               ; 7 LEs                  ; Yes        ; |processador|registradorPC:PC|saida[6]                       ;
 ; 17:1               ; 3 bits    ; 33 LEs        ; 30 LEs               ; 3 LEs                  ; Yes        ; |processador|ctrl_undd:Controle|prox_estado[2]               ;
-; 21:1               ; 31 bits   ; 434 LEs       ; 186 LEs              ; 248 LEs                ; Yes        ; |processador|ULA:ALU|saida[1]                                ;
-; 3:1                ; 17 bits   ; 34 LEs        ; 34 LEs               ; 0 LEs                  ; No         ; |processador|mux4_32b:MuxUlaB|Mux14                          ;
-; 4:1                ; 15 bits   ; 30 LEs        ; 30 LEs               ; 0 LEs                  ; No         ; |processador|mux4_32b:MuxUlaB|Mux17                          ;
-; 3:1                ; 25 bits   ; 50 LEs        ; 50 LEs               ; 0 LEs                  ; No         ; |processador|mux2_32b:MuxUlaA|saida[27]                      ;
-; 68:1               ; 4 bits    ; 180 LEs       ; 44 LEs               ; 136 LEs                ; No         ; |processador|ctrl_undd:Controle|ULA_ctrl:ctrlULA|controle[1] ;
+; 21:1               ; 31 bits   ; 434 LEs       ; 186 LEs              ; 248 LEs                ; Yes        ; |processador|ULA:ALU|saida[9]                                ;
+; 3:1                ; 17 bits   ; 34 LEs        ; 34 LEs               ; 0 LEs                  ; No         ; |processador|mux4_32b:MuxUlaB|Mux8                           ;
+; 4:1                ; 15 bits   ; 30 LEs        ; 30 LEs               ; 0 LEs                  ; No         ; |processador|mux4_32b:MuxUlaB|Mux27                          ;
+; 3:1                ; 25 bits   ; 50 LEs        ; 50 LEs               ; 0 LEs                  ; No         ; |processador|mux2_32b:MuxUlaA|saida[29]                      ;
+; 68:1               ; 4 bits    ; 180 LEs       ; 44 LEs               ; 136 LEs                ; No         ; |processador|ctrl_undd:Controle|ULA_ctrl:ctrlULA|controle[2] ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------+
 
 
 +-----------------------------------------------------------------------------------------------------+
 ; Source assignments for bancoReg:banco|altsyncram:registradores_rtl_0|altsyncram_bmh1:auto_generated ;
-+---------------------------------+--------------------+------+---------------------------------------+
-; Assignment                      ; Value              ; From ; To                                    ;
-+---------------------------------+--------------------+------+---------------------------------------+
-; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                     ;
-+---------------------------------+--------------------+------+---------------------------------------+
-
-
-+-----------------------------------------------------------------------------------------------------+
-; Source assignments for bancoReg:banco|altsyncram:registradores_rtl_1|altsyncram_47g1:auto_generated ;
 +---------------------------------+--------------------+------+---------------------------------------+
 ; Assignment                      ; Value              ; From ; To                                    ;
 +---------------------------------+--------------------+------+---------------------------------------+
@@ -545,6 +528,15 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +---------------------------------+--------------------+------+----------------------------+
 ; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                          ;
 +---------------------------------+--------------------+------+----------------------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Source assignments for bancoReg:banco|altsyncram:registradores_rtl_1|altsyncram_47g1:auto_generated ;
++---------------------------------+--------------------+------+---------------------------------------+
+; Assignment                      ; Value              ; From ; To                                    ;
++---------------------------------+--------------------+------+---------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                     ;
++---------------------------------+--------------------+------+---------------------------------------+
 
 
 +-----------------------------------------------------------------+
@@ -701,6 +693,67 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++-------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: stack:Pilha|altsyncram:stack_rtl_0 ;
++------------------------------------+----------------------+-------------------------+
+; Parameter Name                     ; Value                ; Type                    ;
++------------------------------------+----------------------+-------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                 ;
+; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY              ;
+; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY            ;
+; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE            ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE          ;
+; WIDTH_BYTEENA                      ; 1                    ; Untyped                 ;
+; OPERATION_MODE                     ; DUAL_PORT            ; Untyped                 ;
+; WIDTH_A                            ; 32                   ; Untyped                 ;
+; WIDTHAD_A                          ; 4                    ; Untyped                 ;
+; NUMWORDS_A                         ; 10                   ; Untyped                 ;
+; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped                 ;
+; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                 ;
+; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                 ;
+; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                 ;
+; INDATA_ACLR_A                      ; NONE                 ; Untyped                 ;
+; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                 ;
+; WIDTH_B                            ; 32                   ; Untyped                 ;
+; WIDTHAD_B                          ; 4                    ; Untyped                 ;
+; NUMWORDS_B                         ; 10                   ; Untyped                 ;
+; INDATA_REG_B                       ; CLOCK1               ; Untyped                 ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                 ;
+; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                 ;
+; ADDRESS_REG_B                      ; CLOCK1               ; Untyped                 ;
+; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                 ;
+; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                 ;
+; INDATA_ACLR_B                      ; NONE                 ; Untyped                 ;
+; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                 ;
+; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                 ;
+; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                 ;
+; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                 ;
+; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                 ;
+; WIDTH_BYTEENA_A                    ; 1                    ; Untyped                 ;
+; WIDTH_BYTEENA_B                    ; 1                    ; Untyped                 ;
+; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                 ;
+; BYTE_SIZE                          ; 8                    ; Untyped                 ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                 ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                 ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                 ;
+; INIT_FILE                          ; UNUSED               ; Untyped                 ;
+; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                 ;
+; MAXIMUM_DEPTH                      ; 0                    ; Untyped                 ;
+; CLOCK_ENABLE_INPUT_A               ; NORMAL               ; Untyped                 ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped                 ;
+; CLOCK_ENABLE_OUTPUT_A              ; NORMAL               ; Untyped                 ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped                 ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                 ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                 ;
+; ENABLE_ECC                         ; FALSE                ; Untyped                 ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                 ;
+; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                 ;
+; DEVICE_FAMILY                      ; MAX 10               ; Untyped                 ;
+; CBXI_PARAMETER                     ; altsyncram_0ac1      ; Untyped                 ;
++------------------------------------+----------------------+-------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +------------------------------------------------------------------------------------------------+
 ; Parameter Settings for Inferred Entity Instance: bancoReg:banco|altsyncram:registradores_rtl_1 ;
 +------------------------------------+----------------------+------------------------------------+
@@ -763,63 +816,25 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +-------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: stack:Pilha|altsyncram:stack_rtl_0 ;
-+------------------------------------+----------------------+-------------------------+
-; Parameter Name                     ; Value                ; Type                    ;
-+------------------------------------+----------------------+-------------------------+
-; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                 ;
-; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY              ;
-; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY            ;
-; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE            ;
-; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE          ;
-; WIDTH_BYTEENA                      ; 1                    ; Untyped                 ;
-; OPERATION_MODE                     ; DUAL_PORT            ; Untyped                 ;
-; WIDTH_A                            ; 32                   ; Untyped                 ;
-; WIDTHAD_A                          ; 4                    ; Untyped                 ;
-; NUMWORDS_A                         ; 10                   ; Untyped                 ;
-; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped                 ;
-; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                 ;
-; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                 ;
-; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                 ;
-; INDATA_ACLR_A                      ; NONE                 ; Untyped                 ;
-; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                 ;
-; WIDTH_B                            ; 32                   ; Untyped                 ;
-; WIDTHAD_B                          ; 4                    ; Untyped                 ;
-; NUMWORDS_B                         ; 10                   ; Untyped                 ;
-; INDATA_REG_B                       ; CLOCK1               ; Untyped                 ;
-; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                 ;
-; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                 ;
-; ADDRESS_REG_B                      ; CLOCK1               ; Untyped                 ;
-; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                 ;
-; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                 ;
-; INDATA_ACLR_B                      ; NONE                 ; Untyped                 ;
-; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                 ;
-; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                 ;
-; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                 ;
-; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                 ;
-; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                 ;
-; WIDTH_BYTEENA_A                    ; 1                    ; Untyped                 ;
-; WIDTH_BYTEENA_B                    ; 1                    ; Untyped                 ;
-; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                 ;
-; BYTE_SIZE                          ; 8                    ; Untyped                 ;
-; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                 ;
-; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                 ;
-; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                 ;
-; INIT_FILE                          ; UNUSED               ; Untyped                 ;
-; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                 ;
-; MAXIMUM_DEPTH                      ; 0                    ; Untyped                 ;
-; CLOCK_ENABLE_INPUT_A               ; NORMAL               ; Untyped                 ;
-; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped                 ;
-; CLOCK_ENABLE_OUTPUT_A              ; NORMAL               ; Untyped                 ;
-; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped                 ;
-; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                 ;
-; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                 ;
-; ENABLE_ECC                         ; FALSE                ; Untyped                 ;
-; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                 ;
-; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                 ;
-; DEVICE_FAMILY                      ; MAX 10               ; Untyped                 ;
-; CBXI_PARAMETER                     ; altsyncram_0ac1      ; Untyped                 ;
-+------------------------------------+----------------------+-------------------------+
+; Parameter Settings for Inferred Entity Instance: moduloSaida:ModOUT|lpm_divide:Div0 ;
++------------------------+----------------+-------------------------------------------+
+; Parameter Name         ; Value          ; Type                                      ;
++------------------------+----------------+-------------------------------------------+
+; LPM_WIDTHN             ; 32             ; Untyped                                   ;
+; LPM_WIDTHD             ; 4              ; Untyped                                   ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                   ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                   ;
+; LPM_PIPELINE           ; 0              ; Untyped                                   ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                   ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                   ;
+; CBXI_PARAMETER         ; lpm_divide_mtl ; Untyped                                   ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                   ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                   ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                              ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                              ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                            ;
++------------------------+----------------+-------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -870,29 +885,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +-------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: moduloSaida:ModOUT|lpm_divide:Div3 ;
-+------------------------+----------------+-------------------------------------------+
-; Parameter Name         ; Value          ; Type                                      ;
-+------------------------+----------------+-------------------------------------------+
-; LPM_WIDTHN             ; 32             ; Untyped                                   ;
-; LPM_WIDTHD             ; 4              ; Untyped                                   ;
-; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                   ;
-; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                   ;
-; LPM_PIPELINE           ; 0              ; Untyped                                   ;
-; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                   ;
-; MAXIMIZE_SPEED         ; 5              ; Untyped                                   ;
-; CBXI_PARAMETER         ; lpm_divide_mtl ; Untyped                                   ;
-; CARRY_CHAIN            ; MANUAL         ; Untyped                                   ;
-; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                   ;
-; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                ;
-; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                              ;
-; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                              ;
-; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                            ;
-+------------------------+----------------+-------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-------------------------------------------------------------------------------------+
 ; Parameter Settings for Inferred Entity Instance: moduloSaida:ModOUT|lpm_divide:Mod3 ;
 +------------------------+----------------+-------------------------------------------+
 ; Parameter Name         ; Value          ; Type                                      ;
@@ -905,29 +897,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                   ;
 ; MAXIMIZE_SPEED         ; 5              ; Untyped                                   ;
 ; CBXI_PARAMETER         ; lpm_divide_pll ; Untyped                                   ;
-; CARRY_CHAIN            ; MANUAL         ; Untyped                                   ;
-; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                   ;
-; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                ;
-; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                              ;
-; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                              ;
-; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                            ;
-+------------------------+----------------+-------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: moduloSaida:ModOUT|lpm_divide:Div0 ;
-+------------------------+----------------+-------------------------------------------+
-; Parameter Name         ; Value          ; Type                                      ;
-+------------------------+----------------+-------------------------------------------+
-; LPM_WIDTHN             ; 32             ; Untyped                                   ;
-; LPM_WIDTHD             ; 14             ; Untyped                                   ;
-; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                   ;
-; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                   ;
-; LPM_PIPELINE           ; 0              ; Untyped                                   ;
-; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                   ;
-; MAXIMIZE_SPEED         ; 5              ; Untyped                                   ;
-; CBXI_PARAMETER         ; lpm_divide_7vl ; Untyped                                   ;
 ; CARRY_CHAIN            ; MANUAL         ; Untyped                                   ;
 ; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                   ;
 ; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                ;
@@ -1082,17 +1051,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     -- OUTDATA_REG_B                      ; UNREGISTERED                                  ;
 ;     -- RAM_BLOCK_TYPE                     ; AUTO                                          ;
 ;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; OLD_DATA                                      ;
-; Entity Instance                           ; bancoReg:banco|altsyncram:registradores_rtl_1 ;
-;     -- OPERATION_MODE                     ; DUAL_PORT                                     ;
-;     -- WIDTH_A                            ; 32                                            ;
-;     -- NUMWORDS_A                         ; 32                                            ;
-;     -- OUTDATA_REG_A                      ; UNREGISTERED                                  ;
-;     -- WIDTH_B                            ; 32                                            ;
-;     -- NUMWORDS_B                         ; 32                                            ;
-;     -- ADDRESS_REG_B                      ; CLOCK0                                        ;
-;     -- OUTDATA_REG_B                      ; UNREGISTERED                                  ;
-;     -- RAM_BLOCK_TYPE                     ; AUTO                                          ;
-;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; OLD_DATA                                      ;
 ; Entity Instance                           ; stack:Pilha|altsyncram:stack_rtl_0            ;
 ;     -- OPERATION_MODE                     ; DUAL_PORT                                     ;
 ;     -- WIDTH_A                            ; 32                                            ;
@@ -1104,6 +1062,17 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     -- OUTDATA_REG_B                      ; UNREGISTERED                                  ;
 ;     -- RAM_BLOCK_TYPE                     ; AUTO                                          ;
 ;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                     ;
+; Entity Instance                           ; bancoReg:banco|altsyncram:registradores_rtl_1 ;
+;     -- OPERATION_MODE                     ; DUAL_PORT                                     ;
+;     -- WIDTH_A                            ; 32                                            ;
+;     -- NUMWORDS_A                         ; 32                                            ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                                  ;
+;     -- WIDTH_B                            ; 32                                            ;
+;     -- NUMWORDS_B                         ; 32                                            ;
+;     -- ADDRESS_REG_B                      ; CLOCK0                                        ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                                  ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                          ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; OLD_DATA                                      ;
 +-------------------------------------------+-----------------------------------------------+
 
 
@@ -1125,6 +1094,15 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     -- INPUT_A_FIXED_VALUE            ; Bx                     ;
 ;     -- INPUT_B_FIXED_VALUE            ; Bx                     ;
 +---------------------------------------+------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ctrl_undd:Controle"                                                                                        ;
++--------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                                                  ;
++--------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; estado ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++--------+--------+----------+----------------------------------------------------------------------------------------------------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -1210,7 +1188,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------+-------+----------+--------------+
 ; Port            ; Type  ; Severity ; Details      ;
 +-----------------+-------+----------+--------------+
-; entrada2[31..9] ; Input ; Info     ; Stuck at GND ;
+; entrada2[31..8] ; Input ; Info     ; Stuck at GND ;
 +-----------------+-------+----------+--------------+
 
 
@@ -1223,44 +1201,35 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------+-------+----------+---------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "registrador32b:PC"                                                                                                                          ;
-+------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; Port ; Type  ; Severity ; Details                                                                                                                                      ;
-+------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; set  ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
-+------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-
-
 +-----------------------------------------------------+
 ; Post-Synthesis Netlist Statistics for Top Partition ;
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 45                          ;
-; cycloneiii_ff         ; 4455                        ;
+; boundary_port         ; 51                          ;
+; cycloneiii_ff         ; 4465                        ;
 ;     ENA               ; 4176                        ;
 ;     ENA SCLR SLD      ; 25                          ;
 ;     ENA SLD           ; 4                           ;
 ;     SCLR              ; 1                           ;
-;     plain             ; 249                         ;
-; cycloneiii_lcell_comb ; 8287                        ;
-;     arith             ; 1584                        ;
+;     plain             ; 259                         ;
+; cycloneiii_lcell_comb ; 7540                        ;
+;     arith             ; 1376                        ;
 ;         1 data inputs ; 5                           ;
-;         2 data inputs ; 59                          ;
-;         3 data inputs ; 1520                        ;
-;     normal            ; 6703                        ;
-;         0 data inputs ; 226                         ;
-;         1 data inputs ; 480                         ;
-;         2 data inputs ; 1399                        ;
-;         3 data inputs ; 265                         ;
-;         4 data inputs ; 4333                        ;
+;         2 data inputs ; 49                          ;
+;         3 data inputs ; 1322                        ;
+;     normal            ; 6164                        ;
+;         0 data inputs ; 207                         ;
+;         1 data inputs ; 479                         ;
+;         2 data inputs ; 1167                        ;
+;         3 data inputs ; 230                         ;
+;         4 data inputs ; 4081                        ;
 ; cycloneiii_mac_mult   ; 3                           ;
 ; cycloneiii_mac_out    ; 3                           ;
 ; cycloneiii_ram_block  ; 96                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 125.50                      ;
-; Average LUT depth     ; 38.27                       ;
+; Average LUT depth     ; 36.44                       ;
 +-----------------------+-----------------------------+
 
 
@@ -1269,7 +1238,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:20     ;
+; Top            ; 00:00:13     ;
 +----------------+--------------+
 
 
@@ -1279,92 +1248,81 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Mon Nov 16 18:29:12 2020
+    Info: Processing started: Thu Nov 19 20:34:01 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off teste -c teste
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file divisor.v
-    Info (12023): Found entity 1: divisor File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/divisor.v Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file debounce.v
-    Info (12023): Found entity 1: DeBounce File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/DeBounce.v Line: 28
+    Info (12023): Found entity 1: divisor File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/divisor.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file DeBounce.v
+    Info (12023): Found entity 1: DeBounce File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/DeBounce.v Line: 28
 Info (12021): Found 1 design units, including 1 entities, in source file mux2_5b.v
-    Info (12023): Found entity 1: mux2_5b File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/mux2_5b.v Line: 1
-Warning (10229): Verilog HDL Expression warning at ula_ctrl.v(58): truncated literal to match 5 bits File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/ula_ctrl.v Line: 58
+    Info (12023): Found entity 1: mux2_5b File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/mux2_5b.v Line: 1
+Warning (10229): Verilog HDL Expression warning at ula_ctrl.v(58): truncated literal to match 5 bits File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/ula_ctrl.v Line: 58
 Info (12021): Found 1 design units, including 1 entities, in source file ula_ctrl.v
-    Info (12023): Found entity 1: ULA_ctrl File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/ula_ctrl.v Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file modulosaida.v
-    Info (12023): Found entity 1: moduloSaida File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/moduloSaida.v Line: 1
+    Info (12023): Found entity 1: ULA_ctrl File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/ula_ctrl.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file moduloSaida.v
+    Info (12023): Found entity 1: moduloSaida File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/moduloSaida.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file mux4_32b.v
-    Info (12023): Found entity 1: mux4_32b File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/mux4_32b.v Line: 1
+    Info (12023): Found entity 1: mux4_32b File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/mux4_32b.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file shiftl2.v
-    Info (12023): Found entity 1: shiftL2 File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/shiftl2.v Line: 1
+    Info (12023): Found entity 1: shiftL2 File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/shiftl2.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file bancoreg.v
-    Info (12023): Found entity 1: bancoReg File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/bancoreg.v Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file decoddisplay.v
-    Info (12023): Found entity 1: decodDisplay File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/decodDisplay.v Line: 1
+    Info (12023): Found entity 1: bancoReg File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/bancoreg.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file decodDisplay.v
+    Info (12023): Found entity 1: decodDisplay File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/decodDisplay.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file registrador32b.v
-    Info (12023): Found entity 1: registrador32b File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/registrador32b.v Line: 1
+    Info (12023): Found entity 1: registrador32b File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/registrador32b.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file mux2_32b.v
-    Info (12023): Found entity 1: mux2_32b File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/mux2_32b.v Line: 1
+    Info (12023): Found entity 1: mux2_32b File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/mux2_32b.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file memoria.v
-    Info (12023): Found entity 1: memoria File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/memoria.v Line: 1
+    Info (12023): Found entity 1: memoria File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/memoria.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file extensor.v
-    Info (12023): Found entity 1: extensor File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/extensor.v Line: 1
+    Info (12023): Found entity 1: extensor File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/extensor.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file ula.v
-    Info (12023): Found entity 1: ULA File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/ula.v Line: 1
+    Info (12023): Found entity 1: ULA File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/ula.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file ctrl_undd.v
-    Info (12023): Found entity 1: ctrl_undd File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/ctrl_undd.v Line: 1
+    Info (12023): Found entity 1: ctrl_undd File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/ctrl_undd.v Line: 1
 Warning (12019): Can't analyze file -- file teste.v is missing
 Info (12021): Found 1 design units, including 1 entities, in source file processador.v
-    Info (12023): Found entity 1: processador File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/processador.v Line: 1
+    Info (12023): Found entity 1: processador File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/processador.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file stack.v
-    Info (12023): Found entity 1: stack File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/stack.v Line: 1
+    Info (12023): Found entity 1: stack File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/stack.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file registradorPC.v
+    Info (12023): Found entity 1: registradorPC File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/registradorPC.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file sigEnter.v
+    Info (12023): Found entity 1: sigEnter File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/sigEnter.v Line: 1
 Info (12127): Elaborating entity "processador" for the top level hierarchy
-Info (12128): Elaborating entity "divisor" for hierarchy "divisor:divFreq" File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/processador.v Line: 37
-Info (12128): Elaborating entity "registrador32b" for hierarchy "registrador32b:PC" File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/processador.v Line: 42
-Info (12128): Elaborating entity "stack" for hierarchy "stack:Pilha" File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/processador.v Line: 51
-Warning (10230): Verilog HDL assignment warning at stack.v(24): truncated value with size 4 to match size of target (1) File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/stack.v Line: 24
-Info (12128): Elaborating entity "mux2_32b" for hierarchy "mux2_32b:MuxMem" File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/processador.v Line: 57
-Info (12128): Elaborating entity "memoria" for hierarchy "memoria:MEM" File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/processador.v Line: 65
-Info (12128): Elaborating entity "mux2_5b" for hierarchy "mux2_5b:MuxReg1" File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/processador.v Line: 89
-Info (12128): Elaborating entity "bancoReg" for hierarchy "bancoReg:banco" File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/processador.v Line: 107
-Info (12128): Elaborating entity "moduloSaida" for hierarchy "moduloSaida:ModOUT" File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/processador.v Line: 115
-Info (12128): Elaborating entity "decodDisplay" for hierarchy "moduloSaida:ModOUT|decodDisplay:dispay1" File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/moduloSaida.v Line: 39
-Info (12128): Elaborating entity "extensor" for hierarchy "extensor:EXT" File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/processador.v Line: 131
-Info (12128): Elaborating entity "mux4_32b" for hierarchy "mux4_32b:MuxUlaB" File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/processador.v Line: 145
-Info (12128): Elaborating entity "ULA" for hierarchy "ULA:ALU" File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/processador.v Line: 154
-Info (12128): Elaborating entity "ctrl_undd" for hierarchy "ctrl_undd:Controle" File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/processador.v Line: 191
-Info (12128): Elaborating entity "ULA_ctrl" for hierarchy "ctrl_undd:Controle|ULA_ctrl:ctrlULA" File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/ctrl_undd.v Line: 57
-Warning (10240): Verilog HDL Always Construct warning at ula_ctrl.v(20): inferring latch(es) for variable "controle", which holds its previous value in one or more paths through the always construct File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/ula_ctrl.v Line: 20
-Info (10041): Inferred latch for "controle[0]" at ula_ctrl.v(55) File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/ula_ctrl.v Line: 55
-Info (10041): Inferred latch for "controle[1]" at ula_ctrl.v(55) File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/ula_ctrl.v Line: 55
-Info (10041): Inferred latch for "controle[2]" at ula_ctrl.v(55) File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/ula_ctrl.v Line: 55
-Info (10041): Inferred latch for "controle[3]" at ula_ctrl.v(55) File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/ula_ctrl.v Line: 55
-Info (10041): Inferred latch for "controle[4]" at ula_ctrl.v(55) File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/ula_ctrl.v Line: 55
-Warning (127007): Memory Initialization File or Hexadecimal (Intel-Format) File "C:/Users/M A C/Desktop/Processador-AOC/Verilog/db/teste.ram0_memoria_5f521753.hdl.mif" contains "don't care" values -- overwriting them with 0s
+Info (12128): Elaborating entity "divisor" for hierarchy "divisor:divFreq" File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/processador.v Line: 38
+Info (12128): Elaborating entity "registradorPC" for hierarchy "registradorPC:PC" File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/processador.v Line: 45
+Info (12128): Elaborating entity "stack" for hierarchy "stack:Pilha" File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/processador.v Line: 54
+Warning (10230): Verilog HDL assignment warning at stack.v(24): truncated value with size 4 to match size of target (1) File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/stack.v Line: 24
+Info (12128): Elaborating entity "mux2_32b" for hierarchy "mux2_32b:MuxMem" File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/processador.v Line: 60
+Info (12128): Elaborating entity "memoria" for hierarchy "memoria:MEM" File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/processador.v Line: 68
+Info (12128): Elaborating entity "registrador32b" for hierarchy "registrador32b:Rmem" File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/processador.v Line: 80
+Info (12128): Elaborating entity "mux2_5b" for hierarchy "mux2_5b:MuxReg1" File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/processador.v Line: 92
+Info (12128): Elaborating entity "bancoReg" for hierarchy "bancoReg:banco" File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/processador.v Line: 110
+Info (12128): Elaborating entity "moduloSaida" for hierarchy "moduloSaida:ModOUT" File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/processador.v Line: 118
+Info (12128): Elaborating entity "decodDisplay" for hierarchy "moduloSaida:ModOUT|decodDisplay:dispay1" File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/moduloSaida.v Line: 39
+Info (12128): Elaborating entity "extensor" for hierarchy "extensor:EXT" File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/processador.v Line: 134
+Info (12128): Elaborating entity "mux4_32b" for hierarchy "mux4_32b:MuxUlaB" File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/processador.v Line: 148
+Info (12128): Elaborating entity "ULA" for hierarchy "ULA:ALU" File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/processador.v Line: 157
+Info (12128): Elaborating entity "ctrl_undd" for hierarchy "ctrl_undd:Controle" File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/processador.v Line: 195
+Info (12128): Elaborating entity "ULA_ctrl" for hierarchy "ctrl_undd:Controle|ULA_ctrl:ctrlULA" File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/ctrl_undd.v Line: 58
+Warning (10240): Verilog HDL Always Construct warning at ula_ctrl.v(20): inferring latch(es) for variable "controle", which holds its previous value in one or more paths through the always construct File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/ula_ctrl.v Line: 20
+Info (10041): Inferred latch for "controle[0]" at ula_ctrl.v(55) File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/ula_ctrl.v Line: 55
+Info (10041): Inferred latch for "controle[1]" at ula_ctrl.v(55) File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/ula_ctrl.v Line: 55
+Info (10041): Inferred latch for "controle[2]" at ula_ctrl.v(55) File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/ula_ctrl.v Line: 55
+Info (10041): Inferred latch for "controle[3]" at ula_ctrl.v(55) File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/ula_ctrl.v Line: 55
+Info (10041): Inferred latch for "controle[4]" at ula_ctrl.v(55) File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/ula_ctrl.v Line: 55
+Warning (127007): Memory Initialization File or Hexadecimal (Intel-Format) File "/home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/db/teste.ram0_memoria_5f521753_0.hdl.mif" contains "don't care" values -- overwriting them with 0s
 Warning (276020): Inferred RAM node "bancoReg:banco|registradores_rtl_0" from synchronous design logic.  Pass-through logic has been added to match the read-during-write behavior of the original design.
 Warning (276027): Inferred dual-clock RAM node "stack:Pilha|stack_rtl_0" from synchronous design logic.  The read-during-write behavior of a dual-clock RAM is undefined and may not match the behavior of the original design.
 Info (276014): Found 1 instances of uninferred RAM logic
-    Info (276013): RAM logic "memoria:MEM|ram" is uninferred because MIF is not supported for the selected family File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/memoria.v Line: 7
-Warning (127007): Memory Initialization File or Hexadecimal (Intel-Format) File "C:/Users/M A C/Desktop/Processador-AOC/Verilog/db/teste.ram0_memoria_5f521753.hdl.mif" contains "don't care" values -- overwriting them with 0s
+    Info (276013): RAM logic "memoria:MEM|ram" is uninferred because MIF is not supported for the selected family File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/memoria.v Line: 7
+Warning (127007): Memory Initialization File or Hexadecimal (Intel-Format) File "/home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/db/teste.ram0_memoria_5f521753_0.hdl.mif" contains "don't care" values -- overwriting them with 0s
 Info (19000): Inferred 3 megafunctions from design logic
     Info (276029): Inferred altsyncram megafunction from the following design logic: "bancoReg:banco|registradores_rtl_0" 
-        Info (286033): Parameter OPERATION_MODE set to DUAL_PORT
-        Info (286033): Parameter WIDTH_A set to 32
-        Info (286033): Parameter WIDTHAD_A set to 5
-        Info (286033): Parameter NUMWORDS_A set to 32
-        Info (286033): Parameter WIDTH_B set to 32
-        Info (286033): Parameter WIDTHAD_B set to 5
-        Info (286033): Parameter NUMWORDS_B set to 32
-        Info (286033): Parameter ADDRESS_ACLR_A set to NONE
-        Info (286033): Parameter OUTDATA_REG_B set to UNREGISTERED
-        Info (286033): Parameter ADDRESS_ACLR_B set to NONE
-        Info (286033): Parameter OUTDATA_ACLR_B set to NONE
-        Info (286033): Parameter ADDRESS_REG_B set to CLOCK0
-        Info (286033): Parameter INDATA_ACLR_A set to NONE
-        Info (286033): Parameter WRCONTROL_ACLR_A set to NONE
-        Info (286033): Parameter READ_DURING_WRITE_MODE_MIXED_PORTS set to OLD_DATA
-    Info (276029): Inferred altsyncram megafunction from the following design logic: "bancoReg:banco|registradores_rtl_1" 
         Info (286033): Parameter OPERATION_MODE set to DUAL_PORT
         Info (286033): Parameter WIDTH_A set to 32
         Info (286033): Parameter WIDTHAD_A set to 5
@@ -1395,17 +1353,32 @@ Info (19000): Inferred 3 megafunctions from design logic
         Info (286033): Parameter ADDRESS_REG_B set to CLOCK1
         Info (286033): Parameter INDATA_ACLR_A set to NONE
         Info (286033): Parameter WRCONTROL_ACLR_A set to NONE
-Info (278001): Inferred 10 megafunctions from design logic
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "moduloSaida:ModOUT|Div1" File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/moduloSaida.v Line: 29
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "moduloSaida:ModOUT|Div2" File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/moduloSaida.v Line: 31
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "moduloSaida:ModOUT|Div3" File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/moduloSaida.v Line: 33
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "moduloSaida:ModOUT|Mod3" File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/moduloSaida.v Line: 34
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "moduloSaida:ModOUT|Div0" File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/moduloSaida.v Line: 21
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "moduloSaida:ModOUT|Mod2" File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/moduloSaida.v Line: 32
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "moduloSaida:ModOUT|Mod1" File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/moduloSaida.v Line: 30
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "moduloSaida:ModOUT|Mod0" File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/moduloSaida.v Line: 28
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "ULA:ALU|Div0" File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/ula.v Line: 33
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "ULA:ALU|Mult0" File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/ula.v Line: 29
+    Info (276029): Inferred altsyncram megafunction from the following design logic: "bancoReg:banco|registradores_rtl_1" 
+        Info (286033): Parameter OPERATION_MODE set to DUAL_PORT
+        Info (286033): Parameter WIDTH_A set to 32
+        Info (286033): Parameter WIDTHAD_A set to 5
+        Info (286033): Parameter NUMWORDS_A set to 32
+        Info (286033): Parameter WIDTH_B set to 32
+        Info (286033): Parameter WIDTHAD_B set to 5
+        Info (286033): Parameter NUMWORDS_B set to 32
+        Info (286033): Parameter ADDRESS_ACLR_A set to NONE
+        Info (286033): Parameter OUTDATA_REG_B set to UNREGISTERED
+        Info (286033): Parameter ADDRESS_ACLR_B set to NONE
+        Info (286033): Parameter OUTDATA_ACLR_B set to NONE
+        Info (286033): Parameter ADDRESS_REG_B set to CLOCK0
+        Info (286033): Parameter INDATA_ACLR_A set to NONE
+        Info (286033): Parameter WRCONTROL_ACLR_A set to NONE
+        Info (286033): Parameter READ_DURING_WRITE_MODE_MIXED_PORTS set to OLD_DATA
+Info (278001): Inferred 9 megafunctions from design logic
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "moduloSaida:ModOUT|Div0" File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/moduloSaida.v Line: 29
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "moduloSaida:ModOUT|Div1" File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/moduloSaida.v Line: 31
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "moduloSaida:ModOUT|Div2" File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/moduloSaida.v Line: 33
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "moduloSaida:ModOUT|Mod3" File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/moduloSaida.v Line: 34
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "moduloSaida:ModOUT|Mod2" File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/moduloSaida.v Line: 32
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "moduloSaida:ModOUT|Mod1" File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/moduloSaida.v Line: 30
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "moduloSaida:ModOUT|Mod0" File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/moduloSaida.v Line: 28
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "ULA:ALU|Div0" File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/ula.v Line: 33
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "ULA:ALU|Mult0" File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/ula.v Line: 29
 Info (12130): Elaborated megafunction instantiation "bancoReg:banco|altsyncram:registradores_rtl_0"
 Info (12133): Instantiated megafunction "bancoReg:banco|altsyncram:registradores_rtl_0" with the following parameter:
     Info (12134): Parameter "OPERATION_MODE" = "DUAL_PORT"
@@ -1424,7 +1397,25 @@ Info (12133): Instantiated megafunction "bancoReg:banco|altsyncram:registradores
     Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
     Info (12134): Parameter "READ_DURING_WRITE_MODE_MIXED_PORTS" = "OLD_DATA"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_bmh1.tdf
-    Info (12023): Found entity 1: altsyncram_bmh1 File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/db/altsyncram_bmh1.tdf Line: 28
+    Info (12023): Found entity 1: altsyncram_bmh1 File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/db/altsyncram_bmh1.tdf Line: 28
+Info (12130): Elaborated megafunction instantiation "stack:Pilha|altsyncram:stack_rtl_0"
+Info (12133): Instantiated megafunction "stack:Pilha|altsyncram:stack_rtl_0" with the following parameter:
+    Info (12134): Parameter "OPERATION_MODE" = "DUAL_PORT"
+    Info (12134): Parameter "WIDTH_A" = "32"
+    Info (12134): Parameter "WIDTHAD_A" = "4"
+    Info (12134): Parameter "NUMWORDS_A" = "10"
+    Info (12134): Parameter "WIDTH_B" = "32"
+    Info (12134): Parameter "WIDTHAD_B" = "4"
+    Info (12134): Parameter "NUMWORDS_B" = "10"
+    Info (12134): Parameter "ADDRESS_ACLR_A" = "NONE"
+    Info (12134): Parameter "OUTDATA_REG_B" = "UNREGISTERED"
+    Info (12134): Parameter "ADDRESS_ACLR_B" = "NONE"
+    Info (12134): Parameter "OUTDATA_ACLR_B" = "NONE"
+    Info (12134): Parameter "ADDRESS_REG_B" = "CLOCK1"
+    Info (12134): Parameter "INDATA_ACLR_A" = "NONE"
+    Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_0ac1.tdf
+    Info (12023): Found entity 1: altsyncram_0ac1 File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/db/altsyncram_0ac1.tdf Line: 28
 Info (12130): Elaborated megafunction instantiation "bancoReg:banco|altsyncram:registradores_rtl_1"
 Info (12133): Instantiated megafunction "bancoReg:banco|altsyncram:registradores_rtl_1" with the following parameter:
     Info (12134): Parameter "OPERATION_MODE" = "DUAL_PORT"
@@ -1443,75 +1434,45 @@ Info (12133): Instantiated megafunction "bancoReg:banco|altsyncram:registradores
     Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
     Info (12134): Parameter "READ_DURING_WRITE_MODE_MIXED_PORTS" = "OLD_DATA"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_47g1.tdf
-    Info (12023): Found entity 1: altsyncram_47g1 File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/db/altsyncram_47g1.tdf Line: 28
-Info (12130): Elaborated megafunction instantiation "stack:Pilha|altsyncram:stack_rtl_0"
-Info (12133): Instantiated megafunction "stack:Pilha|altsyncram:stack_rtl_0" with the following parameter:
-    Info (12134): Parameter "OPERATION_MODE" = "DUAL_PORT"
-    Info (12134): Parameter "WIDTH_A" = "32"
-    Info (12134): Parameter "WIDTHAD_A" = "4"
-    Info (12134): Parameter "NUMWORDS_A" = "10"
-    Info (12134): Parameter "WIDTH_B" = "32"
-    Info (12134): Parameter "WIDTHAD_B" = "4"
-    Info (12134): Parameter "NUMWORDS_B" = "10"
-    Info (12134): Parameter "ADDRESS_ACLR_A" = "NONE"
-    Info (12134): Parameter "OUTDATA_REG_B" = "UNREGISTERED"
-    Info (12134): Parameter "ADDRESS_ACLR_B" = "NONE"
-    Info (12134): Parameter "OUTDATA_ACLR_B" = "NONE"
-    Info (12134): Parameter "ADDRESS_REG_B" = "CLOCK1"
-    Info (12134): Parameter "INDATA_ACLR_A" = "NONE"
-    Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
-Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_0ac1.tdf
-    Info (12023): Found entity 1: altsyncram_0ac1 File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/db/altsyncram_0ac1.tdf Line: 28
-Info (12130): Elaborated megafunction instantiation "moduloSaida:ModOUT|lpm_divide:Div1" File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/moduloSaida.v Line: 29
-Info (12133): Instantiated megafunction "moduloSaida:ModOUT|lpm_divide:Div1" with the following parameter: File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/moduloSaida.v Line: 29
+    Info (12023): Found entity 1: altsyncram_47g1 File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/db/altsyncram_47g1.tdf Line: 28
+Info (12130): Elaborated megafunction instantiation "moduloSaida:ModOUT|lpm_divide:Div0" File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/moduloSaida.v Line: 29
+Info (12133): Instantiated megafunction "moduloSaida:ModOUT|lpm_divide:Div0" with the following parameter: File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/moduloSaida.v Line: 29
     Info (12134): Parameter "LPM_WIDTHN" = "32"
     Info (12134): Parameter "LPM_WIDTHD" = "4"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_mtl.tdf
-    Info (12023): Found entity 1: lpm_divide_mtl File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/db/lpm_divide_mtl.tdf Line: 25
+    Info (12023): Found entity 1: lpm_divide_mtl File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/db/lpm_divide_mtl.tdf Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_olh.tdf
-    Info (12023): Found entity 1: sign_div_unsign_olh File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/db/sign_div_unsign_olh.tdf Line: 25
+    Info (12023): Found entity 1: sign_div_unsign_olh File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/db/sign_div_unsign_olh.tdf Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_qhe.tdf
-    Info (12023): Found entity 1: alt_u_div_qhe File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 27
+    Info (12023): Found entity 1: alt_u_div_qhe File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 27
 Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_t3c.tdf
-    Info (12023): Found entity 1: add_sub_t3c File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/db/add_sub_t3c.tdf Line: 23
+    Info (12023): Found entity 1: add_sub_t3c File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/db/add_sub_t3c.tdf Line: 23
 Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_u3c.tdf
-    Info (12023): Found entity 1: add_sub_u3c File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/db/add_sub_u3c.tdf Line: 23
-Info (12130): Elaborated megafunction instantiation "moduloSaida:ModOUT|lpm_divide:Mod3" File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/moduloSaida.v Line: 34
-Info (12133): Instantiated megafunction "moduloSaida:ModOUT|lpm_divide:Mod3" with the following parameter: File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/moduloSaida.v Line: 34
+    Info (12023): Found entity 1: add_sub_u3c File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/db/add_sub_u3c.tdf Line: 23
+Info (12130): Elaborated megafunction instantiation "moduloSaida:ModOUT|lpm_divide:Mod3" File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/moduloSaida.v Line: 34
+Info (12133): Instantiated megafunction "moduloSaida:ModOUT|lpm_divide:Mod3" with the following parameter: File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/moduloSaida.v Line: 34
     Info (12134): Parameter "LPM_WIDTHN" = "32"
     Info (12134): Parameter "LPM_WIDTHD" = "4"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_pll.tdf
-    Info (12023): Found entity 1: lpm_divide_pll File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/db/lpm_divide_pll.tdf Line: 25
-Info (12130): Elaborated megafunction instantiation "moduloSaida:ModOUT|lpm_divide:Div0" File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/moduloSaida.v Line: 21
-Info (12133): Instantiated megafunction "moduloSaida:ModOUT|lpm_divide:Div0" with the following parameter: File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/moduloSaida.v Line: 21
-    Info (12134): Parameter "LPM_WIDTHN" = "32"
-    Info (12134): Parameter "LPM_WIDTHD" = "14"
-    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
-    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
-Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_7vl.tdf
-    Info (12023): Found entity 1: lpm_divide_7vl File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/db/lpm_divide_7vl.tdf Line: 25
-Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_9nh.tdf
-    Info (12023): Found entity 1: sign_div_unsign_9nh File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/db/sign_div_unsign_9nh.tdf Line: 25
-Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_ske.tdf
-    Info (12023): Found entity 1: alt_u_div_ske File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/db/alt_u_div_ske.tdf Line: 27
-Info (12130): Elaborated megafunction instantiation "ULA:ALU|lpm_divide:Div0" File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/ula.v Line: 33
-Info (12133): Instantiated megafunction "ULA:ALU|lpm_divide:Div0" with the following parameter: File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/ula.v Line: 33
+    Info (12023): Found entity 1: lpm_divide_pll File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/db/lpm_divide_pll.tdf Line: 25
+Info (12130): Elaborated megafunction instantiation "ULA:ALU|lpm_divide:Div0" File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/ula.v Line: 33
+Info (12133): Instantiated megafunction "ULA:ALU|lpm_divide:Div0" with the following parameter: File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/ula.v Line: 33
     Info (12134): Parameter "LPM_WIDTHN" = "32"
     Info (12134): Parameter "LPM_WIDTHD" = "32"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_8vl.tdf
-    Info (12023): Found entity 1: lpm_divide_8vl File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/db/lpm_divide_8vl.tdf Line: 25
+    Info (12023): Found entity 1: lpm_divide_8vl File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/db/lpm_divide_8vl.tdf Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_anh.tdf
-    Info (12023): Found entity 1: sign_div_unsign_anh File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/db/sign_div_unsign_anh.tdf Line: 25
+    Info (12023): Found entity 1: sign_div_unsign_anh File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/db/sign_div_unsign_anh.tdf Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_tke.tdf
-    Info (12023): Found entity 1: alt_u_div_tke File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/db/alt_u_div_tke.tdf Line: 27
-Info (12130): Elaborated megafunction instantiation "ULA:ALU|lpm_mult:Mult0" File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/ula.v Line: 29
-Info (12133): Instantiated megafunction "ULA:ALU|lpm_mult:Mult0" with the following parameter: File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/ula.v Line: 29
+    Info (12023): Found entity 1: alt_u_div_tke File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/db/alt_u_div_tke.tdf Line: 27
+Info (12130): Elaborated megafunction instantiation "ULA:ALU|lpm_mult:Mult0" File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/ula.v Line: 29
+Info (12133): Instantiated megafunction "ULA:ALU|lpm_mult:Mult0" with the following parameter: File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/ula.v Line: 29
     Info (12134): Parameter "LPM_WIDTHA" = "32"
     Info (12134): Parameter "LPM_WIDTHB" = "32"
     Info (12134): Parameter "LPM_WIDTHP" = "64"
@@ -1522,163 +1483,163 @@ Info (12133): Instantiated megafunction "ULA:ALU|lpm_mult:Mult0" with the follow
     Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "NO"
     Info (12134): Parameter "MAXIMIZE_SPEED" = "5"
 Info (12021): Found 1 design units, including 1 entities, in source file db/mult_tns.tdf
-    Info (12023): Found entity 1: mult_tns File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/db/mult_tns.tdf Line: 31
+    Info (12023): Found entity 1: mult_tns File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/db/mult_tns.tdf Line: 31
 Warning (14284): Synthesized away the following node(s):
     Warning (14285): Synthesized away the following DSP element node(s):
-        Warning (14320): Synthesized away node "ULA:ALU|lpm_mult:Mult0|mult_tns:auto_generated|mac_mult7" File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/db/mult_tns.tdf Line: 67
-        Warning (14320): Synthesized away node "ULA:ALU|lpm_mult:Mult0|mult_tns:auto_generated|mac_out8" File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/db/mult_tns.tdf Line: 91
+        Warning (14320): Synthesized away node "ULA:ALU|lpm_mult:Mult0|mult_tns:auto_generated|mac_mult7" File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/db/mult_tns.tdf Line: 67
+        Warning (14320): Synthesized away node "ULA:ALU|lpm_mult:Mult0|mult_tns:auto_generated|mac_out8" File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/db/mult_tns.tdf Line: 91
 Warning (12241): 8 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Info (13014): Ignored 84 buffer(s)
     Info (13019): Ignored 84 SOFT buffer(s)
-Warning (13012): Latch ctrl_undd:Controle|ULA_ctrl:ctrlULA|controle[3] has unsafe behavior File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/ula_ctrl.v Line: 55
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal registrador32b:ri|saida[3] File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/registrador32b.v Line: 6
-Warning (13012): Latch ctrl_undd:Controle|ULA_ctrl:ctrlULA|controle[4] has unsafe behavior File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/ula_ctrl.v Line: 55
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ctrl_undd:Controle|OpULA[1] File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/ctrl_undd.v Line: 59
-Warning (13012): Latch ctrl_undd:Controle|ULA_ctrl:ctrlULA|controle[1] has unsafe behavior File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/ula_ctrl.v Line: 55
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal registrador32b:ri|saida[5] File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/registrador32b.v Line: 6
-Warning (13012): Latch ctrl_undd:Controle|ULA_ctrl:ctrlULA|controle[2] has unsafe behavior File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/ula_ctrl.v Line: 55
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal registrador32b:ri|saida[2] File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/registrador32b.v Line: 6
-Warning (13012): Latch ctrl_undd:Controle|ULA_ctrl:ctrlULA|controle[0] has unsafe behavior File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/ula_ctrl.v Line: 55
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal registrador32b:ri|saida[27] File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/registrador32b.v Line: 6
+Warning (13012): Latch ctrl_undd:Controle|ULA_ctrl:ctrlULA|controle[3] has unsafe behavior File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/ula_ctrl.v Line: 55
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal registrador32b:ri|saida[3] File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/registrador32b.v Line: 6
+Warning (13012): Latch ctrl_undd:Controle|ULA_ctrl:ctrlULA|controle[4] has unsafe behavior File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/ula_ctrl.v Line: 55
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ctrl_undd:Controle|OpULA[1] File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/ctrl_undd.v Line: 60
+Warning (13012): Latch ctrl_undd:Controle|ULA_ctrl:ctrlULA|controle[1] has unsafe behavior File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/ula_ctrl.v Line: 55
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal registrador32b:ri|saida[5] File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/registrador32b.v Line: 6
+Warning (13012): Latch ctrl_undd:Controle|ULA_ctrl:ctrlULA|controle[2] has unsafe behavior File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/ula_ctrl.v Line: 55
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal registrador32b:ri|saida[2] File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/registrador32b.v Line: 6
+Warning (13012): Latch ctrl_undd:Controle|ULA_ctrl:ctrlULA|controle[0] has unsafe behavior File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/ula_ctrl.v Line: 55
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal registrador32b:ri|saida[27] File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/registrador32b.v Line: 6
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "un" is stuck at VCC File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/processador.v Line: 17
+    Warning (13410): Pin "un" is stuck at VCC File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/processador.v Line: 18
 Info (286030): Timing-Driven Synthesis is running
 Info (17016): Found the following redundant logic cells in design
-    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Div2|lpm_divide_mtl:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_6_result_int[0]~10" File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 167
-    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Div2|lpm_divide_mtl:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_7_result_int[0]~10" File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 172
-    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Div2|lpm_divide_mtl:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_8_result_int[0]~10" File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 177
-    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Div3|lpm_divide_mtl:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_9_result_int[0]~10" File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 182
-    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Div2|lpm_divide_mtl:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_9_result_int[0]~10" File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 182
-    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Div3|lpm_divide_mtl:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_10_result_int[0]~10" File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 37
-    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Div2|lpm_divide_mtl:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_10_result_int[0]~10" File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 37
-    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Div3|lpm_divide_mtl:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_11_result_int[0]~10" File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 42
-    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Div2|lpm_divide_mtl:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_11_result_int[0]~10" File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 42
-    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Div3|lpm_divide_mtl:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_12_result_int[0]~10" File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 47
-    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Div2|lpm_divide_mtl:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_12_result_int[0]~10" File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 47
-    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Div3|lpm_divide_mtl:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_13_result_int[0]~10" File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 52
-    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Div2|lpm_divide_mtl:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_13_result_int[0]~10" File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 52
-    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Div3|lpm_divide_mtl:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_14_result_int[0]~10" File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 57
-    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Div2|lpm_divide_mtl:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_14_result_int[0]~10" File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 57
-    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Div3|lpm_divide_mtl:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_15_result_int[0]~10" File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 62
-    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Div2|lpm_divide_mtl:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_15_result_int[0]~10" File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 62
-    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Div3|lpm_divide_mtl:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_16_result_int[0]~10" File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 67
-    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Div2|lpm_divide_mtl:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_16_result_int[0]~10" File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 67
-    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Div3|lpm_divide_mtl:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_17_result_int[0]~10" File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 72
-    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Div2|lpm_divide_mtl:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_17_result_int[0]~10" File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 72
-    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Div3|lpm_divide_mtl:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_18_result_int[0]~10" File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 77
-    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Div2|lpm_divide_mtl:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_18_result_int[0]~10" File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 77
-    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Div3|lpm_divide_mtl:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_19_result_int[0]~10" File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 82
-    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Div2|lpm_divide_mtl:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_19_result_int[0]~10" File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 82
-    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Div3|lpm_divide_mtl:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_20_result_int[0]~10" File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 92
-    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Div2|lpm_divide_mtl:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_20_result_int[0]~10" File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 92
-    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Div3|lpm_divide_mtl:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_21_result_int[0]~10" File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 97
-    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Div2|lpm_divide_mtl:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_21_result_int[0]~10" File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 97
-    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Div3|lpm_divide_mtl:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_22_result_int[0]~10" File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 102
-    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Div2|lpm_divide_mtl:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_22_result_int[0]~10" File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 102
-    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Div3|lpm_divide_mtl:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_23_result_int[0]~10" File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 107
-    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Div2|lpm_divide_mtl:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_23_result_int[0]~10" File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 107
-    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Div3|lpm_divide_mtl:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_24_result_int[0]~10" File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 112
-    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Div2|lpm_divide_mtl:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_24_result_int[0]~10" File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 112
-    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Div3|lpm_divide_mtl:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_25_result_int[0]~10" File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 117
-    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Div2|lpm_divide_mtl:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_25_result_int[0]~10" File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 117
-    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Div3|lpm_divide_mtl:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_26_result_int[0]~10" File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 122
-    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Div2|lpm_divide_mtl:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_26_result_int[0]~10" File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 122
-    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Div3|lpm_divide_mtl:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_27_result_int[0]~10" File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 127
-    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Div2|lpm_divide_mtl:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_27_result_int[0]~10" File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 127
-    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Div3|lpm_divide_mtl:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_28_result_int[0]~10" File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 132
-    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Div2|lpm_divide_mtl:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_28_result_int[0]~10" File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 132
-    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Div3|lpm_divide_mtl:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_29_result_int[0]~10" File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 137
-    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Div2|lpm_divide_mtl:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_29_result_int[0]~10" File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 137
-    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Div3|lpm_divide_mtl:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_30_result_int[0]~10" File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 147
-    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Mod3|lpm_divide_pll:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_31_result_int[0]~0" File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 152
-    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Mod3|lpm_divide_pll:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_12_result_int[0]~10" File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 47
-    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Mod3|lpm_divide_pll:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_13_result_int[0]~10" File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 52
-    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Mod3|lpm_divide_pll:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_14_result_int[0]~10" File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 57
-    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Mod3|lpm_divide_pll:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_15_result_int[0]~10" File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 62
-    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Mod3|lpm_divide_pll:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_16_result_int[0]~10" File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 67
-    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Mod3|lpm_divide_pll:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_17_result_int[0]~10" File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 72
-    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Mod3|lpm_divide_pll:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_18_result_int[0]~10" File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 77
-    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Mod3|lpm_divide_pll:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_19_result_int[0]~10" File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 82
-    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Mod3|lpm_divide_pll:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_20_result_int[0]~10" File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 92
-    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Mod3|lpm_divide_pll:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_21_result_int[0]~10" File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 97
-    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Mod3|lpm_divide_pll:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_22_result_int[0]~10" File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 102
-    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Mod3|lpm_divide_pll:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_23_result_int[0]~10" File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 107
-    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Mod3|lpm_divide_pll:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_24_result_int[0]~10" File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 112
-    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Mod3|lpm_divide_pll:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_25_result_int[0]~10" File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 117
-    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Mod3|lpm_divide_pll:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_26_result_int[0]~10" File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 122
-    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Mod3|lpm_divide_pll:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_27_result_int[0]~10" File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 127
-    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Mod3|lpm_divide_pll:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_28_result_int[0]~10" File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 132
-    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Mod3|lpm_divide_pll:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_29_result_int[0]~10" File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 137
-    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Mod3|lpm_divide_pll:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_30_result_int[0]~10" File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 147
-    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Div2|lpm_divide_mtl:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_30_result_int[0]~10" File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 147
-    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Mod2|lpm_divide_pll:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_31_result_int[0]~0" File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 152
-    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Mod2|lpm_divide_pll:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_9_result_int[0]~10" File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 182
-    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Mod2|lpm_divide_pll:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_10_result_int[0]~10" File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 37
-    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Mod2|lpm_divide_pll:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_11_result_int[0]~10" File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 42
-    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Mod2|lpm_divide_pll:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_12_result_int[0]~10" File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 47
-    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Mod2|lpm_divide_pll:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_13_result_int[0]~10" File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 52
-    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Mod2|lpm_divide_pll:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_14_result_int[0]~10" File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 57
-    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Mod2|lpm_divide_pll:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_15_result_int[0]~10" File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 62
-    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Mod2|lpm_divide_pll:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_16_result_int[0]~10" File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 67
-    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Mod2|lpm_divide_pll:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_17_result_int[0]~10" File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 72
-    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Mod2|lpm_divide_pll:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_18_result_int[0]~10" File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 77
-    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Mod2|lpm_divide_pll:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_19_result_int[0]~10" File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 82
-    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Mod2|lpm_divide_pll:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_20_result_int[0]~10" File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 92
-    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Mod2|lpm_divide_pll:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_21_result_int[0]~10" File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 97
-    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Mod2|lpm_divide_pll:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_22_result_int[0]~10" File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 102
-    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Mod2|lpm_divide_pll:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_23_result_int[0]~10" File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 107
-    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Mod2|lpm_divide_pll:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_24_result_int[0]~10" File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 112
-    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Mod2|lpm_divide_pll:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_25_result_int[0]~10" File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 117
-    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Mod2|lpm_divide_pll:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_26_result_int[0]~10" File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 122
-    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Mod2|lpm_divide_pll:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_27_result_int[0]~10" File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 127
-    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Mod2|lpm_divide_pll:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_28_result_int[0]~10" File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 132
-    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Mod2|lpm_divide_pll:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_29_result_int[0]~10" File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 137
-    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Mod2|lpm_divide_pll:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_30_result_int[0]~10" File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 147
-    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Mod1|lpm_divide_pll:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_31_result_int[0]~0" File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 152
-    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Mod1|lpm_divide_pll:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_6_result_int[0]~10" File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 167
-    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Mod1|lpm_divide_pll:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_7_result_int[0]~10" File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 172
-    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Mod1|lpm_divide_pll:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_8_result_int[0]~10" File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 177
-    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Mod1|lpm_divide_pll:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_9_result_int[0]~10" File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 182
-    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Mod1|lpm_divide_pll:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_10_result_int[0]~10" File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 37
-    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Mod1|lpm_divide_pll:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_11_result_int[0]~10" File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 42
-    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Mod1|lpm_divide_pll:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_12_result_int[0]~10" File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 47
-    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Mod1|lpm_divide_pll:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_13_result_int[0]~10" File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 52
-    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Mod1|lpm_divide_pll:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_14_result_int[0]~10" File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 57
-    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Mod1|lpm_divide_pll:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_15_result_int[0]~10" File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 62
-    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Mod1|lpm_divide_pll:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_16_result_int[0]~10" File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 67
-    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Mod1|lpm_divide_pll:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_17_result_int[0]~10" File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 72
-    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Mod1|lpm_divide_pll:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_18_result_int[0]~10" File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 77
-    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Mod1|lpm_divide_pll:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_19_result_int[0]~10" File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 82
-    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Mod1|lpm_divide_pll:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_20_result_int[0]~10" File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 92
-    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Mod1|lpm_divide_pll:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_21_result_int[0]~10" File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 97
-    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Mod1|lpm_divide_pll:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_22_result_int[0]~10" File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 102
-    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Mod1|lpm_divide_pll:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_23_result_int[0]~10" File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 107
-    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Mod1|lpm_divide_pll:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_24_result_int[0]~10" File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 112
-    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Mod1|lpm_divide_pll:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_25_result_int[0]~10" File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 117
-    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Mod1|lpm_divide_pll:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_26_result_int[0]~10" File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 122
-    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Mod1|lpm_divide_pll:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_27_result_int[0]~10" File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 127
-    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Mod1|lpm_divide_pll:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_28_result_int[0]~10" File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 132
-    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Mod1|lpm_divide_pll:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_29_result_int[0]~10" File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 137
-    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Mod1|lpm_divide_pll:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_30_result_int[0]~10" File: C:/Users/M A C/Desktop/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 147
-Info (144001): Generated suppressed messages file C:/Users/M A C/Desktop/Processador-AOC/Verilog/output_files/teste.map.smsg
+    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Div1|lpm_divide_mtl:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_6_result_int[0]~10" File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 167
+    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Div1|lpm_divide_mtl:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_7_result_int[0]~10" File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 172
+    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Div1|lpm_divide_mtl:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_8_result_int[0]~10" File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 177
+    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Div2|lpm_divide_mtl:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_9_result_int[0]~10" File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 182
+    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Div1|lpm_divide_mtl:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_9_result_int[0]~10" File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 182
+    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Div2|lpm_divide_mtl:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_10_result_int[0]~10" File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 37
+    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Div1|lpm_divide_mtl:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_10_result_int[0]~10" File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 37
+    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Div2|lpm_divide_mtl:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_11_result_int[0]~10" File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 42
+    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Div1|lpm_divide_mtl:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_11_result_int[0]~10" File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 42
+    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Div2|lpm_divide_mtl:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_12_result_int[0]~10" File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 47
+    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Div1|lpm_divide_mtl:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_12_result_int[0]~10" File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 47
+    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Div2|lpm_divide_mtl:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_13_result_int[0]~10" File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 52
+    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Div1|lpm_divide_mtl:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_13_result_int[0]~10" File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 52
+    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Div2|lpm_divide_mtl:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_14_result_int[0]~10" File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 57
+    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Div1|lpm_divide_mtl:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_14_result_int[0]~10" File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 57
+    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Div2|lpm_divide_mtl:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_15_result_int[0]~10" File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 62
+    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Div1|lpm_divide_mtl:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_15_result_int[0]~10" File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 62
+    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Div2|lpm_divide_mtl:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_16_result_int[0]~10" File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 67
+    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Div1|lpm_divide_mtl:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_16_result_int[0]~10" File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 67
+    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Div2|lpm_divide_mtl:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_17_result_int[0]~10" File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 72
+    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Div1|lpm_divide_mtl:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_17_result_int[0]~10" File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 72
+    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Div2|lpm_divide_mtl:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_18_result_int[0]~10" File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 77
+    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Div1|lpm_divide_mtl:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_18_result_int[0]~10" File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 77
+    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Div2|lpm_divide_mtl:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_19_result_int[0]~10" File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 82
+    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Div1|lpm_divide_mtl:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_19_result_int[0]~10" File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 82
+    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Div2|lpm_divide_mtl:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_20_result_int[0]~10" File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 92
+    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Div1|lpm_divide_mtl:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_20_result_int[0]~10" File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 92
+    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Div2|lpm_divide_mtl:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_21_result_int[0]~10" File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 97
+    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Div1|lpm_divide_mtl:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_21_result_int[0]~10" File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 97
+    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Div2|lpm_divide_mtl:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_22_result_int[0]~10" File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 102
+    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Div1|lpm_divide_mtl:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_22_result_int[0]~10" File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 102
+    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Div2|lpm_divide_mtl:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_23_result_int[0]~10" File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 107
+    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Div1|lpm_divide_mtl:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_23_result_int[0]~10" File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 107
+    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Div2|lpm_divide_mtl:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_24_result_int[0]~10" File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 112
+    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Div1|lpm_divide_mtl:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_24_result_int[0]~10" File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 112
+    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Div2|lpm_divide_mtl:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_25_result_int[0]~10" File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 117
+    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Div1|lpm_divide_mtl:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_25_result_int[0]~10" File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 117
+    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Div2|lpm_divide_mtl:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_26_result_int[0]~10" File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 122
+    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Div1|lpm_divide_mtl:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_26_result_int[0]~10" File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 122
+    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Div2|lpm_divide_mtl:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_27_result_int[0]~10" File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 127
+    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Div1|lpm_divide_mtl:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_27_result_int[0]~10" File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 127
+    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Div2|lpm_divide_mtl:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_28_result_int[0]~10" File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 132
+    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Div1|lpm_divide_mtl:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_28_result_int[0]~10" File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 132
+    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Div2|lpm_divide_mtl:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_29_result_int[0]~10" File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 137
+    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Div1|lpm_divide_mtl:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_29_result_int[0]~10" File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 137
+    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Div2|lpm_divide_mtl:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_30_result_int[0]~10" File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 147
+    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Mod3|lpm_divide_pll:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_31_result_int[0]~0" File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 152
+    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Mod3|lpm_divide_pll:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_12_result_int[0]~10" File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 47
+    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Mod3|lpm_divide_pll:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_13_result_int[0]~10" File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 52
+    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Mod3|lpm_divide_pll:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_14_result_int[0]~10" File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 57
+    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Mod3|lpm_divide_pll:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_15_result_int[0]~10" File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 62
+    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Mod3|lpm_divide_pll:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_16_result_int[0]~10" File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 67
+    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Mod3|lpm_divide_pll:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_17_result_int[0]~10" File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 72
+    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Mod3|lpm_divide_pll:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_18_result_int[0]~10" File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 77
+    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Mod3|lpm_divide_pll:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_19_result_int[0]~10" File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 82
+    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Mod3|lpm_divide_pll:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_20_result_int[0]~10" File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 92
+    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Mod3|lpm_divide_pll:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_21_result_int[0]~10" File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 97
+    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Mod3|lpm_divide_pll:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_22_result_int[0]~10" File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 102
+    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Mod3|lpm_divide_pll:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_23_result_int[0]~10" File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 107
+    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Mod3|lpm_divide_pll:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_24_result_int[0]~10" File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 112
+    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Mod3|lpm_divide_pll:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_25_result_int[0]~10" File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 117
+    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Mod3|lpm_divide_pll:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_26_result_int[0]~10" File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 122
+    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Mod3|lpm_divide_pll:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_27_result_int[0]~10" File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 127
+    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Mod3|lpm_divide_pll:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_28_result_int[0]~10" File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 132
+    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Mod3|lpm_divide_pll:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_29_result_int[0]~10" File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 137
+    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Mod3|lpm_divide_pll:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_30_result_int[0]~10" File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 147
+    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Div1|lpm_divide_mtl:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_30_result_int[0]~10" File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 147
+    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Mod2|lpm_divide_pll:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_31_result_int[0]~0" File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 152
+    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Mod2|lpm_divide_pll:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_9_result_int[0]~10" File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 182
+    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Mod2|lpm_divide_pll:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_10_result_int[0]~10" File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 37
+    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Mod2|lpm_divide_pll:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_11_result_int[0]~10" File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 42
+    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Mod2|lpm_divide_pll:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_12_result_int[0]~10" File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 47
+    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Mod2|lpm_divide_pll:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_13_result_int[0]~10" File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 52
+    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Mod2|lpm_divide_pll:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_14_result_int[0]~10" File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 57
+    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Mod2|lpm_divide_pll:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_15_result_int[0]~10" File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 62
+    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Mod2|lpm_divide_pll:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_16_result_int[0]~10" File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 67
+    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Mod2|lpm_divide_pll:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_17_result_int[0]~10" File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 72
+    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Mod2|lpm_divide_pll:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_18_result_int[0]~10" File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 77
+    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Mod2|lpm_divide_pll:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_19_result_int[0]~10" File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 82
+    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Mod2|lpm_divide_pll:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_20_result_int[0]~10" File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 92
+    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Mod2|lpm_divide_pll:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_21_result_int[0]~10" File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 97
+    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Mod2|lpm_divide_pll:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_22_result_int[0]~10" File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 102
+    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Mod2|lpm_divide_pll:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_23_result_int[0]~10" File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 107
+    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Mod2|lpm_divide_pll:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_24_result_int[0]~10" File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 112
+    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Mod2|lpm_divide_pll:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_25_result_int[0]~10" File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 117
+    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Mod2|lpm_divide_pll:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_26_result_int[0]~10" File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 122
+    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Mod2|lpm_divide_pll:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_27_result_int[0]~10" File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 127
+    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Mod2|lpm_divide_pll:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_28_result_int[0]~10" File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 132
+    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Mod2|lpm_divide_pll:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_29_result_int[0]~10" File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 137
+    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Mod2|lpm_divide_pll:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_30_result_int[0]~10" File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 147
+    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Mod1|lpm_divide_pll:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_31_result_int[0]~0" File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 152
+    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Mod1|lpm_divide_pll:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_6_result_int[0]~10" File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 167
+    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Mod1|lpm_divide_pll:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_7_result_int[0]~10" File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 172
+    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Mod1|lpm_divide_pll:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_8_result_int[0]~10" File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 177
+    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Mod1|lpm_divide_pll:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_9_result_int[0]~10" File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 182
+    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Mod1|lpm_divide_pll:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_10_result_int[0]~10" File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 37
+    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Mod1|lpm_divide_pll:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_11_result_int[0]~10" File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 42
+    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Mod1|lpm_divide_pll:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_12_result_int[0]~10" File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 47
+    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Mod1|lpm_divide_pll:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_13_result_int[0]~10" File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 52
+    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Mod1|lpm_divide_pll:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_14_result_int[0]~10" File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 57
+    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Mod1|lpm_divide_pll:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_15_result_int[0]~10" File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 62
+    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Mod1|lpm_divide_pll:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_16_result_int[0]~10" File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 67
+    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Mod1|lpm_divide_pll:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_17_result_int[0]~10" File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 72
+    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Mod1|lpm_divide_pll:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_18_result_int[0]~10" File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 77
+    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Mod1|lpm_divide_pll:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_19_result_int[0]~10" File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 82
+    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Mod1|lpm_divide_pll:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_20_result_int[0]~10" File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 92
+    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Mod1|lpm_divide_pll:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_21_result_int[0]~10" File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 97
+    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Mod1|lpm_divide_pll:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_22_result_int[0]~10" File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 102
+    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Mod1|lpm_divide_pll:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_23_result_int[0]~10" File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 107
+    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Mod1|lpm_divide_pll:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_24_result_int[0]~10" File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 112
+    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Mod1|lpm_divide_pll:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_25_result_int[0]~10" File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 117
+    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Mod1|lpm_divide_pll:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_26_result_int[0]~10" File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 122
+    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Mod1|lpm_divide_pll:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_27_result_int[0]~10" File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 127
+    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Mod1|lpm_divide_pll:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_28_result_int[0]~10" File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 132
+    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Mod1|lpm_divide_pll:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_29_result_int[0]~10" File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 137
+    Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Mod1|lpm_divide_pll:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_30_result_int[0]~10" File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 147
+Info (144001): Generated suppressed messages file /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/output_files/teste.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 12345 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 11612 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 11 input pins
-    Info (21059): Implemented 34 output pins
-    Info (21061): Implemented 12198 logic cells
+    Info (21059): Implemented 40 output pins
+    Info (21061): Implemented 11459 logic cells
     Info (21064): Implemented 96 RAM segments
     Info (21062): Implemented 6 DSP elements
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 26 warnings
-    Info: Peak virtual memory: 4831 megabytes
-    Info: Processing ended: Mon Nov 16 18:29:55 2020
-    Info: Elapsed time: 00:00:43
-    Info: Total CPU time (on all processors): 00:01:03
+    Info: Peak virtual memory: 440 megabytes
+    Info: Processing ended: Thu Nov 19 20:34:29 2020
+    Info: Elapsed time: 00:00:28
+    Info: Total CPU time (on all processors): 00:00:47
 
 
 +------------------------------------------+
 ; Analysis & Synthesis Suppressed Messages ;
 +------------------------------------------+
-The suppressed messages can be found in C:/Users/M A C/Desktop/Processador-AOC/Verilog/output_files/teste.map.smsg.
+The suppressed messages can be found in /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/output_files/teste.map.smsg.
 
 
