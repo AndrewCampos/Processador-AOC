@@ -60,7 +60,7 @@ Abaixo estão descritas algumas configurações de operação do processador.
 
 + Tratamento de números negativos: Não Trata
 
-+ Linguagens suportadas: [C-minus](https://github.com/AndrewCampos/CompiladorC-)
++ Linguagens suportadas: [C-](https://github.com/AndrewCampos/CompiladorC-)
 
 ## Resultados
 
