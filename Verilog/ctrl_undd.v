@@ -405,12 +405,8 @@ module ctrl_undd(opcode,
 			SelMuxUlaB  <= 2'b00;
 			SelMuxIn    <=  1'b1;
 			
-			if(enter == 1'b1) begin
-				if(!ok) ok = 1'b1;
-				
-			end else if(enter == 1'b0) begin
-				if(ok) prox_estado = ESTADO15;
-			end
+			if(enter)
+				prox_estado <= ESTADO15;
 		end
 		
 		ESTADO13: begin // finaliza jmp, sw e lw
@@ -477,7 +473,8 @@ module ctrl_undd(opcode,
 			SelMuxUlaA  <=  1'b0;
 			SelMuxUlaB  <= 2'b00;
 			SelMuxIn    <=  1'b1;
-			prox_estado <= ESTADO0;
+			if(opcode != in || enter == 1'b0)
+				prox_estado <= ESTADO0;
 		end
 		endcase
 	end //fim always
