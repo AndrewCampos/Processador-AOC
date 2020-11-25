@@ -1,6 +1,6 @@
-module registrador32b(controle, set, clk, entrada, saida);
+module registrador32b(controle, clk, entrada, saida);
 		input [31:0] entrada;
-		input controle, clk, set;
+		input controle, clk;
 		output reg [31:0] saida;
 		
 always @(posedge clk)begin

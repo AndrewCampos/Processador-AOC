@@ -188,13 +188,13 @@ RESERVED_INPUT               : D5        :        :                   :         
 RESERVED_INPUT               : D6        :        :                   :         : 8         :                
 RESERVED_INPUT               : D7        :        :                   :         : 8         :                
 RESERVED_INPUT               : D8        :        :                   :         : 8         :                
-ov                           : D9        : output : 2.5 V             :         : 8         : N              
+RESERVED_INPUT               : D9        :        :                   :         : 8         :                
 RESERVED_INPUT               : D10       :        :                   :         : 8         :                
 GND                          : D11       : gnd    :                   :         :           :                
 dadosIN[2]                   : D12       : input  : 2.5 V             :         : 7         : Y              
 estado[4]                    : D13       : output : 2.5 V             :         : 7         : Y              
 estado[7]                    : D14       : output : 2.5 V             :         : 7         : Y              
-un                           : D15       : output : 2.5 V             :         : 7         : N              
+RESERVED_INPUT               : D15       :        :                   :         : 7         :                
 GND                          : D16       : gnd    :                   :         :           :                
 disp1[5]                     : D17       : output : 2.5 V             :         : 7         : Y              
 disp2[1]                     : D18       : output : 2.5 V             :         : 6         : Y              
@@ -238,7 +238,7 @@ VCCIO8                       : F11       : power  :                   : 2.5V    
 VCCIO7                       : F12       : power  :                   : 2.5V    : 7         :                
 GND                          : F13       : gnd    :                   :         :           :                
 VCCIO7                       : F14       : power  :                   : 2.5V    : 7         :                
-enter                        : F15       : input  : 2.5 V             :         : 7         : Y              
+chave                        : F15       : input  : 2.5 V             :         : 7         : Y              
 RESERVED_INPUT               : F16       :        :                   :         : 7         :                
 RESERVED_INPUT               : F17       :        :                   :         : 6         :                
 RESERVED_INPUT               : F18       :        :                   :         : 6         :                

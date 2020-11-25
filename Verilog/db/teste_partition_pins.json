@@ -156,10 +156,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "ov",
-					"strict" : false
-				},
-				{
 					"name" : "rst",
 					"strict" : false
 				},
@@ -200,7 +196,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "enter",
+					"name" : "chave",
 					"strict" : false
 				}
 			]

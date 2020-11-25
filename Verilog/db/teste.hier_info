@@ -7,7 +7,7 @@ dadosIN[4] => dadosIN[4].IN1
 dadosIN[5] => dadosIN[5].IN1
 dadosIN[6] => dadosIN[6].IN1
 dadosIN[7] => dadosIN[7].IN1
-enter => enter.IN1
+chave => chave.IN1
 rst => rst.IN2
 realClk => realClk.IN1
 estado[0] <= registradorPC:PC.led
@@ -48,8 +48,6 @@ disp1[3] <= moduloSaida:ModOUT.saida1
 disp1[2] <= moduloSaida:ModOUT.saida1
 disp1[1] <= moduloSaida:ModOUT.saida1
 disp1[0] <= moduloSaida:ModOUT.saida1
-un <= stack:Pilha.undrflw
-ov <= stack:Pilha.ovrflw
 
 
 |processador|divisor:divFreq
@@ -947,7 +945,6 @@ controle => saida[28]~reg0.ENA
 controle => saida[29]~reg0.ENA
 controle => saida[30]~reg0.ENA
 controle => saida[31]~reg0.ENA
-set => ~NO_FANOUT~
 clk => saida[0]~reg0.CLK
 clk => saida[1]~reg0.CLK
 clk => saida[2]~reg0.CLK
@@ -1079,7 +1076,6 @@ controle => saida[28]~reg0.ENA
 controle => saida[29]~reg0.ENA
 controle => saida[30]~reg0.ENA
 controle => saida[31]~reg0.ENA
-set => ~NO_FANOUT~
 clk => saida[0]~reg0.CLK
 clk => saida[1]~reg0.CLK
 clk => saida[2]~reg0.CLK
@@ -5077,7 +5073,6 @@ controle => saida[28]~reg0.ENA
 controle => saida[29]~reg0.ENA
 controle => saida[30]~reg0.ENA
 controle => saida[31]~reg0.ENA
-set => ~NO_FANOUT~
 clk => saida[0]~reg0.CLK
 clk => saida[1]~reg0.CLK
 clk => saida[2]~reg0.CLK
@@ -5209,7 +5204,6 @@ controle => saida[28]~reg0.ENA
 controle => saida[29]~reg0.ENA
 controle => saida[30]~reg0.ENA
 controle => saida[31]~reg0.ENA
-set => ~NO_FANOUT~
 clk => saida[0]~reg0.CLK
 clk => saida[1]~reg0.CLK
 clk => saida[2]~reg0.CLK
@@ -6802,7 +6796,6 @@ controle => saida[28]~reg0.ENA
 controle => saida[29]~reg0.ENA
 controle => saida[30]~reg0.ENA
 controle => saida[31]~reg0.ENA
-set => ~NO_FANOUT~
 clk => saida[0]~reg0.CLK
 clk => saida[1]~reg0.CLK
 clk => saida[2]~reg0.CLK
@@ -7126,6 +7119,14 @@ saida[28] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
 saida[29] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
 saida[30] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
 saida[31] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|processador|sigEnter:Pulso
+enter => always0.IN1
+enter => always0.IN1
+clk => sig~reg0.CLK
+clk => flag.CLK
+sig <= sig~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |processador|ctrl_undd:Controle
