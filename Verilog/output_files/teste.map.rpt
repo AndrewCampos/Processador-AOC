@@ -1,5 +1,5 @@
 Analysis & Synthesis report for teste
-Thu Nov 19 22:03:39 2020
+Wed Nov 25 17:49:46 2020
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -21,13 +21,13 @@ Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
  13. Registers Packed Into Inferred Megafunctions
  14. Multiplexer Restructuring Statistics (Restructuring Performed)
  15. Source assignments for bancoReg:banco|altsyncram:registradores_rtl_0|altsyncram_bmh1:auto_generated
- 16. Source assignments for stack:Pilha|altsyncram:stack_rtl_0|altsyncram_0ac1:auto_generated
- 17. Source assignments for bancoReg:banco|altsyncram:registradores_rtl_1|altsyncram_47g1:auto_generated
+ 16. Source assignments for bancoReg:banco|altsyncram:registradores_rtl_1|altsyncram_47g1:auto_generated
+ 17. Source assignments for stack:Pilha|altsyncram:stack_rtl_0|altsyncram_0ac1:auto_generated
  18. Parameter Settings for User Entity Instance: ctrl_undd:Controle
  19. Parameter Settings for User Entity Instance: ctrl_undd:Controle|ULA_ctrl:ctrlULA
  20. Parameter Settings for Inferred Entity Instance: bancoReg:banco|altsyncram:registradores_rtl_0
- 21. Parameter Settings for Inferred Entity Instance: stack:Pilha|altsyncram:stack_rtl_0
- 22. Parameter Settings for Inferred Entity Instance: bancoReg:banco|altsyncram:registradores_rtl_1
+ 21. Parameter Settings for Inferred Entity Instance: bancoReg:banco|altsyncram:registradores_rtl_1
+ 22. Parameter Settings for Inferred Entity Instance: stack:Pilha|altsyncram:stack_rtl_0
  23. Parameter Settings for Inferred Entity Instance: moduloSaida:ModOUT|lpm_divide:Div0
  24. Parameter Settings for Inferred Entity Instance: moduloSaida:ModOUT|lpm_divide:Div1
  25. Parameter Settings for Inferred Entity Instance: moduloSaida:ModOUT|lpm_divide:Div2
@@ -39,17 +39,17 @@ Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
  31. Parameter Settings for Inferred Entity Instance: ULA:ALU|lpm_mult:Mult0
  32. altsyncram Parameter Settings by Entity Instance
  33. lpm_mult Parameter Settings by Entity Instance
- 34. Port Connectivity Checks: "ctrl_undd:Controle"
- 35. Port Connectivity Checks: "mux4_32b:MuxPC"
- 36. Port Connectivity Checks: "registrador32b:saidaUla"
- 37. Port Connectivity Checks: "ULA:ALU"
- 38. Port Connectivity Checks: "mux4_32b:MuxUlaB"
- 39. Port Connectivity Checks: "registrador32b:B"
- 40. Port Connectivity Checks: "registrador32b:A"
- 41. Port Connectivity Checks: "registrador32b:Rmem"
- 42. Port Connectivity Checks: "mux2_32b:MuxIn"
- 43. Port Connectivity Checks: "memoria:MEM"
- 44. Port Connectivity Checks: "stack:Pilha"
+ 34. Port Connectivity Checks: "mux4_32b:MuxPC"
+ 35. Port Connectivity Checks: "registrador32b:saidaUla"
+ 36. Port Connectivity Checks: "ULA:ALU"
+ 37. Port Connectivity Checks: "mux4_32b:MuxUlaB"
+ 38. Port Connectivity Checks: "registrador32b:B"
+ 39. Port Connectivity Checks: "registrador32b:A"
+ 40. Port Connectivity Checks: "registrador32b:Rmem"
+ 41. Port Connectivity Checks: "mux2_32b:MuxIn"
+ 42. Port Connectivity Checks: "memoria:MEM"
+ 43. Port Connectivity Checks: "stack:Pilha"
+ 44. Port Connectivity Checks: "registradorPC:PC"
  45. Post-Synthesis Netlist Statistics for Top Partition
  46. Elapsed Time Per Partition
  47. Analysis & Synthesis Messages
@@ -80,15 +80,15 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Nov 19 22:03:39 2020       ;
+; Analysis & Synthesis Status        ; Successful - Wed Nov 25 17:49:46 2020       ;
 ; Quartus Prime Version              ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                      ; teste                                       ;
 ; Top-level Entity Name              ; processador                                 ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 11,382                                      ;
-;     Total combinational functions  ; 7,543                                       ;
-;     Dedicated logic registers      ; 4,466                                       ;
-; Total registers                    ; 4466                                        ;
+; Total logic elements               ; 11,356                                      ;
+;     Total combinational functions  ; 7,527                                       ;
+;     Dedicated logic registers      ; 4,457                                       ;
+; Total registers                    ; 4457                                        ;
 ; Total pins                         ; 49                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 2,368                                       ;
@@ -198,7 +198,7 @@ https://fpgasoftware.intel.com/eula.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.4%      ;
+;     Processor 2            ;   0.5%      ;
 +----------------------------+-------------+
 
 
@@ -234,8 +234,8 @@ https://fpgasoftware.intel.com/eula.
 ; altram.inc                       ; yes             ; Megafunction                 ; /home/andrew/Documentos/intelFPGA/20.1/quartus/libraries/megafunctions/altram.inc            ;         ;
 ; altdpram.inc                     ; yes             ; Megafunction                 ; /home/andrew/Documentos/intelFPGA/20.1/quartus/libraries/megafunctions/altdpram.inc          ;         ;
 ; db/altsyncram_bmh1.tdf           ; yes             ; Auto-Generated Megafunction  ; /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/db/altsyncram_bmh1.tdf               ;         ;
-; db/altsyncram_0ac1.tdf           ; yes             ; Auto-Generated Megafunction  ; /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/db/altsyncram_0ac1.tdf               ;         ;
 ; db/altsyncram_47g1.tdf           ; yes             ; Auto-Generated Megafunction  ; /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/db/altsyncram_47g1.tdf               ;         ;
+; db/altsyncram_0ac1.tdf           ; yes             ; Auto-Generated Megafunction  ; /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/db/altsyncram_0ac1.tdf               ;         ;
 ; lpm_divide.tdf                   ; yes             ; Megafunction                 ; /home/andrew/Documentos/intelFPGA/20.1/quartus/libraries/megafunctions/lpm_divide.tdf        ;         ;
 ; abs_divider.inc                  ; yes             ; Megafunction                 ; /home/andrew/Documentos/intelFPGA/20.1/quartus/libraries/megafunctions/abs_divider.inc       ;         ;
 ; sign_div_unsign.inc              ; yes             ; Megafunction                 ; /home/andrew/Documentos/intelFPGA/20.1/quartus/libraries/megafunctions/sign_div_unsign.inc   ;         ;
@@ -262,20 +262,20 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-------------------------+
 ; Resource                                    ; Usage                   ;
 +---------------------------------------------+-------------------------+
-; Estimated Total logic elements              ; 11,382                  ;
+; Estimated Total logic elements              ; 11,356                  ;
 ;                                             ;                         ;
-; Total combinational functions               ; 7543                    ;
+; Total combinational functions               ; 7527                    ;
 ; Logic element usage by number of LUT inputs ;                         ;
-;     -- 4 input functions                    ; 4082                    ;
-;     -- 3 input functions                    ; 1550                    ;
-;     -- <=2 input functions                  ; 1911                    ;
+;     -- 4 input functions                    ; 4128                    ;
+;     -- 3 input functions                    ; 1584                    ;
+;     -- <=2 input functions                  ; 1815                    ;
 ;                                             ;                         ;
 ; Logic elements by mode                      ;                         ;
-;     -- normal mode                          ; 6167                    ;
+;     -- normal mode                          ; 6151                    ;
 ;     -- arithmetic mode                      ; 1376                    ;
 ;                                             ;                         ;
-; Total registers                             ; 4466                    ;
-;     -- Dedicated logic registers            ; 4466                    ;
+; Total registers                             ; 4457                    ;
+;     -- Dedicated logic registers            ; 4457                    ;
 ;     -- I/O registers                        ; 0                       ;
 ;                                             ;                         ;
 ; I/O pins                                    ; 49                      ;
@@ -284,9 +284,9 @@ https://fpgasoftware.intel.com/eula.
 ; Embedded Multiplier 9-bit elements          ; 6                       ;
 ;                                             ;                         ;
 ; Maximum fan-out node                        ; divisor:divFreq|div_clk ;
-; Maximum fan-out                             ; 4502                    ;
-; Total fan-out                               ; 38521                   ;
-; Average fan-out                             ; 3.16                    ;
+; Maximum fan-out                             ; 4493                    ;
+; Total fan-out                               ; 38591                   ;
+; Average fan-out                             ; 3.17                    ;
 +---------------------------------------------+-------------------------+
 
 
@@ -295,7 +295,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
 ; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                                                                                                        ; Entity Name         ; Library Name ;
 +-------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
-; |processador                              ; 7543 (0)            ; 4466 (0)                  ; 2368        ; 0          ; 6            ; 0       ; 3         ; 49   ; 0            ; 0          ; |processador                                                                                                                               ; processador         ; work         ;
+; |processador                              ; 7527 (0)            ; 4457 (0)                  ; 2368        ; 0          ; 6            ; 0       ; 3         ; 49   ; 0            ; 0          ; |processador                                                                                                                               ; processador         ; work         ;
 ;    |ULA:ALU|                              ; 1477 (334)          ; 33 (33)                   ; 0           ; 0          ; 6            ; 0       ; 3         ; 0    ; 0            ; 0          ; |processador|ULA:ALU                                                                                                                       ; ULA                 ; work         ;
 ;       |lpm_divide:Div0|                   ; 1115 (0)            ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |processador|ULA:ALU|lpm_divide:Div0                                                                                                       ; lpm_divide          ; work         ;
 ;          |lpm_divide_8vl:auto_generated|  ; 1115 (0)            ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |processador|ULA:ALU|lpm_divide:Div0|lpm_divide_8vl:auto_generated                                                                         ; lpm_divide_8vl      ; work         ;
@@ -304,15 +304,15 @@ https://fpgasoftware.intel.com/eula.
 ;                   |add_sub_u3c:add_sub_1| ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |processador|ULA:ALU|lpm_divide:Div0|lpm_divide_8vl:auto_generated|sign_div_unsign_anh:divider|alt_u_div_tke:divider|add_sub_u3c:add_sub_1 ; add_sub_u3c         ; work         ;
 ;       |lpm_mult:Mult0|                    ; 28 (0)              ; 0 (0)                     ; 0           ; 0          ; 6            ; 0       ; 3         ; 0    ; 0            ; 0          ; |processador|ULA:ALU|lpm_mult:Mult0                                                                                                        ; lpm_mult            ; work         ;
 ;          |mult_tns:auto_generated|        ; 28 (28)             ; 0 (0)                     ; 0           ; 0          ; 6            ; 0       ; 3         ; 0    ; 0            ; 0          ; |processador|ULA:ALU|lpm_mult:Mult0|mult_tns:auto_generated                                                                                ; mult_tns            ; work         ;
-;    |bancoReg:banco|                       ; 51 (51)             ; 75 (75)                   ; 2048        ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |processador|bancoReg:banco                                                                                                                ; bancoReg            ; work         ;
+;    |bancoReg:banco|                       ; 36 (36)             ; 75 (75)                   ; 2048        ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |processador|bancoReg:banco                                                                                                                ; bancoReg            ; work         ;
 ;       |altsyncram:registradores_rtl_0|    ; 0 (0)               ; 0 (0)                     ; 1024        ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |processador|bancoReg:banco|altsyncram:registradores_rtl_0                                                                                 ; altsyncram          ; work         ;
 ;          |altsyncram_bmh1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 1024        ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |processador|bancoReg:banco|altsyncram:registradores_rtl_0|altsyncram_bmh1:auto_generated                                                  ; altsyncram_bmh1     ; work         ;
 ;       |altsyncram:registradores_rtl_1|    ; 0 (0)               ; 0 (0)                     ; 1024        ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |processador|bancoReg:banco|altsyncram:registradores_rtl_1                                                                                 ; altsyncram          ; work         ;
 ;          |altsyncram_47g1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 1024        ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |processador|bancoReg:banco|altsyncram:registradores_rtl_1|altsyncram_47g1:auto_generated                                                  ; altsyncram_47g1     ; work         ;
-;    |ctrl_undd:Controle|                   ; 99 (67)             ; 26 (26)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |processador|ctrl_undd:Controle                                                                                                            ; ctrl_undd           ; work         ;
-;       |ULA_ctrl:ctrlULA|                  ; 32 (32)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |processador|ctrl_undd:Controle|ULA_ctrl:ctrlULA                                                                                           ; ULA_ctrl            ; work         ;
+;    |ctrl_undd:Controle|                   ; 101 (68)            ; 27 (27)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |processador|ctrl_undd:Controle                                                                                                            ; ctrl_undd           ; work         ;
+;       |ULA_ctrl:ctrlULA|                  ; 33 (33)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |processador|ctrl_undd:Controle|ULA_ctrl:ctrlULA                                                                                           ; ULA_ctrl            ; work         ;
 ;    |divisor:divFreq|                      ; 39 (39)             ; 28 (28)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |processador|divisor:divFreq                                                                                                               ; divisor             ; work         ;
-;    |memoria:MEM|                          ; 3242 (3242)         ; 4128 (4128)               ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |processador|memoria:MEM                                                                                                                   ; memoria             ; work         ;
+;    |memoria:MEM|                          ; 3239 (3239)         ; 4128 (4128)               ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |processador|memoria:MEM                                                                                                                   ; memoria             ; work         ;
 ;    |moduloSaida:ModOUT|                   ; 2410 (36)           ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |processador|moduloSaida:ModOUT                                                                                                            ; moduloSaida         ; work         ;
 ;       |decodDisplay:dispay1|              ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |processador|moduloSaida:ModOUT|decodDisplay:dispay1                                                                                       ; decodDisplay        ; work         ;
 ;       |decodDisplay:dispay2|              ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |processador|moduloSaida:ModOUT|decodDisplay:dispay2                                                                                       ; decodDisplay        ; work         ;
@@ -356,7 +356,7 @@ https://fpgasoftware.intel.com/eula.
 ;    |registrador32b:Rmem|                  ; 0 (0)               ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |processador|registrador32b:Rmem                                                                                                           ; registrador32b      ; work         ;
 ;    |registrador32b:ri|                    ; 0 (0)               ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |processador|registrador32b:ri                                                                                                             ; registrador32b      ; work         ;
 ;    |registrador32b:saidaUla|              ; 0 (0)               ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |processador|registrador32b:saidaUla                                                                                                       ; registrador32b      ; work         ;
-;    |registradorPC:PC|                     ; 48 (48)             ; 42 (42)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |processador|registradorPC:PC                                                                                                              ; registradorPC       ; work         ;
+;    |registradorPC:PC|                     ; 48 (48)             ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |processador|registradorPC:PC                                                                                                              ; registradorPC       ; work         ;
 ;    |sigEnter:Pulso|                       ; 1 (1)               ; 2 (2)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |processador|sigEnter:Pulso                                                                                                                ; sigEnter            ; work         ;
 ;    |stack:Pilha|                          ; 10 (10)             ; 4 (4)                     ; 320         ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |processador|stack:Pilha                                                                                                                   ; stack               ; work         ;
 ;       |altsyncram:stack_rtl_0|            ; 0 (0)               ; 0 (0)                     ; 320         ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |processador|stack:Pilha|altsyncram:stack_rtl_0                                                                                            ; altsyncram          ; work         ;
@@ -399,11 +399,11 @@ Note: number of Embedded Multiplier Blocks used is only available after a succes
 +----------------------------------------------------+-------------------------------------------------+------------------------+
 ; Latch Name                                         ; Latch Enable Signal                             ; Free of Timing Hazards ;
 +----------------------------------------------------+-------------------------------------------------+------------------------+
-; ctrl_undd:Controle|ULA_ctrl:ctrlULA|controle[3]    ; ctrl_undd:Controle|ULA_ctrl:ctrlULA|controle[0] ; yes                    ;
 ; ctrl_undd:Controle|ULA_ctrl:ctrlULA|controle[4]    ; ctrl_undd:Controle|ULA_ctrl:ctrlULA|controle[0] ; yes                    ;
-; ctrl_undd:Controle|ULA_ctrl:ctrlULA|controle[1]    ; ctrl_undd:Controle|ULA_ctrl:ctrlULA|controle[0] ; yes                    ;
+; ctrl_undd:Controle|ULA_ctrl:ctrlULA|controle[3]    ; ctrl_undd:Controle|ULA_ctrl:ctrlULA|controle[0] ; yes                    ;
 ; ctrl_undd:Controle|ULA_ctrl:ctrlULA|controle[2]    ; ctrl_undd:Controle|ULA_ctrl:ctrlULA|controle[0] ; yes                    ;
 ; ctrl_undd:Controle|ULA_ctrl:ctrlULA|controle[0]    ; ctrl_undd:Controle|ULA_ctrl:ctrlULA|controle[0] ; yes                    ;
+; ctrl_undd:Controle|ULA_ctrl:ctrlULA|controle[1]    ; ctrl_undd:Controle|ULA_ctrl:ctrlULA|controle[0] ; yes                    ;
 ; Number of user-specified and inferred latches = 5  ;                                                 ;                        ;
 +----------------------------------------------------+-------------------------------------------------+------------------------+
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
@@ -414,7 +414,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 4466  ;
+; Total registers                              ; 4457  ;
 ; Number of registers using Synchronous Clear  ; 26    ;
 ; Number of registers using Synchronous Load   ; 29    ;
 ; Number of registers using Asynchronous Clear ; 0     ;
@@ -480,9 +480,9 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +--------------------------------------------+------------------------------------+------+
 ; Register Name                              ; Megafunction                       ; Type ;
 +--------------------------------------------+------------------------------------+------+
-; stack:Pilha|saida[0..31]                   ; stack:Pilha|stack_rtl_0            ; RAM  ;
 ; registrador32b:A|saida[0..31]              ; bancoReg:banco|registradores_rtl_1 ; RAM  ;
 ; bancoReg:banco|registradores[0..31][0..31] ; bancoReg:banco|registradores_rtl_1 ; RAM  ;
+; stack:Pilha|saida[0..31]                   ; stack:Pilha|stack_rtl_0            ; RAM  ;
 +--------------------------------------------+------------------------------------+------+
 
 
@@ -491,20 +491,29 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                   ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------+
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |processador|stack:Pilha|pointer[3]                          ;
-; 6:1                ; 25 bits   ; 100 LEs       ; 50 LEs               ; 50 LEs                 ; Yes        ; |processador|registradorPC:PC|saida[18]                      ;
-; 6:1                ; 7 bits    ; 28 LEs        ; 21 LEs               ; 7 LEs                  ; Yes        ; |processador|registradorPC:PC|saida[6]                       ;
-; 17:1               ; 3 bits    ; 33 LEs        ; 30 LEs               ; 3 LEs                  ; Yes        ; |processador|ctrl_undd:Controle|prox_estado[2]               ;
-; 21:1               ; 31 bits   ; 434 LEs       ; 186 LEs              ; 248 LEs                ; Yes        ; |processador|ULA:ALU|saida[29]                               ;
-; 3:1                ; 17 bits   ; 34 LEs        ; 34 LEs               ; 0 LEs                  ; No         ; |processador|mux4_32b:MuxUlaB|Mux8                           ;
-; 4:1                ; 15 bits   ; 30 LEs        ; 30 LEs               ; 0 LEs                  ; No         ; |processador|mux4_32b:MuxUlaB|Mux27                          ;
-; 3:1                ; 25 bits   ; 50 LEs        ; 50 LEs               ; 0 LEs                  ; No         ; |processador|mux2_32b:MuxUlaA|saida[28]                      ;
-; 68:1               ; 4 bits    ; 180 LEs       ; 44 LEs               ; 136 LEs                ; No         ; |processador|ctrl_undd:Controle|ULA_ctrl:ctrlULA|controle[1] ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |processador|stack:Pilha|pointer[0]                          ;
+; 6:1                ; 25 bits   ; 100 LEs       ; 50 LEs               ; 50 LEs                 ; Yes        ; |processador|registradorPC:PC|saida[7]                       ;
+; 6:1                ; 7 bits    ; 28 LEs        ; 21 LEs               ; 7 LEs                  ; Yes        ; |processador|registradorPC:PC|saida[0]                       ;
+; 17:1               ; 3 bits    ; 33 LEs        ; 30 LEs               ; 3 LEs                  ; Yes        ; |processador|ctrl_undd:Controle|prox_estado[0]               ;
+; 21:1               ; 31 bits   ; 434 LEs       ; 186 LEs              ; 248 LEs                ; Yes        ; |processador|ULA:ALU|saida[13]                               ;
+; 3:1                ; 17 bits   ; 34 LEs        ; 34 LEs               ; 0 LEs                  ; No         ; |processador|mux4_32b:MuxUlaB|Mux5                           ;
+; 4:1                ; 15 bits   ; 30 LEs        ; 30 LEs               ; 0 LEs                  ; No         ; |processador|mux4_32b:MuxUlaB|Mux21                          ;
+; 3:1                ; 25 bits   ; 50 LEs        ; 50 LEs               ; 0 LEs                  ; No         ; |processador|mux2_32b:MuxUlaA|saida[16]                      ;
+; 68:1               ; 4 bits    ; 180 LEs       ; 44 LEs               ; 136 LEs                ; No         ; |processador|ctrl_undd:Controle|ULA_ctrl:ctrlULA|controle[0] ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------+
 
 
 +-----------------------------------------------------------------------------------------------------+
 ; Source assignments for bancoReg:banco|altsyncram:registradores_rtl_0|altsyncram_bmh1:auto_generated ;
++---------------------------------+--------------------+------+---------------------------------------+
+; Assignment                      ; Value              ; From ; To                                    ;
++---------------------------------+--------------------+------+---------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                     ;
++---------------------------------+--------------------+------+---------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Source assignments for bancoReg:banco|altsyncram:registradores_rtl_1|altsyncram_47g1:auto_generated ;
 +---------------------------------+--------------------+------+---------------------------------------+
 ; Assignment                      ; Value              ; From ; To                                    ;
 +---------------------------------+--------------------+------+---------------------------------------+
@@ -519,15 +528,6 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +---------------------------------+--------------------+------+----------------------------+
 ; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                          ;
 +---------------------------------+--------------------+------+----------------------------+
-
-
-+-----------------------------------------------------------------------------------------------------+
-; Source assignments for bancoReg:banco|altsyncram:registradores_rtl_1|altsyncram_47g1:auto_generated ;
-+---------------------------------+--------------------+------+---------------------------------------+
-; Assignment                      ; Value              ; From ; To                                    ;
-+---------------------------------+--------------------+------+---------------------------------------+
-; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                     ;
-+---------------------------------+--------------------+------+---------------------------------------+
 
 
 +-----------------------------------------------------------------+
@@ -684,67 +684,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+-------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: stack:Pilha|altsyncram:stack_rtl_0 ;
-+------------------------------------+----------------------+-------------------------+
-; Parameter Name                     ; Value                ; Type                    ;
-+------------------------------------+----------------------+-------------------------+
-; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                 ;
-; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY              ;
-; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY            ;
-; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE            ;
-; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE          ;
-; WIDTH_BYTEENA                      ; 1                    ; Untyped                 ;
-; OPERATION_MODE                     ; DUAL_PORT            ; Untyped                 ;
-; WIDTH_A                            ; 32                   ; Untyped                 ;
-; WIDTHAD_A                          ; 4                    ; Untyped                 ;
-; NUMWORDS_A                         ; 10                   ; Untyped                 ;
-; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped                 ;
-; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                 ;
-; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                 ;
-; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                 ;
-; INDATA_ACLR_A                      ; NONE                 ; Untyped                 ;
-; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                 ;
-; WIDTH_B                            ; 32                   ; Untyped                 ;
-; WIDTHAD_B                          ; 4                    ; Untyped                 ;
-; NUMWORDS_B                         ; 10                   ; Untyped                 ;
-; INDATA_REG_B                       ; CLOCK1               ; Untyped                 ;
-; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                 ;
-; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                 ;
-; ADDRESS_REG_B                      ; CLOCK1               ; Untyped                 ;
-; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                 ;
-; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                 ;
-; INDATA_ACLR_B                      ; NONE                 ; Untyped                 ;
-; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                 ;
-; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                 ;
-; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                 ;
-; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                 ;
-; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                 ;
-; WIDTH_BYTEENA_A                    ; 1                    ; Untyped                 ;
-; WIDTH_BYTEENA_B                    ; 1                    ; Untyped                 ;
-; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                 ;
-; BYTE_SIZE                          ; 8                    ; Untyped                 ;
-; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                 ;
-; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                 ;
-; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                 ;
-; INIT_FILE                          ; UNUSED               ; Untyped                 ;
-; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                 ;
-; MAXIMUM_DEPTH                      ; 0                    ; Untyped                 ;
-; CLOCK_ENABLE_INPUT_A               ; NORMAL               ; Untyped                 ;
-; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped                 ;
-; CLOCK_ENABLE_OUTPUT_A              ; NORMAL               ; Untyped                 ;
-; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped                 ;
-; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                 ;
-; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                 ;
-; ENABLE_ECC                         ; FALSE                ; Untyped                 ;
-; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                 ;
-; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                 ;
-; DEVICE_FAMILY                      ; MAX 10               ; Untyped                 ;
-; CBXI_PARAMETER                     ; altsyncram_0ac1      ; Untyped                 ;
-+------------------------------------+----------------------+-------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
 +------------------------------------------------------------------------------------------------+
 ; Parameter Settings for Inferred Entity Instance: bancoReg:banco|altsyncram:registradores_rtl_1 ;
 +------------------------------------+----------------------+------------------------------------+
@@ -803,6 +742,67 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; DEVICE_FAMILY                      ; MAX 10               ; Untyped                            ;
 ; CBXI_PARAMETER                     ; altsyncram_47g1      ; Untyped                            ;
 +------------------------------------+----------------------+------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: stack:Pilha|altsyncram:stack_rtl_0 ;
++------------------------------------+----------------------+-------------------------+
+; Parameter Name                     ; Value                ; Type                    ;
++------------------------------------+----------------------+-------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                 ;
+; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY              ;
+; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY            ;
+; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE            ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE          ;
+; WIDTH_BYTEENA                      ; 1                    ; Untyped                 ;
+; OPERATION_MODE                     ; DUAL_PORT            ; Untyped                 ;
+; WIDTH_A                            ; 32                   ; Untyped                 ;
+; WIDTHAD_A                          ; 4                    ; Untyped                 ;
+; NUMWORDS_A                         ; 10                   ; Untyped                 ;
+; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped                 ;
+; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                 ;
+; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                 ;
+; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                 ;
+; INDATA_ACLR_A                      ; NONE                 ; Untyped                 ;
+; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                 ;
+; WIDTH_B                            ; 32                   ; Untyped                 ;
+; WIDTHAD_B                          ; 4                    ; Untyped                 ;
+; NUMWORDS_B                         ; 10                   ; Untyped                 ;
+; INDATA_REG_B                       ; CLOCK1               ; Untyped                 ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                 ;
+; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                 ;
+; ADDRESS_REG_B                      ; CLOCK1               ; Untyped                 ;
+; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                 ;
+; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                 ;
+; INDATA_ACLR_B                      ; NONE                 ; Untyped                 ;
+; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                 ;
+; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                 ;
+; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                 ;
+; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                 ;
+; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                 ;
+; WIDTH_BYTEENA_A                    ; 1                    ; Untyped                 ;
+; WIDTH_BYTEENA_B                    ; 1                    ; Untyped                 ;
+; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                 ;
+; BYTE_SIZE                          ; 8                    ; Untyped                 ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                 ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                 ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                 ;
+; INIT_FILE                          ; UNUSED               ; Untyped                 ;
+; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                 ;
+; MAXIMUM_DEPTH                      ; 0                    ; Untyped                 ;
+; CLOCK_ENABLE_INPUT_A               ; NORMAL               ; Untyped                 ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped                 ;
+; CLOCK_ENABLE_OUTPUT_A              ; NORMAL               ; Untyped                 ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped                 ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                 ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                 ;
+; ENABLE_ECC                         ; FALSE                ; Untyped                 ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                 ;
+; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                 ;
+; DEVICE_FAMILY                      ; MAX 10               ; Untyped                 ;
+; CBXI_PARAMETER                     ; altsyncram_0ac1      ; Untyped                 ;
++------------------------------------+----------------------+-------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -1042,17 +1042,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     -- OUTDATA_REG_B                      ; UNREGISTERED                                  ;
 ;     -- RAM_BLOCK_TYPE                     ; AUTO                                          ;
 ;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; OLD_DATA                                      ;
-; Entity Instance                           ; stack:Pilha|altsyncram:stack_rtl_0            ;
-;     -- OPERATION_MODE                     ; DUAL_PORT                                     ;
-;     -- WIDTH_A                            ; 32                                            ;
-;     -- NUMWORDS_A                         ; 10                                            ;
-;     -- OUTDATA_REG_A                      ; UNREGISTERED                                  ;
-;     -- WIDTH_B                            ; 32                                            ;
-;     -- NUMWORDS_B                         ; 10                                            ;
-;     -- ADDRESS_REG_B                      ; CLOCK1                                        ;
-;     -- OUTDATA_REG_B                      ; UNREGISTERED                                  ;
-;     -- RAM_BLOCK_TYPE                     ; AUTO                                          ;
-;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                     ;
 ; Entity Instance                           ; bancoReg:banco|altsyncram:registradores_rtl_1 ;
 ;     -- OPERATION_MODE                     ; DUAL_PORT                                     ;
 ;     -- WIDTH_A                            ; 32                                            ;
@@ -1064,6 +1053,17 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     -- OUTDATA_REG_B                      ; UNREGISTERED                                  ;
 ;     -- RAM_BLOCK_TYPE                     ; AUTO                                          ;
 ;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; OLD_DATA                                      ;
+; Entity Instance                           ; stack:Pilha|altsyncram:stack_rtl_0            ;
+;     -- OPERATION_MODE                     ; DUAL_PORT                                     ;
+;     -- WIDTH_A                            ; 32                                            ;
+;     -- NUMWORDS_A                         ; 10                                            ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                                  ;
+;     -- WIDTH_B                            ; 32                                            ;
+;     -- NUMWORDS_B                         ; 10                                            ;
+;     -- ADDRESS_REG_B                      ; CLOCK1                                        ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                                  ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                          ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                     ;
 +-------------------------------------------+-----------------------------------------------+
 
 
@@ -1085,15 +1085,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     -- INPUT_A_FIXED_VALUE            ; Bx                     ;
 ;     -- INPUT_B_FIXED_VALUE            ; Bx                     ;
 +---------------------------------------+------------------------+
-
-
-+---------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "ctrl_undd:Controle"                                                                                        ;
-+--------+--------+----------+----------------------------------------------------------------------------------------------------------+
-; Port   ; Type   ; Severity ; Details                                                                                                  ;
-+--------+--------+----------+----------------------------------------------------------------------------------------------------------+
-; estado ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
-+--------+--------+----------+----------------------------------------------------------------------------------------------------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -1189,35 +1180,44 @@ Note: In order to hide this table in the UI and the text report file, please set
 +---------+--------+----------+----------------------------------------------------------------------------------------------------------+
 
 
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "registradorPC:PC"                                                                                        ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                  ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; led  ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
 +-----------------------------------------------------+
 ; Post-Synthesis Netlist Statistics for Top Partition ;
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 49                          ;
-; cycloneiii_ff         ; 4466                        ;
+; cycloneiii_ff         ; 4457                        ;
 ;     ENA               ; 4176                        ;
 ;     ENA SCLR SLD      ; 25                          ;
 ;     ENA SLD           ; 4                           ;
 ;     SCLR              ; 1                           ;
-;     plain             ; 260                         ;
-; cycloneiii_lcell_comb ; 7547                        ;
+;     plain             ; 251                         ;
+; cycloneiii_lcell_comb ; 7532                        ;
 ;     arith             ; 1376                        ;
 ;         1 data inputs ; 5                           ;
 ;         2 data inputs ; 49                          ;
 ;         3 data inputs ; 1322                        ;
-;     normal            ; 6171                        ;
-;         0 data inputs ; 206                         ;
+;     normal            ; 6156                        ;
+;         0 data inputs ; 207                         ;
 ;         1 data inputs ; 493                         ;
-;         2 data inputs ; 1162                        ;
-;         3 data inputs ; 228                         ;
-;         4 data inputs ; 4082                        ;
+;         2 data inputs ; 1066                        ;
+;         3 data inputs ; 262                         ;
+;         4 data inputs ; 4128                        ;
 ; cycloneiii_mac_mult   ; 3                           ;
 ; cycloneiii_mac_out    ; 3                           ;
 ; cycloneiii_ram_block  ; 96                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 125.50                      ;
-; Average LUT depth     ; 36.42                       ;
+; Average LUT depth     ; 36.48                       ;
 +-----------------------+-----------------------------+
 
 
@@ -1226,7 +1226,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:13     ;
+; Top            ; 00:00:14     ;
 +----------------+--------------+
 
 
@@ -1236,7 +1236,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Thu Nov 19 22:03:11 2020
+    Info: Processing started: Wed Nov 25 17:49:15 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off teste -c teste
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -1281,6 +1281,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file registr
 Info (12021): Found 1 design units, including 1 entities, in source file sigEnter.v
     Info (12023): Found entity 1: sigEnter File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/sigEnter.v Line: 1
 Info (12127): Elaborating entity "processador" for the top level hierarchy
+Warning (10034): Output port "estado[9..4]" at processador.v(14) has no driver File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/processador.v Line: 14
 Info (12128): Elaborating entity "divisor" for hierarchy "divisor:divFreq" File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/processador.v Line: 35
 Info (12128): Elaborating entity "registradorPC" for hierarchy "registradorPC:PC" File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/processador.v Line: 42
 Info (12128): Elaborating entity "stack" for hierarchy "stack:Pilha" File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/processador.v Line: 49
@@ -1297,7 +1298,7 @@ Info (12128): Elaborating entity "mux4_32b" for hierarchy "mux4_32b:MuxUlaB" Fil
 Info (12128): Elaborating entity "ULA" for hierarchy "ULA:ALU" File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/processador.v Line: 152
 Info (12128): Elaborating entity "sigEnter" for hierarchy "sigEnter:Pulso" File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/processador.v Line: 171
 Info (12128): Elaborating entity "ctrl_undd" for hierarchy "ctrl_undd:Controle" File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/processador.v Line: 194
-Info (12128): Elaborating entity "ULA_ctrl" for hierarchy "ctrl_undd:Controle|ULA_ctrl:ctrlULA" File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/ctrl_undd.v Line: 58
+Info (12128): Elaborating entity "ULA_ctrl" for hierarchy "ctrl_undd:Controle|ULA_ctrl:ctrlULA" File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/ctrl_undd.v Line: 59
 Warning (10240): Verilog HDL Always Construct warning at ula_ctrl.v(20): inferring latch(es) for variable "controle", which holds its previous value in one or more paths through the always construct File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/ula_ctrl.v Line: 20
 Info (10041): Inferred latch for "controle[0]" at ula_ctrl.v(55) File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/ula_ctrl.v Line: 55
 Info (10041): Inferred latch for "controle[1]" at ula_ctrl.v(55) File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/ula_ctrl.v Line: 55
@@ -1312,6 +1313,22 @@ Info (276014): Found 1 instances of uninferred RAM logic
 Warning (127007): Memory Initialization File or Hexadecimal (Intel-Format) File "/home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/db/teste.ram0_memoria_5f521753_0.hdl.mif" contains "don't care" values -- overwriting them with 0s
 Info (19000): Inferred 3 megafunctions from design logic
     Info (276029): Inferred altsyncram megafunction from the following design logic: "bancoReg:banco|registradores_rtl_0" 
+        Info (286033): Parameter OPERATION_MODE set to DUAL_PORT
+        Info (286033): Parameter WIDTH_A set to 32
+        Info (286033): Parameter WIDTHAD_A set to 5
+        Info (286033): Parameter NUMWORDS_A set to 32
+        Info (286033): Parameter WIDTH_B set to 32
+        Info (286033): Parameter WIDTHAD_B set to 5
+        Info (286033): Parameter NUMWORDS_B set to 32
+        Info (286033): Parameter ADDRESS_ACLR_A set to NONE
+        Info (286033): Parameter OUTDATA_REG_B set to UNREGISTERED
+        Info (286033): Parameter ADDRESS_ACLR_B set to NONE
+        Info (286033): Parameter OUTDATA_ACLR_B set to NONE
+        Info (286033): Parameter ADDRESS_REG_B set to CLOCK0
+        Info (286033): Parameter INDATA_ACLR_A set to NONE
+        Info (286033): Parameter WRCONTROL_ACLR_A set to NONE
+        Info (286033): Parameter READ_DURING_WRITE_MODE_MIXED_PORTS set to OLD_DATA
+    Info (276029): Inferred altsyncram megafunction from the following design logic: "bancoReg:banco|registradores_rtl_1" 
         Info (286033): Parameter OPERATION_MODE set to DUAL_PORT
         Info (286033): Parameter WIDTH_A set to 32
         Info (286033): Parameter WIDTHAD_A set to 5
@@ -1342,22 +1359,6 @@ Info (19000): Inferred 3 megafunctions from design logic
         Info (286033): Parameter ADDRESS_REG_B set to CLOCK1
         Info (286033): Parameter INDATA_ACLR_A set to NONE
         Info (286033): Parameter WRCONTROL_ACLR_A set to NONE
-    Info (276029): Inferred altsyncram megafunction from the following design logic: "bancoReg:banco|registradores_rtl_1" 
-        Info (286033): Parameter OPERATION_MODE set to DUAL_PORT
-        Info (286033): Parameter WIDTH_A set to 32
-        Info (286033): Parameter WIDTHAD_A set to 5
-        Info (286033): Parameter NUMWORDS_A set to 32
-        Info (286033): Parameter WIDTH_B set to 32
-        Info (286033): Parameter WIDTHAD_B set to 5
-        Info (286033): Parameter NUMWORDS_B set to 32
-        Info (286033): Parameter ADDRESS_ACLR_A set to NONE
-        Info (286033): Parameter OUTDATA_REG_B set to UNREGISTERED
-        Info (286033): Parameter ADDRESS_ACLR_B set to NONE
-        Info (286033): Parameter OUTDATA_ACLR_B set to NONE
-        Info (286033): Parameter ADDRESS_REG_B set to CLOCK0
-        Info (286033): Parameter INDATA_ACLR_A set to NONE
-        Info (286033): Parameter WRCONTROL_ACLR_A set to NONE
-        Info (286033): Parameter READ_DURING_WRITE_MODE_MIXED_PORTS set to OLD_DATA
 Info (278001): Inferred 9 megafunctions from design logic
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "moduloSaida:ModOUT|Div0" File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/moduloSaida.v Line: 29
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "moduloSaida:ModOUT|Div1" File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/moduloSaida.v Line: 31
@@ -1387,24 +1388,6 @@ Info (12133): Instantiated megafunction "bancoReg:banco|altsyncram:registradores
     Info (12134): Parameter "READ_DURING_WRITE_MODE_MIXED_PORTS" = "OLD_DATA"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_bmh1.tdf
     Info (12023): Found entity 1: altsyncram_bmh1 File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/db/altsyncram_bmh1.tdf Line: 28
-Info (12130): Elaborated megafunction instantiation "stack:Pilha|altsyncram:stack_rtl_0"
-Info (12133): Instantiated megafunction "stack:Pilha|altsyncram:stack_rtl_0" with the following parameter:
-    Info (12134): Parameter "OPERATION_MODE" = "DUAL_PORT"
-    Info (12134): Parameter "WIDTH_A" = "32"
-    Info (12134): Parameter "WIDTHAD_A" = "4"
-    Info (12134): Parameter "NUMWORDS_A" = "10"
-    Info (12134): Parameter "WIDTH_B" = "32"
-    Info (12134): Parameter "WIDTHAD_B" = "4"
-    Info (12134): Parameter "NUMWORDS_B" = "10"
-    Info (12134): Parameter "ADDRESS_ACLR_A" = "NONE"
-    Info (12134): Parameter "OUTDATA_REG_B" = "UNREGISTERED"
-    Info (12134): Parameter "ADDRESS_ACLR_B" = "NONE"
-    Info (12134): Parameter "OUTDATA_ACLR_B" = "NONE"
-    Info (12134): Parameter "ADDRESS_REG_B" = "CLOCK1"
-    Info (12134): Parameter "INDATA_ACLR_A" = "NONE"
-    Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
-Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_0ac1.tdf
-    Info (12023): Found entity 1: altsyncram_0ac1 File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/db/altsyncram_0ac1.tdf Line: 28
 Info (12130): Elaborated megafunction instantiation "bancoReg:banco|altsyncram:registradores_rtl_1"
 Info (12133): Instantiated megafunction "bancoReg:banco|altsyncram:registradores_rtl_1" with the following parameter:
     Info (12134): Parameter "OPERATION_MODE" = "DUAL_PORT"
@@ -1424,6 +1407,24 @@ Info (12133): Instantiated megafunction "bancoReg:banco|altsyncram:registradores
     Info (12134): Parameter "READ_DURING_WRITE_MODE_MIXED_PORTS" = "OLD_DATA"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_47g1.tdf
     Info (12023): Found entity 1: altsyncram_47g1 File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/db/altsyncram_47g1.tdf Line: 28
+Info (12130): Elaborated megafunction instantiation "stack:Pilha|altsyncram:stack_rtl_0"
+Info (12133): Instantiated megafunction "stack:Pilha|altsyncram:stack_rtl_0" with the following parameter:
+    Info (12134): Parameter "OPERATION_MODE" = "DUAL_PORT"
+    Info (12134): Parameter "WIDTH_A" = "32"
+    Info (12134): Parameter "WIDTHAD_A" = "4"
+    Info (12134): Parameter "NUMWORDS_A" = "10"
+    Info (12134): Parameter "WIDTH_B" = "32"
+    Info (12134): Parameter "WIDTHAD_B" = "4"
+    Info (12134): Parameter "NUMWORDS_B" = "10"
+    Info (12134): Parameter "ADDRESS_ACLR_A" = "NONE"
+    Info (12134): Parameter "OUTDATA_REG_B" = "UNREGISTERED"
+    Info (12134): Parameter "ADDRESS_ACLR_B" = "NONE"
+    Info (12134): Parameter "OUTDATA_ACLR_B" = "NONE"
+    Info (12134): Parameter "ADDRESS_REG_B" = "CLOCK1"
+    Info (12134): Parameter "INDATA_ACLR_A" = "NONE"
+    Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_0ac1.tdf
+    Info (12023): Found entity 1: altsyncram_0ac1 File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/db/altsyncram_0ac1.tdf Line: 28
 Info (12130): Elaborated megafunction instantiation "moduloSaida:ModOUT|lpm_divide:Div0" File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/moduloSaida.v Line: 29
 Info (12133): Instantiated megafunction "moduloSaida:ModOUT|lpm_divide:Div0" with the following parameter: File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/moduloSaida.v Line: 29
     Info (12134): Parameter "LPM_WIDTHN" = "32"
@@ -1480,16 +1481,23 @@ Warning (14284): Synthesized away the following node(s):
 Warning (12241): 4 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Info (13014): Ignored 84 buffer(s)
     Info (13019): Ignored 84 SOFT buffer(s)
+Warning (13012): Latch ctrl_undd:Controle|ULA_ctrl:ctrlULA|controle[4] has unsafe behavior File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/ula_ctrl.v Line: 55
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ctrl_undd:Controle|OpULA[1] File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/ctrl_undd.v Line: 61
 Warning (13012): Latch ctrl_undd:Controle|ULA_ctrl:ctrlULA|controle[3] has unsafe behavior File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/ula_ctrl.v Line: 55
     Warning (13013): Ports D and ENA on the latch are fed by the same signal registrador32b:ri|saida[3] File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/registrador32b.v Line: 6
-Warning (13012): Latch ctrl_undd:Controle|ULA_ctrl:ctrlULA|controle[4] has unsafe behavior File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/ula_ctrl.v Line: 55
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ctrl_undd:Controle|OpULA[1] File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/ctrl_undd.v Line: 60
-Warning (13012): Latch ctrl_undd:Controle|ULA_ctrl:ctrlULA|controle[1] has unsafe behavior File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/ula_ctrl.v Line: 55
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal registrador32b:ri|saida[5] File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/registrador32b.v Line: 6
 Warning (13012): Latch ctrl_undd:Controle|ULA_ctrl:ctrlULA|controle[2] has unsafe behavior File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/ula_ctrl.v Line: 55
     Warning (13013): Ports D and ENA on the latch are fed by the same signal registrador32b:ri|saida[2] File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/registrador32b.v Line: 6
 Warning (13012): Latch ctrl_undd:Controle|ULA_ctrl:ctrlULA|controle[0] has unsafe behavior File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/ula_ctrl.v Line: 55
     Warning (13013): Ports D and ENA on the latch are fed by the same signal registrador32b:ri|saida[27] File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/registrador32b.v Line: 6
+Warning (13012): Latch ctrl_undd:Controle|ULA_ctrl:ctrlULA|controle[1] has unsafe behavior File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/ula_ctrl.v Line: 55
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal registrador32b:ri|saida[5] File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/registrador32b.v Line: 6
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "estado[4]" is stuck at GND File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/processador.v Line: 14
+    Warning (13410): Pin "estado[5]" is stuck at GND File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/processador.v Line: 14
+    Warning (13410): Pin "estado[6]" is stuck at GND File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/processador.v Line: 14
+    Warning (13410): Pin "estado[7]" is stuck at GND File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/processador.v Line: 14
+    Warning (13410): Pin "estado[8]" is stuck at GND File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/processador.v Line: 14
+    Warning (13410): Pin "estado[9]" is stuck at GND File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/processador.v Line: 14
 Info (286030): Timing-Driven Synthesis is running
 Info (17016): Found the following redundant logic cells in design
     Info (17048): Logic cell "moduloSaida:ModOUT|lpm_divide:Div1|lpm_divide_mtl:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_6_result_int[0]~10" File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/db/alt_u_div_qhe.tdf Line: 167
@@ -1611,17 +1619,17 @@ Info (17016): Found the following redundant logic cells in design
 Info (144001): Generated suppressed messages file /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/output_files/teste.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 11605 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 11578 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 11 input pins
     Info (21059): Implemented 38 output pins
-    Info (21061): Implemented 11454 logic cells
+    Info (21061): Implemented 11427 logic cells
     Info (21064): Implemented 96 RAM segments
     Info (21062): Implemented 6 DSP elements
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 24 warnings
-    Info: Peak virtual memory: 439 megabytes
-    Info: Processing ended: Thu Nov 19 22:03:39 2020
-    Info: Elapsed time: 00:00:28
-    Info: Total CPU time (on all processors): 00:00:46
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 32 warnings
+    Info: Peak virtual memory: 446 megabytes
+    Info: Processing ended: Wed Nov 25 17:49:46 2020
+    Info: Elapsed time: 00:00:31
+    Info: Total CPU time (on all processors): 00:00:49
 
 
 +------------------------------------------+

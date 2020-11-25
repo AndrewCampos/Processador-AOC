@@ -20,30 +20,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "estado[4]",
-					"strict" : false
-				},
-				{
-					"name" : "estado[5]",
-					"strict" : false
-				},
-				{
-					"name" : "estado[6]",
-					"strict" : false
-				},
-				{
-					"name" : "estado[7]",
-					"strict" : false
-				},
-				{
-					"name" : "estado[8]",
-					"strict" : false
-				},
-				{
-					"name" : "estado[9]",
-					"strict" : false
-				},
-				{
 					"name" : "disp4[6]",
 					"strict" : false
 				},
@@ -164,6 +140,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "chave",
+					"strict" : false
+				},
+				{
 					"name" : "dadosIN[7]",
 					"strict" : false
 				},
@@ -193,10 +173,6 @@
 				},
 				{
 					"name" : "dadosIN[0]",
-					"strict" : false
-				},
-				{
-					"name" : "chave",
 					"strict" : false
 				}
 			]

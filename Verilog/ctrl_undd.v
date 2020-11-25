@@ -26,6 +26,7 @@ module ctrl_undd(opcode,
 	input [5:0] funct;
 	output reg [3:0] estado;
 	reg [3:0] prox_estado;
+	reg ok;
 	 
 	//sinais de controle de memoria
 	output reg pop, push, EscrevePC, EscreveRI, EscreveReg, EscreveMem, controleOUT;
@@ -79,6 +80,7 @@ module ctrl_undd(opcode,
 			SelMuxUlaB  <= 2'b01;
 			SelMuxIn    <=  1'b1;
 			prox_estado <= ESTADO1;
+			ok <= 1'b0;
 		end	
 		
 		ESTADO1: begin //decodifica instrucao
@@ -106,6 +108,10 @@ module ctrl_undd(opcode,
 			
 				out: begin
 					prox_estado <= ESTADO0; //out
+				end
+				
+				in: begin
+					prox_estado <= ESTADO12; //in
 				end
 				
 				sti: begin
@@ -146,10 +152,6 @@ module ctrl_undd(opcode,
 				
 				jst: begin
 					prox_estado <= ESTADO10; //jst
-				end
-				
-				in: begin
-					prox_estado <= ESTADO12; //in
 				end
 				
 				hlt: begin
@@ -402,8 +404,13 @@ module ctrl_undd(opcode,
 			SelMuxUlaA  <=  1'b0;
 			SelMuxUlaB  <= 2'b00;
 			SelMuxIn    <=  1'b1;
-			if(enter) prox_estado <= ESTADO15;
-			else prox_estado <= prox_estado;
+			
+			if(enter == 1'b1) begin
+				if(!ok) ok = 1'b1;
+				
+			end else if(enter == 1'b0) begin
+				if(ok) prox_estado = ESTADO15;
+			end
 		end
 		
 		ESTADO13: begin // finaliza jmp, sw e lw

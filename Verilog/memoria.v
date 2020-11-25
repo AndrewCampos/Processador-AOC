@@ -65,8 +65,6 @@ ram[49] = {6'b010101, 26'd50};   // jmp
 // end
 ram[50] = {6'b010010, 26'd0};   // hlt
 
-
-			
 			
 	end 
 	always @ (posedge wclk)

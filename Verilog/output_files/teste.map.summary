@@ -1,12 +1,12 @@
-Analysis & Synthesis Status : Successful - Thu Nov 19 22:03:39 2020
+Analysis & Synthesis Status : Successful - Wed Nov 25 17:49:46 2020
 Quartus Prime Version : 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 Revision Name : teste
 Top-level Entity Name : processador
 Family : MAX 10
-Total logic elements : 11,382
-    Total combinational functions : 7,543
-    Dedicated logic registers : 4,466
-Total registers : 4466
+Total logic elements : 11,356
+    Total combinational functions : 7,527
+    Dedicated logic registers : 4,457
+Total registers : 4457
 Total pins : 49
 Total virtual pins : 0
 Total memory bits : 2,368
