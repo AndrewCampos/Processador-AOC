@@ -80,7 +80,6 @@ module ctrl_undd(opcode,
 			SelMuxUlaB  <= 2'b01;
 			SelMuxIn    <=  1'b1;
 			prox_estado <= ESTADO1;
-			ok <= 1'b0;
 		end	
 		
 		ESTADO1: begin //decodifica instrucao
@@ -469,18 +468,18 @@ module ctrl_undd(opcode,
 			SelMuxPC    <= 2'b00;
 			SelMuxMem   <=  1'b0;
 			SelMuxReg1  <=  1'b0;
-			SelMuxReg2  <=  1'b1;
+			SelMuxReg2  <=  1'b1; 
 			SelMuxUlaA  <=  1'b0;
 			SelMuxUlaB  <= 2'b00;
 			SelMuxIn    <=  1'b1;
-			if(opcode != in || enter == 1'b0)
+			//if(!enter)
 				prox_estado <= ESTADO0;
 		end
 		endcase
 	end //fim always
 	
 always @(posedge clk) begin
-		if(reset == 1'b1) estado <= ESTADO0;
+		if(reset) estado <= ESTADO0;
 		else estado <= prox_estado;
 	
 	end//fim always

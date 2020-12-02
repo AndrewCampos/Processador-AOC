@@ -2,7 +2,8 @@ module processador(dadosIN,
 						 chave,
 						 rst, 
 						 realClk, 
-						 estado, 
+						 estado,
+						 disp5,
 						 disp4, 
 						 disp3, 
 						 disp2, 
@@ -12,7 +13,7 @@ input realClk;
 input chave,rst;
 input [7:0] dadosIN;
 output [9:0] estado;
-output [0:6] disp4, disp3, disp2, disp1;
+output [0:6] disp5, disp4, disp3, disp2, disp1;
 
 wire [31:0] sPilha, sregB, sMEM, saidaEXT, sregA, ULA1, ULA2, sULA,  valorPC, toOUT, carregaDados, sValorPC, sregULA, endereco, dadosMEM, mem, instr, dadosEscrita, sA, sB;
 wire [4:0] regEscrita;
@@ -30,9 +31,6 @@ wire [4:0]controleULA;
 
 
 // MODULOS
-
-divisor divFreq(.clk(realClk),
-					 .div_clk(clk));
 
 registradorPC PC(.controle(EscrevePC), 
 						.reset(rst),
@@ -110,6 +108,7 @@ moduloSaida ModOUT(.entrada(toOUT),
 						 .saida2(disp2),
 						 .saida3(disp3),
 						 .saida4(disp4),
+						 .saida5(disp5),
 						 .clk(clk)); // modulo de saida (out)
 
 				 
@@ -166,14 +165,14 @@ mux4_32b MuxPC(.seletor(SelMuxPC),
 				   .saida(valorPC)); // para PC
 
 //CONTROLE
-sigEnter Pulso(.clk(clk),
-					.enter(chave),
-					.sig(enter));
+divisor divFreq(.clk(realClk),
+					 .enter(chave),
+					 .div_clk(clk));
 
 ctrl_undd Controle(.opcode(instr[31:26]),
                    .funct(instr[5:0]),
 						 .zero(zero),
-						 .enter(enter),
+						 .enter(chave),
 						 .reset(rst),
 						 .clk(clk),
 						 .estado(estado[3:0]),

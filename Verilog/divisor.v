@@ -1,11 +1,11 @@
-module divisor (clk , div_clk );
+module divisor (clk , enter, div_clk );
 
-input clk ;
-output reg div_clk ;
-reg [26:0] cont ;
+input clk, enter;
+output reg div_clk;
+reg [26:0] cont;
 
 always @( posedge clk ) begin
-	if(cont == 26'd10) begin
+	if(cont >= 26'd1000 && !enter) begin
 		div_clk = 1'b1;
 		cont = 26'd0;
 	end else begin
