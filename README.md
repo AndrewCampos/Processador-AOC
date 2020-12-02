@@ -52,7 +52,7 @@ Abaixo estão descritas algumas configurações de operação do processador.
 
 + Pinagem definida: FPGA DE10-Lite (10M5.0DAF.484C.7G)
 
-+ Clock: 0.5 Hz (expansível até 50Mhz)
++ Clock: 0.5 Hz (expansível até 50 Khz)
 
 + Número de instruções implementadas: 34 (expansível até 127)
 
