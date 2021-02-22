@@ -1,6 +1,7 @@
-module moduloSaida(entrada,saida5, saida4, saida3, saida2, saida1,clk);
+module moduloSaida(entrada, chaves, controleOUT, saida5, saida4, saida3, saida2, saida1,clk);
 
-	input clk;
+	input clk, controleOUT;
+	input [7:0] chaves;
 	input [31:0] entrada;
 	output [6:0] saida1, saida2, saida3, saida4, saida5;
 	reg [31:0] n1,  n2, n3, n4, n5;
@@ -17,27 +18,49 @@ initial begin
 end
 	
 always @(*) begin
-	temp = entrada;
-		
-		if(temp > 32'd99999) begin
-			n1 <= 32'd14;
-			n2 <= 32'd14;
-			n3 <= 32'd14;
-			n4 <= 32'd14;
-			n5 <= 32'd14;
-		end
-		else begin
-			n1  <= temp % 32'd10;
-			temp = temp / 32'd10;
-			n2  <= temp % 32'd10;
-			temp = temp / 32'd10;
-			n3  <= temp % 32'd10;
-			temp = temp / 32'd10;
-			n4  <= temp % 32'd10;
-			temp = temp / 32'd10;
-			n5  <= temp % 32'd10;
-		end
-	//end
+	if(!controleOUT) begin
+		temp = entrada;
+			
+			if(temp > 32'd99999) begin
+				n1 <= 32'd14;
+				n2 <= 32'd14;
+				n3 <= 32'd14;
+				n4 <= 32'd14;
+				n5 <= 32'd14;
+			end
+			else begin
+				n1  <= temp % 32'd10;
+				temp = temp / 32'd10;
+				n2  <= temp % 32'd10;
+				temp = temp / 32'd10;
+				n3  <= temp % 32'd10;
+				temp = temp / 32'd10;
+				n4  <= temp % 32'd10;
+				temp = temp / 32'd10;
+				n5  <= temp % 32'd10;
+			end
+	end else begin
+		temp = chaves;
+			
+			if(temp > 32'd99999) begin
+				n1 <= 32'd14;
+				n2 <= 32'd14;
+				n3 <= 32'd14;
+				n4 <= 32'd14;
+				n5 <= 32'd14;
+			end
+			else begin
+				n1  <= temp % 32'd10;
+				temp = temp / 32'd10;
+				n2  <= temp % 32'd10;
+				temp = temp / 32'd10;
+				n3  <= temp % 32'd10;
+				temp = temp / 32'd10;
+				n4  <= temp % 32'd10;
+				temp = temp / 32'd10;
+				n5  <= temp % 32'd10;
+			end
+	end
 end
 // decodfica display 1
 decodDisplay dispay1(n1[3:0],saida1);

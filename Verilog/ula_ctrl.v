@@ -55,8 +55,8 @@ always @(*) begin
 	if(opULA != 2'b00) begin
 		case(opULA)
 			2'b01: controle =  5'd0;
-			2'b10: controle = 5'd33;
-			2'b11: controle = 5'd31;
+			2'b10: controle = 5'd31;
+			2'b11: controle = 5'd30;
 			default: controle = controle;
 		endcase
 	end

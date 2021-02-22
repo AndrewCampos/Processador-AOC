@@ -123,7 +123,7 @@ always @(posedge clk) begin
 				saida = 1'b0;
 		end
 			
-		5'd31: begin
+		5'd30: begin
 			zero = 1'b0;
 			overflow = 1'b0;
 			saida = B;

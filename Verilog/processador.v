@@ -3,19 +3,16 @@ module processador(dadosIN,
 						 rst, 
 						 realClk, 
 						 estado,
-						 disp5,
-						 disp4, 
-						 disp3, 
-						 disp2, 
-						 disp1);
-
+						 toOUT,
+						 controleIN);
 input realClk;
 input chave,rst;
 input [7:0] dadosIN;
 output [9:0] estado;
-output [0:6] disp5, disp4, disp3, disp2, disp1;
+output [31:0]toOUT;
+output controleIN;
 
-wire [31:0] sPilha, sregB, sMEM, saidaEXT, sregA, ULA1, ULA2, sULA,  valorPC, toOUT, carregaDados, sValorPC, sregULA, endereco, dadosMEM, mem, instr, dadosEscrita, sA, sB;
+wire [31:0] Dado, ePilha, sPilha, sregB, sMEM, saidaEXT, sregA, ULA1, ULA2, sULA,  valorPC, carregaDados, sValorPC, sregULA, endereco, dadosMEM, mem, instr, dadosEscrita, sA, sB;
 wire [4:0] regEscrita;
 
 // SINAIS DE CONTROLE
@@ -23,23 +20,27 @@ wire [4:0] regEscrita;
 wire clk, enter, pop, push, EscrevePC, SetPC, LeMem, EscreveRI, EscreveReg, controleOUT, EscreveMem, ovrflw, zero;
 	
 //seletores de multiplexadores
-wire SelMuxMem, SelReg1, SelReg2, SelMuxUlaA, SelMuxIn;
+wire SelMuxEndMem, SelMuxDadoMem, SelReg1, SelReg2, SelMuxUlaA, SelMuxIn, SelMuxPilha;
 wire [1:0] SelMuxUlaB, SelMuxPC;
 	
 //sinal de controle da ULA
 wire [4:0]controleULA; 
-
 
 // MODULOS
 
 registradorPC PC(.controle(EscrevePC), 
 						.reset(rst),
 						.clk(clk),
-						//.led(estado),
+						.led(estado),
 						.entrada(valorPC),
 						.saida(sValorPC)); // PC
-						
-stack Pilha(.dado(sValorPC),
+
+mux2_32b MuxPilha(.seletor(SelMuxPilha),
+				    .entrada1(sValorPC),
+				    .entrada2(sULA),
+				    .saida(ePilha)); // para 'endereco' mem
+					 
+stack Pilha(.dado(ePilha),
 				.pop(pop),
 				.push(push),
 				.wclk(clk),
@@ -47,13 +48,17 @@ stack Pilha(.dado(sValorPC),
 				.saida(sPilha)); // pilha de recusrsao
 						
 
-mux2_32b MuxMem(.seletor(SelMuxMem),
+mux2_32b MuxEndMem(.seletor(SelMuxEndMem),
 				    .entrada1(sValorPC),
 				    .entrada2(sULA),
 				    .saida(endereco)); // para 'endereco' mem
 
-				  
-memoria MEM(.dado(sregB),
+mux2_32b MuxDadoMem(.seletor(SelMuxDadoMem),
+		    .entrada1(sregB),
+		    .entrada2(sPilha),
+		    .saida(Dado)); // para 'endereco' mem	
+			 
+memoria MEM(.dado(Dado),
 				.endereco(endereco[6:0]),
 				.write(EscreveMem),
 				.wclk(clk),
@@ -102,15 +107,18 @@ bancoReg banco(.escreve(EscreveReg),
 					.B(sB),
 					.toOUT(toOUT)); // banco de registradores (b-reg)
 
-					
+	
+/*
 moduloSaida ModOUT(.entrada(toOUT),
+						 .chaves(dadosIN),
+						 .controleOUT(controleIN),
 						 .saida1(disp1),
 						 .saida2(disp2),
 						 .saida3(disp3),
 						 .saida4(disp4),
 						 .saida5(disp5),
 						 .clk(clk)); // modulo de saida (out)
-
+*/
 				 
 registrador32b A(.controle(1'b1),
 					  .clk(clk),
@@ -175,10 +183,12 @@ ctrl_undd Controle(.opcode(instr[31:26]),
 						 .enter(chave),
 						 .reset(rst),
 						 .clk(clk),
-						 .estado(estado[3:0]),
+						 //.estado(estado[3:0]),
 						 .SelMuxPC(SelMuxPC),
 						 .EscrevePC(EscrevePC),
-						 .SelMuxMem(SelMuxMem),
+						 .SelMuxPilha(SelMuxPilha),
+						 .SelMuxEndMem(SelMuxEndMem),
+						 .SelMuxDadoMem(SelMuxDadoMem),
 						 .EscreveMem(EscreveMem),
 						 .EscreveRI(EscreveRI),
 						 .SelMuxReg1(SelReg1),
@@ -188,6 +198,7 @@ ctrl_undd Controle(.opcode(instr[31:26]),
 						 .SelMuxUlaB(SelMuxUlaB),
 						 .controleULA(controleULA),
 						 .SelMuxIn(SelMuxIn),
+						 .controleIN(controleIN),
 						 .controleOUT(controleOUT),
 						 .pop(pop),
 						 .push(push));

@@ -220,8 +220,8 @@ disp1[1]                     : E15       : output : 2.5 V             :         
 disp1[4]                     : E16       : output : 2.5 V             :         : 7         : Y              
 disp4[6]                     : E17       : output : 2.5 V             :         : 6         : Y              
 disp2[2]                     : E18       : output : 2.5 V             :         : 6         : Y              
-RESERVED_INPUT               : E19       :        :                   :         : 6         :                
-RESERVED_INPUT               : E20       :        :                   :         : 6         :                
+disp5[2]                     : E19       : output : 2.5 V             :         : 6         : Y              
+disp5[1]                     : E20       : output : 2.5 V             :         : 6         : Y              
 disp4[2]                     : E21       : output : 2.5 V             :         : 6         : Y              
 disp4[1]                     : E22       : output : 2.5 V             :         : 6         : Y              
 RESERVED_INPUT               : F1        :        :                   :         : 1B        :                
@@ -241,9 +241,9 @@ VCCIO7                       : F14       : power  :                   : 2.5V    
 chave                        : F15       : input  : 2.5 V             :         : 7         : Y              
 RESERVED_INPUT               : F16       :        :                   :         : 7         :                
 RESERVED_INPUT               : F17       :        :                   :         : 6         :                
-RESERVED_INPUT               : F18       :        :                   :         : 6         :                
-RESERVED_INPUT               : F19       :        :                   :         : 6         :                
-RESERVED_INPUT               : F20       :        :                   :         : 6         :                
+disp5[0]                     : F18       : output : 2.5 V             :         : 6         : Y              
+disp5[5]                     : F19       : output : 2.5 V             :         : 6         : Y              
+disp5[6]                     : F20       : output : 2.5 V             :         : 6         : Y              
 disp4[0]                     : F21       : output : 2.5 V             :         : 6         : Y              
 RESERVED_INPUT               : F22       :        :                   :         : 6         :                
 RESERVED_INPUT               : G1        :        :                   :         : 1B        :                
@@ -286,7 +286,7 @@ VCCA2                        : H15       : power  :                   : 2.5V    
 VCCIO6                       : H16       : power  :                   : 2.5V    : 6         :                
 RESERVED_INPUT               : H17       :        :                   :         : 6         :                
 RESERVED_INPUT               : H18       :        :                   :         : 6         :                
-RESERVED_INPUT               : H19       :        :                   :         : 6         :                
+disp5[4]                     : H19       : output : 2.5 V             :         : 6         : Y              
 RESERVED_INPUT               : H20       :        :                   :         : 6         :                
 RESERVED_INPUT               : H21       :        :                   :         : 6         :                
 RESERVED_INPUT               : H22       :        :                   :         : 6         :                
@@ -307,7 +307,7 @@ RESERVED_INPUT               : J14       :        :                   :         
 RESERVED_INPUT               : J15       :        :                   :         : 6         :                
 GND                          : J16       : gnd    :                   :         :           :                
 VCCIO6                       : J17       : power  :                   : 2.5V    : 6         :                
-RESERVED_INPUT               : J18       :        :                   :         : 6         :                
+disp5[3]                     : J18       : output : 2.5 V             :         : 6         : Y              
 GND                          : J19       : gnd    :                   :         :           :                
 RESERVED_INPUT               : J20       :        :                   :         : 6         :                
 RESERVED_INPUT               : J21       :        :                   :         : 6         :                

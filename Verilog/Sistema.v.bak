@@ -1,0 +1,29 @@
+module Sistema(dadosIN,
+						 chave,
+						 rst, 
+						 realClk, 
+						 estado,
+						 disp5,
+						 disp4, 
+						 disp3, 
+						 disp2, 
+						 disp1);
+
+input realClk;
+input chave,rst;
+input [7:0] dadosIN;
+output [9:0] estado;
+output [0:6] disp5, disp4, disp3, disp2, disp1;
+
+processador CPU(.dadosIN(dadosIN),
+					 .chave(chave),
+					 .rst(rst),
+					 .realClk(realClk),
+					 .estado(estado),
+					 .disp5(disp5),
+					 .disp4(disp4),
+					 .disp3(disp3),
+					 .disp2(disp2),
+					 .disp1(disp1));
+			
+endmodule

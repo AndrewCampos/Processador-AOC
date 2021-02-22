@@ -20,6 +20,58 @@
 					"strict" : false
 				},
 				{
+					"name" : "estado[4]",
+					"strict" : false
+				},
+				{
+					"name" : "estado[5]",
+					"strict" : false
+				},
+				{
+					"name" : "estado[6]",
+					"strict" : false
+				},
+				{
+					"name" : "estado[7]",
+					"strict" : false
+				},
+				{
+					"name" : "estado[8]",
+					"strict" : false
+				},
+				{
+					"name" : "estado[9]",
+					"strict" : false
+				},
+				{
+					"name" : "disp5[6]",
+					"strict" : false
+				},
+				{
+					"name" : "disp5[5]",
+					"strict" : false
+				},
+				{
+					"name" : "disp5[4]",
+					"strict" : false
+				},
+				{
+					"name" : "disp5[3]",
+					"strict" : false
+				},
+				{
+					"name" : "disp5[2]",
+					"strict" : false
+				},
+				{
+					"name" : "disp5[1]",
+					"strict" : false
+				},
+				{
+					"name" : "disp5[0]",
+					"strict" : false
+				},
+				{
 					"name" : "disp4[6]",
 					"strict" : false
 				},
@@ -132,18 +184,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "rst",
-					"strict" : false
-				},
-				{
-					"name" : "realClk",
-					"strict" : false
-				},
-				{
-					"name" : "chave",
-					"strict" : false
-				},
-				{
 					"name" : "dadosIN[7]",
 					"strict" : false
 				},
@@ -173,6 +213,18 @@
 				},
 				{
 					"name" : "dadosIN[0]",
+					"strict" : false
+				},
+				{
+					"name" : "rst",
+					"strict" : false
+				},
+				{
+					"name" : "chave",
+					"strict" : false
+				},
+				{
+					"name" : "realClk",
 					"strict" : false
 				}
 			]
