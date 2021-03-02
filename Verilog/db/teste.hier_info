@@ -7260,7 +7260,7 @@ clk => cont[24].CLK
 clk => cont[25].CLK
 clk => cont[26].CLK
 clk => div_clk~reg0.CLK
-enter => always0.IN1
+enter => ~NO_FANOUT~
 div_clk <= div_clk~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
@@ -7282,6 +7282,11 @@ reset => estado.OUTPUTSELECT
 reset => estado.OUTPUTSELECT
 reset => estado.OUTPUTSELECT
 reset => estado.OUTPUTSELECT
+enter => prox_estado.OUTPUTSELECT
+enter => prox_estado.OUTPUTSELECT
+enter => prox_estado.OUTPUTSELECT
+enter => prox_estado.OUTPUTSELECT
+enter => prox_estado.OUTPUTSELECT
 enter => prox_estado.OUTPUTSELECT
 enter => prox_estado.OUTPUTSELECT
 enter => prox_estado.OUTPUTSELECT

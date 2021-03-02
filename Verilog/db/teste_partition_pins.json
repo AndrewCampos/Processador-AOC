@@ -220,11 +220,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "chave",
+					"name" : "realClk",
 					"strict" : false
 				},
 				{
-					"name" : "realClk",
+					"name" : "chave",
 					"strict" : false
 				}
 			]

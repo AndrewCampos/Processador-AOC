@@ -545,7 +545,8 @@ module ctrl_undd(opcode,
 			SelMuxUlaA  <=  1'b0;
 			SelMuxUlaB  <= 2'b00;
 			SelMuxIn    <=  1'b1;
-			prox_estado <= ESTADO0;
+			if(!enter)
+				prox_estado <= ESTADO0;
 		end
 		
 		ESTADO16: begin // Busca endereço no banco
