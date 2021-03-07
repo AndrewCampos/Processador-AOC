@@ -1,5 +1,5 @@
 Timing Analyzer report for teste
-Tue Mar  2 12:03:53 2021
+Sun Mar  7 15:20:02 2021
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -92,12 +92,12 @@ https://fpgasoftware.intel.com/eula.
 ; Number detected on machine ; 4           ;
 ; Maximum allowed            ; 2           ;
 ;                            ;             ;
-; Average used               ; 1.67        ;
+; Average used               ; 1.69        ;
 ; Maximum used               ; 2           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;  66.7%      ;
+;     Processor 2            ;  68.6%      ;
 +----------------------------+-------------+
 
 
@@ -113,15 +113,15 @@ https://fpgasoftware.intel.com/eula.
 +------------------------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+----------------------------------------------------+
 
 
-+-----------------------------------------------------------------------------------+
-; Slow 1200mV 85C Model Fmax Summary                                                ;
-+------------+-----------------+---------------------------------------------+------+
-; Fmax       ; Restricted Fmax ; Clock Name                                  ; Note ;
-+------------+-----------------+---------------------------------------------+------+
-; 4.04 MHz   ; 4.04 MHz        ; processador:CPU|divisor:divFreq|div_clk     ;      ;
-; 144.34 MHz ; 144.34 MHz      ; processador:CPU|ctrl_undd:Controle|OpULA[0] ;      ;
-; 245.52 MHz ; 245.52 MHz      ; realClk                                     ;      ;
-+------------+-----------------+---------------------------------------------+------+
++--------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Fmax Summary                                                                                                         ;
++------------+-----------------+---------------------------------------------+---------------------------------------------------------------+
+; Fmax       ; Restricted Fmax ; Clock Name                                  ; Note                                                          ;
++------------+-----------------+---------------------------------------------+---------------------------------------------------------------+
+; 4.05 MHz   ; 4.05 MHz        ; processador:CPU|divisor:divFreq|div_clk     ;                                                               ;
+; 124.63 MHz ; 124.63 MHz      ; processador:CPU|ctrl_undd:Controle|OpULA[0] ;                                                               ;
+; 272.78 MHz ; 250.0 MHz       ; realClk                                     ; limit due to minimum period restriction (max I/O toggle rate) ;
++------------+-----------------+---------------------------------------------+---------------------------------------------------------------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
 
@@ -130,10 +130,10 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +------------------------------------------------+----------+---------------+
 ; Clock                                          ; Slack    ; End Point TNS ;
 +------------------------------------------------+----------+---------------+
-; processador:CPU|divisor:divFreq|div_clk        ; -124.648 ; -36435.825    ;
-; processador:CPU|ctrl_undd:Controle|controleOUT ; -4.709   ; -130.683      ;
-; processador:CPU|ctrl_undd:Controle|OpULA[0]    ; -4.093   ; -17.901       ;
-; realClk                                        ; -3.073   ; -77.802       ;
+; processador:CPU|divisor:divFreq|div_clk        ; -123.902 ; -87056.123    ;
+; processador:CPU|ctrl_undd:Controle|OpULA[0]    ; -5.996   ; -23.723       ;
+; processador:CPU|ctrl_undd:Controle|controleOUT ; -5.589   ; -152.913      ;
+; realClk                                        ; -2.666   ; -67.682       ;
 +------------------------------------------------+----------+---------------+
 
 
@@ -143,9 +143,9 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 ; Clock                                          ; Slack ; End Point TNS ;
 +------------------------------------------------+-------+---------------+
 ; processador:CPU|divisor:divFreq|div_clk        ; 0.341 ; 0.000         ;
-; realClk                                        ; 0.599 ; 0.000         ;
-; processador:CPU|ctrl_undd:Controle|OpULA[0]    ; 0.962 ; 0.000         ;
-; processador:CPU|ctrl_undd:Controle|controleOUT ; 1.188 ; 0.000         ;
+; realClk                                        ; 0.630 ; 0.000         ;
+; processador:CPU|ctrl_undd:Controle|OpULA[0]    ; 1.037 ; 0.000         ;
+; processador:CPU|ctrl_undd:Controle|controleOUT ; 1.491 ; 0.000         ;
 +------------------------------------------------+-------+---------------+
 
 
@@ -167,9 +167,9 @@ No paths to report.
 ; Clock                                          ; Slack  ; End Point TNS ;
 +------------------------------------------------+--------+---------------+
 ; realClk                                        ; -3.000 ; -42.284       ;
-; processador:CPU|divisor:divFreq|div_clk        ; -2.422 ; -6214.891     ;
+; processador:CPU|divisor:divFreq|div_clk        ; -2.422 ; -11961.579    ;
 ; processador:CPU|ctrl_undd:Controle|controleOUT ; -1.403 ; -44.896       ;
-; processador:CPU|ctrl_undd:Controle|OpULA[0]    ; 0.359  ; 0.000         ;
+; processador:CPU|ctrl_undd:Controle|OpULA[0]    ; 0.403  ; 0.000         ;
 +------------------------------------------------+--------+---------------+
 
 
@@ -184,9 +184,9 @@ No synchronizer chains to report.
 +------------+-----------------+---------------------------------------------+---------------------------------------------------------------+
 ; Fmax       ; Restricted Fmax ; Clock Name                                  ; Note                                                          ;
 +------------+-----------------+---------------------------------------------+---------------------------------------------------------------+
-; 4.45 MHz   ; 4.45 MHz        ; processador:CPU|divisor:divFreq|div_clk     ;                                                               ;
-; 151.42 MHz ; 151.42 MHz      ; processador:CPU|ctrl_undd:Controle|OpULA[0] ;                                                               ;
-; 266.88 MHz ; 250.0 MHz       ; realClk                                     ; limit due to minimum period restriction (max I/O toggle rate) ;
+; 4.47 MHz   ; 4.47 MHz        ; processador:CPU|divisor:divFreq|div_clk     ;                                                               ;
+; 129.33 MHz ; 129.33 MHz      ; processador:CPU|ctrl_undd:Controle|OpULA[0] ;                                                               ;
+; 296.3 MHz  ; 250.0 MHz       ; realClk                                     ; limit due to minimum period restriction (max I/O toggle rate) ;
 +------------+-----------------+---------------------------------------------+---------------------------------------------------------------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -196,10 +196,10 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +------------------------------------------------+----------+---------------+
 ; Clock                                          ; Slack    ; End Point TNS ;
 +------------------------------------------------+----------+---------------+
-; processador:CPU|divisor:divFreq|div_clk        ; -113.170 ; -33362.236    ;
-; processador:CPU|ctrl_undd:Controle|controleOUT ; -4.272   ; -118.203      ;
-; processador:CPU|ctrl_undd:Controle|OpULA[0]    ; -3.911   ; -17.200       ;
-; realClk                                        ; -2.747   ; -69.542       ;
+; processador:CPU|divisor:divFreq|div_clk        ; -112.384 ; -79696.671    ;
+; processador:CPU|ctrl_undd:Controle|OpULA[0]    ; -5.787   ; -22.796       ;
+; processador:CPU|ctrl_undd:Controle|controleOUT ; -5.083   ; -139.143      ;
+; realClk                                        ; -2.375   ; -60.133       ;
 +------------------------------------------------+----------+---------------+
 
 
@@ -208,10 +208,10 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +------------------------------------------------+-------+---------------+
 ; Clock                                          ; Slack ; End Point TNS ;
 +------------------------------------------------+-------+---------------+
-; processador:CPU|divisor:divFreq|div_clk        ; 0.307 ; 0.000         ;
-; realClk                                        ; 0.539 ; 0.000         ;
-; processador:CPU|ctrl_undd:Controle|OpULA[0]    ; 0.991 ; 0.000         ;
-; processador:CPU|ctrl_undd:Controle|controleOUT ; 1.113 ; 0.000         ;
+; processador:CPU|divisor:divFreq|div_clk        ; 0.306 ; 0.000         ;
+; realClk                                        ; 0.582 ; 0.000         ;
+; processador:CPU|ctrl_undd:Controle|OpULA[0]    ; 0.999 ; 0.000         ;
+; processador:CPU|ctrl_undd:Controle|controleOUT ; 1.390 ; 0.000         ;
 +------------------------------------------------+-------+---------------+
 
 
@@ -233,9 +233,9 @@ No paths to report.
 ; Clock                                          ; Slack  ; End Point TNS ;
 +------------------------------------------------+--------+---------------+
 ; realClk                                        ; -3.000 ; -42.284       ;
-; processador:CPU|divisor:divFreq|div_clk        ; -2.333 ; -6213.823     ;
+; processador:CPU|divisor:divFreq|div_clk        ; -2.333 ; -11960.511    ;
 ; processador:CPU|ctrl_undd:Controle|controleOUT ; -1.403 ; -44.896       ;
-; processador:CPU|ctrl_undd:Controle|OpULA[0]    ; 0.425  ; 0.000         ;
+; processador:CPU|ctrl_undd:Controle|OpULA[0]    ; 0.437  ; 0.000         ;
 +------------------------------------------------+--------+---------------+
 
 
@@ -250,10 +250,10 @@ No synchronizer chains to report.
 +------------------------------------------------+---------+---------------+
 ; Clock                                          ; Slack   ; End Point TNS ;
 +------------------------------------------------+---------+---------------+
-; processador:CPU|divisor:divFreq|div_clk        ; -51.024 ; -15896.815    ;
-; processador:CPU|ctrl_undd:Controle|controleOUT ; -1.540  ; -41.312       ;
-; processador:CPU|ctrl_undd:Controle|OpULA[0]    ; -1.311  ; -5.440        ;
-; realClk                                        ; -0.704  ; -15.983       ;
+; processador:CPU|divisor:divFreq|div_clk        ; -50.382 ; -40449.892    ;
+; processador:CPU|ctrl_undd:Controle|OpULA[0]    ; -2.165  ; -8.050        ;
+; processador:CPU|ctrl_undd:Controle|controleOUT ; -1.911  ; -50.223       ;
+; realClk                                        ; -0.544  ; -11.810       ;
 +------------------------------------------------+---------+---------------+
 
 
@@ -262,10 +262,10 @@ No synchronizer chains to report.
 +------------------------------------------------+-------+---------------+
 ; Clock                                          ; Slack ; End Point TNS ;
 +------------------------------------------------+-------+---------------+
-; processador:CPU|divisor:divFreq|div_clk        ; 0.148 ; 0.000         ;
-; processador:CPU|ctrl_undd:Controle|OpULA[0]    ; 0.168 ; 0.000         ;
-; realClk                                        ; 0.226 ; 0.000         ;
-; processador:CPU|ctrl_undd:Controle|controleOUT ; 0.423 ; 0.000         ;
+; processador:CPU|divisor:divFreq|div_clk        ; 0.147 ; 0.000         ;
+; realClk                                        ; 0.244 ; 0.000         ;
+; processador:CPU|ctrl_undd:Controle|OpULA[0]    ; 0.302 ; 0.000         ;
+; processador:CPU|ctrl_undd:Controle|controleOUT ; 0.580 ; 0.000         ;
 +------------------------------------------------+-------+---------------+
 
 
@@ -286,10 +286,10 @@ No paths to report.
 +------------------------------------------------+--------+---------------+
 ; Clock                                          ; Slack  ; End Point TNS ;
 +------------------------------------------------+--------+---------------+
-; realClk                                        ; -3.000 ; -32.021       ;
-; processador:CPU|divisor:divFreq|div_clk        ; -1.000 ; -4421.000     ;
+; realClk                                        ; -3.000 ; -31.952       ;
+; processador:CPU|divisor:divFreq|div_clk        ; -1.000 ; -8517.000     ;
 ; processador:CPU|ctrl_undd:Controle|controleOUT ; -1.000 ; -32.000       ;
-; processador:CPU|ctrl_undd:Controle|OpULA[0]    ; 0.290  ; 0.000         ;
+; processador:CPU|ctrl_undd:Controle|OpULA[0]    ; 0.326  ; 0.000         ;
 +------------------------------------------------+--------+---------------+
 
 
@@ -304,16 +304,16 @@ No synchronizer chains to report.
 +-------------------------------------------------+------------+-------+----------+---------+---------------------+
 ; Clock                                           ; Setup      ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
 +-------------------------------------------------+------------+-------+----------+---------+---------------------+
-; Worst-case Slack                                ; -124.648   ; 0.148 ; N/A      ; N/A     ; -3.000              ;
-;  processador:CPU|ctrl_undd:Controle|OpULA[0]    ; -4.093     ; 0.168 ; N/A      ; N/A     ; 0.290               ;
-;  processador:CPU|ctrl_undd:Controle|controleOUT ; -4.709     ; 0.423 ; N/A      ; N/A     ; -1.403              ;
-;  processador:CPU|divisor:divFreq|div_clk        ; -124.648   ; 0.148 ; N/A      ; N/A     ; -2.422              ;
-;  realClk                                        ; -3.073     ; 0.226 ; N/A      ; N/A     ; -3.000              ;
-; Design-wide TNS                                 ; -36662.211 ; 0.0   ; 0.0      ; 0.0     ; -6302.071           ;
-;  processador:CPU|ctrl_undd:Controle|OpULA[0]    ; -17.901    ; 0.000 ; N/A      ; N/A     ; 0.000               ;
-;  processador:CPU|ctrl_undd:Controle|controleOUT ; -130.683   ; 0.000 ; N/A      ; N/A     ; -44.896             ;
-;  processador:CPU|divisor:divFreq|div_clk        ; -36435.825 ; 0.000 ; N/A      ; N/A     ; -6214.891           ;
-;  realClk                                        ; -77.802    ; 0.000 ; N/A      ; N/A     ; -42.284             ;
+; Worst-case Slack                                ; -123.902   ; 0.147 ; N/A      ; N/A     ; -3.000              ;
+;  processador:CPU|ctrl_undd:Controle|OpULA[0]    ; -5.996     ; 0.302 ; N/A      ; N/A     ; 0.326               ;
+;  processador:CPU|ctrl_undd:Controle|controleOUT ; -5.589     ; 0.580 ; N/A      ; N/A     ; -1.403              ;
+;  processador:CPU|divisor:divFreq|div_clk        ; -123.902   ; 0.147 ; N/A      ; N/A     ; -2.422              ;
+;  realClk                                        ; -2.666     ; 0.244 ; N/A      ; N/A     ; -3.000              ;
+; Design-wide TNS                                 ; -87300.441 ; 0.0   ; 0.0      ; 0.0     ; -12048.759          ;
+;  processador:CPU|ctrl_undd:Controle|OpULA[0]    ; -23.723    ; 0.000 ; N/A      ; N/A     ; 0.000               ;
+;  processador:CPU|ctrl_undd:Controle|controleOUT ; -152.913   ; 0.000 ; N/A      ; N/A     ; -44.896             ;
+;  processador:CPU|divisor:divFreq|div_clk        ; -87056.123 ; 0.000 ; N/A      ; N/A     ; -11961.579          ;
+;  realClk                                        ; -67.682    ; 0.000 ; N/A      ; N/A     ; -42.284             ;
 +-------------------------------------------------+------------+-------+----------+---------+---------------------+
 
 
@@ -561,11 +561,11 @@ No synchronizer chains to report.
 ; From Clock                                  ; To Clock                                       ; RR Paths     ; FR Paths     ; RF Paths ; FF Paths ;
 +---------------------------------------------+------------------------------------------------+--------------+--------------+----------+----------+
 ; processador:CPU|divisor:divFreq|div_clk     ; processador:CPU|ctrl_undd:Controle|controleOUT ; 418          ; 0            ; 0        ; 0        ;
-; processador:CPU|ctrl_undd:Controle|OpULA[0] ; processador:CPU|ctrl_undd:Controle|OpULA[0]    ; 0            ; 0            ; 7        ; 7        ;
-; processador:CPU|divisor:divFreq|div_clk     ; processador:CPU|ctrl_undd:Controle|OpULA[0]    ; 0            ; 0            ; 59       ; 8        ;
-; processador:CPU|ctrl_undd:Controle|OpULA[0] ; processador:CPU|divisor:divFreq|div_clk        ; 0            ; 1505         ; 0        ; 0        ;
-; processador:CPU|divisor:divFreq|div_clk     ; processador:CPU|divisor:divFreq|div_clk        ; > 2147483647 ; > 2147483647 ; 12683    ; 4064     ;
-; realClk                                     ; realClk                                        ; 1022         ; 0            ; 0        ; 0        ;
+; processador:CPU|ctrl_undd:Controle|OpULA[0] ; processador:CPU|ctrl_undd:Controle|OpULA[0]    ; 0            ; 0            ; 6        ; 6        ;
+; processador:CPU|divisor:divFreq|div_clk     ; processador:CPU|ctrl_undd:Controle|OpULA[0]    ; 0            ; 0            ; 69       ; 7        ;
+; processador:CPU|ctrl_undd:Controle|OpULA[0] ; processador:CPU|divisor:divFreq|div_clk        ; 0            ; 1590         ; 0        ; 0        ;
+; processador:CPU|divisor:divFreq|div_clk     ; processador:CPU|divisor:divFreq|div_clk        ; > 2147483647 ; > 2147483647 ; 24971    ; 8160     ;
+; realClk                                     ; realClk                                        ; 966          ; 0            ; 0        ; 0        ;
 +---------------------------------------------+------------------------------------------------+--------------+--------------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -576,11 +576,11 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 ; From Clock                                  ; To Clock                                       ; RR Paths     ; FR Paths     ; RF Paths ; FF Paths ;
 +---------------------------------------------+------------------------------------------------+--------------+--------------+----------+----------+
 ; processador:CPU|divisor:divFreq|div_clk     ; processador:CPU|ctrl_undd:Controle|controleOUT ; 418          ; 0            ; 0        ; 0        ;
-; processador:CPU|ctrl_undd:Controle|OpULA[0] ; processador:CPU|ctrl_undd:Controle|OpULA[0]    ; 0            ; 0            ; 7        ; 7        ;
-; processador:CPU|divisor:divFreq|div_clk     ; processador:CPU|ctrl_undd:Controle|OpULA[0]    ; 0            ; 0            ; 59       ; 8        ;
-; processador:CPU|ctrl_undd:Controle|OpULA[0] ; processador:CPU|divisor:divFreq|div_clk        ; 0            ; 1505         ; 0        ; 0        ;
-; processador:CPU|divisor:divFreq|div_clk     ; processador:CPU|divisor:divFreq|div_clk        ; > 2147483647 ; > 2147483647 ; 12683    ; 4064     ;
-; realClk                                     ; realClk                                        ; 1022         ; 0            ; 0        ; 0        ;
+; processador:CPU|ctrl_undd:Controle|OpULA[0] ; processador:CPU|ctrl_undd:Controle|OpULA[0]    ; 0            ; 0            ; 6        ; 6        ;
+; processador:CPU|divisor:divFreq|div_clk     ; processador:CPU|ctrl_undd:Controle|OpULA[0]    ; 0            ; 0            ; 69       ; 7        ;
+; processador:CPU|ctrl_undd:Controle|OpULA[0] ; processador:CPU|divisor:divFreq|div_clk        ; 0            ; 1590         ; 0        ; 0        ;
+; processador:CPU|divisor:divFreq|div_clk     ; processador:CPU|divisor:divFreq|div_clk        ; > 2147483647 ; > 2147483647 ; 24971    ; 8160     ;
+; realClk                                     ; realClk                                        ; 966          ; 0            ; 0        ; 0        ;
 +---------------------------------------------+------------------------------------------------+--------------+--------------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -771,7 +771,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Tue Mar  2 12:03:38 2021
+    Info: Processing started: Sun Mar  7 15:19:38 2021
 Info: Command: quartus_sta teste -c teste
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -792,89 +792,89 @@ Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1200mV 85C Model
 Info: Can't run Report Timing Closure Recommendations. The current device family is not supported.
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -124.648
+Info (332146): Worst-case setup slack is -123.902
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):  -124.648          -36435.825 processador:CPU|divisor:divFreq|div_clk 
-    Info (332119):    -4.709            -130.683 processador:CPU|ctrl_undd:Controle|controleOUT 
-    Info (332119):    -4.093             -17.901 processador:CPU|ctrl_undd:Controle|OpULA[0] 
-    Info (332119):    -3.073             -77.802 realClk 
+    Info (332119):  -123.902          -87056.123 processador:CPU|divisor:divFreq|div_clk 
+    Info (332119):    -5.996             -23.723 processador:CPU|ctrl_undd:Controle|OpULA[0] 
+    Info (332119):    -5.589            -152.913 processador:CPU|ctrl_undd:Controle|controleOUT 
+    Info (332119):    -2.666             -67.682 realClk 
 Info (332146): Worst-case hold slack is 0.341
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
     Info (332119):     0.341               0.000 processador:CPU|divisor:divFreq|div_clk 
-    Info (332119):     0.599               0.000 realClk 
-    Info (332119):     0.962               0.000 processador:CPU|ctrl_undd:Controle|OpULA[0] 
-    Info (332119):     1.188               0.000 processador:CPU|ctrl_undd:Controle|controleOUT 
+    Info (332119):     0.630               0.000 realClk 
+    Info (332119):     1.037               0.000 processador:CPU|ctrl_undd:Controle|OpULA[0] 
+    Info (332119):     1.491               0.000 processador:CPU|ctrl_undd:Controle|controleOUT 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
     Info (332119):    -3.000             -42.284 realClk 
-    Info (332119):    -2.422           -6214.891 processador:CPU|divisor:divFreq|div_clk 
+    Info (332119):    -2.422          -11961.579 processador:CPU|divisor:divFreq|div_clk 
     Info (332119):    -1.403             -44.896 processador:CPU|ctrl_undd:Controle|controleOUT 
-    Info (332119):     0.359               0.000 processador:CPU|ctrl_undd:Controle|OpULA[0] 
+    Info (332119):     0.403               0.000 processador:CPU|ctrl_undd:Controle|OpULA[0] 
 Info: Analyzing Slow 1200mV 0C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -113.170
+Info (332146): Worst-case setup slack is -112.384
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):  -113.170          -33362.236 processador:CPU|divisor:divFreq|div_clk 
-    Info (332119):    -4.272            -118.203 processador:CPU|ctrl_undd:Controle|controleOUT 
-    Info (332119):    -3.911             -17.200 processador:CPU|ctrl_undd:Controle|OpULA[0] 
-    Info (332119):    -2.747             -69.542 realClk 
-Info (332146): Worst-case hold slack is 0.307
+    Info (332119):  -112.384          -79696.671 processador:CPU|divisor:divFreq|div_clk 
+    Info (332119):    -5.787             -22.796 processador:CPU|ctrl_undd:Controle|OpULA[0] 
+    Info (332119):    -5.083            -139.143 processador:CPU|ctrl_undd:Controle|controleOUT 
+    Info (332119):    -2.375             -60.133 realClk 
+Info (332146): Worst-case hold slack is 0.306
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.307               0.000 processador:CPU|divisor:divFreq|div_clk 
-    Info (332119):     0.539               0.000 realClk 
-    Info (332119):     0.991               0.000 processador:CPU|ctrl_undd:Controle|OpULA[0] 
-    Info (332119):     1.113               0.000 processador:CPU|ctrl_undd:Controle|controleOUT 
+    Info (332119):     0.306               0.000 processador:CPU|divisor:divFreq|div_clk 
+    Info (332119):     0.582               0.000 realClk 
+    Info (332119):     0.999               0.000 processador:CPU|ctrl_undd:Controle|OpULA[0] 
+    Info (332119):     1.390               0.000 processador:CPU|ctrl_undd:Controle|controleOUT 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
     Info (332119):    -3.000             -42.284 realClk 
-    Info (332119):    -2.333           -6213.823 processador:CPU|divisor:divFreq|div_clk 
+    Info (332119):    -2.333          -11960.511 processador:CPU|divisor:divFreq|div_clk 
     Info (332119):    -1.403             -44.896 processador:CPU|ctrl_undd:Controle|controleOUT 
-    Info (332119):     0.425               0.000 processador:CPU|ctrl_undd:Controle|OpULA[0] 
+    Info (332119):     0.437               0.000 processador:CPU|ctrl_undd:Controle|OpULA[0] 
 Info: Analyzing Fast 1200mV 0C Model
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -51.024
+Info (332146): Worst-case setup slack is -50.382
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):   -51.024          -15896.815 processador:CPU|divisor:divFreq|div_clk 
-    Info (332119):    -1.540             -41.312 processador:CPU|ctrl_undd:Controle|controleOUT 
-    Info (332119):    -1.311              -5.440 processador:CPU|ctrl_undd:Controle|OpULA[0] 
-    Info (332119):    -0.704             -15.983 realClk 
-Info (332146): Worst-case hold slack is 0.148
+    Info (332119):   -50.382          -40449.892 processador:CPU|divisor:divFreq|div_clk 
+    Info (332119):    -2.165              -8.050 processador:CPU|ctrl_undd:Controle|OpULA[0] 
+    Info (332119):    -1.911             -50.223 processador:CPU|ctrl_undd:Controle|controleOUT 
+    Info (332119):    -0.544             -11.810 realClk 
+Info (332146): Worst-case hold slack is 0.147
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.148               0.000 processador:CPU|divisor:divFreq|div_clk 
-    Info (332119):     0.168               0.000 processador:CPU|ctrl_undd:Controle|OpULA[0] 
-    Info (332119):     0.226               0.000 realClk 
-    Info (332119):     0.423               0.000 processador:CPU|ctrl_undd:Controle|controleOUT 
+    Info (332119):     0.147               0.000 processador:CPU|divisor:divFreq|div_clk 
+    Info (332119):     0.244               0.000 realClk 
+    Info (332119):     0.302               0.000 processador:CPU|ctrl_undd:Controle|OpULA[0] 
+    Info (332119):     0.580               0.000 processador:CPU|ctrl_undd:Controle|controleOUT 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.000             -32.021 realClk 
-    Info (332119):    -1.000           -4421.000 processador:CPU|divisor:divFreq|div_clk 
+    Info (332119):    -3.000             -31.952 realClk 
+    Info (332119):    -1.000           -8517.000 processador:CPU|divisor:divFreq|div_clk 
     Info (332119):    -1.000             -32.000 processador:CPU|ctrl_undd:Controle|controleOUT 
-    Info (332119):     0.290               0.000 processador:CPU|ctrl_undd:Controle|OpULA[0] 
+    Info (332119):     0.326               0.000 processador:CPU|ctrl_undd:Controle|OpULA[0] 
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 555 megabytes
-    Info: Processing ended: Tue Mar  2 12:03:53 2021
-    Info: Elapsed time: 00:00:15
-    Info: Total CPU time (on all processors): 00:00:25
+    Info: Peak virtual memory: 595 megabytes
+    Info: Processing ended: Sun Mar  7 15:20:02 2021
+    Info: Elapsed time: 00:00:24
+    Info: Total CPU time (on all processors): 00:00:40
 
 

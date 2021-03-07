@@ -59,7 +59,7 @@ mux2_32b MuxDadoMem(.seletor(SelMuxDadoMem),
 		    .saida(Dado)); // para 'endereco' mem	
 			 
 memoria MEM(.dado(Dado),
-				.endereco(endereco[6:0]),
+				.endereco(endereco[9:0]),
 				.write(EscreveMem),
 				.wclk(clk),
 				.rclk(clk),

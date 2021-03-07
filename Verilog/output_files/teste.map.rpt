@@ -1,5 +1,5 @@
 Analysis & Synthesis report for teste
-Tue Mar  2 12:00:29 2021
+Sun Mar  7 15:14:47 2021
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -55,12 +55,11 @@ Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
  47. Port Connectivity Checks: "processador:CPU|registrador32b:A"
  48. Port Connectivity Checks: "processador:CPU|registrador32b:Rmem"
  49. Port Connectivity Checks: "processador:CPU|mux2_32b:MuxIn"
- 50. Port Connectivity Checks: "processador:CPU|memoria:MEM"
- 51. Port Connectivity Checks: "processador:CPU|stack:Pilha"
- 52. Post-Synthesis Netlist Statistics for Top Partition
- 53. Elapsed Time Per Partition
- 54. Analysis & Synthesis Messages
- 55. Analysis & Synthesis Suppressed Messages
+ 50. Port Connectivity Checks: "processador:CPU|stack:Pilha"
+ 51. Post-Synthesis Netlist Statistics for Top Partition
+ 52. Elapsed Time Per Partition
+ 53. Analysis & Synthesis Messages
+ 54. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -87,15 +86,15 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Mar  2 12:00:29 2021       ;
+; Analysis & Synthesis Status        ; Successful - Sun Mar  7 15:14:47 2021       ;
 ; Quartus Prime Version              ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                      ; teste                                       ;
 ; Top-level Entity Name              ; Sistema                                     ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 12,090                                      ;
-;     Total combinational functions  ; 8,279                                       ;
-;     Dedicated logic registers      ; 4,469                                       ;
-; Total registers                    ; 4469                                        ;
+; Total logic elements               ; 19,060                                      ;
+;     Total combinational functions  ; 10,891                                      ;
+;     Dedicated logic registers      ; 8,565                                       ;
+; Total registers                    ; 8565                                        ;
 ; Total pins                         ; 56                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 2,368                                       ;
@@ -200,12 +199,12 @@ https://fpgasoftware.intel.com/eula.
 ; Number detected on machine ; 4           ;
 ; Maximum allowed            ; 2           ;
 ;                            ;             ;
-; Average used               ; 1.00        ;
+; Average used               ; 1.01        ;
 ; Maximum used               ; 2           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.4%      ;
+;     Processor 2            ;   0.7%      ;
 +----------------------------+-------------+
 
 
@@ -273,20 +272,20 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-----------------------------------------+
 ; Resource                                    ; Usage                                   ;
 +---------------------------------------------+-----------------------------------------+
-; Estimated Total logic elements              ; 12,090                                  ;
+; Estimated Total logic elements              ; 19,060                                  ;
 ;                                             ;                                         ;
-; Total combinational functions               ; 8279                                    ;
+; Total combinational functions               ; 10891                                   ;
 ; Logic element usage by number of LUT inputs ;                                         ;
-;     -- 4 input functions                    ; 4263                                    ;
-;     -- 3 input functions                    ; 1845                                    ;
-;     -- <=2 input functions                  ; 2171                                    ;
+;     -- 4 input functions                    ; 6974                                    ;
+;     -- 3 input functions                    ; 2047                                    ;
+;     -- <=2 input functions                  ; 1870                                    ;
 ;                                             ;                                         ;
 ; Logic elements by mode                      ;                                         ;
-;     -- normal mode                          ; 6701                                    ;
+;     -- normal mode                          ; 9313                                    ;
 ;     -- arithmetic mode                      ; 1578                                    ;
 ;                                             ;                                         ;
-; Total registers                             ; 4469                                    ;
-;     -- Dedicated logic registers            ; 4469                                    ;
+; Total registers                             ; 8565                                    ;
+;     -- Dedicated logic registers            ; 8565                                    ;
 ;     -- I/O registers                        ; 0                                       ;
 ;                                             ;                                         ;
 ; I/O pins                                    ; 56                                      ;
@@ -295,9 +294,9 @@ https://fpgasoftware.intel.com/eula.
 ; Embedded Multiplier 9-bit elements          ; 6                                       ;
 ;                                             ;                                         ;
 ; Maximum fan-out node                        ; processador:CPU|divisor:divFreq|div_clk ;
-; Maximum fan-out                             ; 4505                                    ;
-; Total fan-out                               ; 40603                                   ;
-; Average fan-out                             ; 3.13                                    ;
+; Maximum fan-out                             ; 8601                                    ;
+; Total fan-out                               ; 64001                                   ;
+; Average fan-out                             ; 3.25                                    ;
 +---------------------------------------------+-----------------------------------------+
 
 
@@ -306,7 +305,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
 ; Compilation Hierarchy Node                   ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                                                                                                                    ; Entity Name         ; Library Name ;
 +----------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
-; |Sistema                                     ; 8279 (1)            ; 4469 (0)                  ; 2368        ; 0          ; 6            ; 0       ; 3         ; 56   ; 0            ; 0          ; |Sistema                                                                                                                                               ; Sistema             ; work         ;
+; |Sistema                                     ; 10891 (1)           ; 8565 (0)                  ; 2368        ; 0          ; 6            ; 0       ; 3         ; 56   ; 0            ; 0          ; |Sistema                                                                                                                                               ; Sistema             ; work         ;
 ;    |moduloSaida:ModOUT|                      ; 3088 (55)           ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Sistema|moduloSaida:ModOUT                                                                                                                            ; moduloSaida         ; work         ;
 ;       |decodDisplay:dispay1|                 ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Sistema|moduloSaida:ModOUT|decodDisplay:dispay1                                                                                                       ; decodDisplay        ; work         ;
 ;       |decodDisplay:dispay2|                 ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Sistema|moduloSaida:ModOUT|decodDisplay:dispay2                                                                                                       ; decodDisplay        ; work         ;
@@ -365,12 +364,12 @@ https://fpgasoftware.intel.com/eula.
 ;          |lpm_divide_ckl:auto_generated|     ; 20 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Sistema|moduloSaida:ModOUT|lpm_divide:Mod6|lpm_divide_ckl:auto_generated                                                                              ; lpm_divide_ckl      ; work         ;
 ;             |sign_div_unsign_bkh:divider|    ; 20 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Sistema|moduloSaida:ModOUT|lpm_divide:Mod6|lpm_divide_ckl:auto_generated|sign_div_unsign_bkh:divider                                                  ; sign_div_unsign_bkh ; work         ;
 ;                |alt_u_div_0fe:divider|       ; 20 (20)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Sistema|moduloSaida:ModOUT|lpm_divide:Mod6|lpm_divide_ckl:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_0fe:divider                            ; alt_u_div_0fe       ; work         ;
-;    |processador:CPU|                         ; 5190 (0)            ; 4469 (0)                  ; 2368        ; 0          ; 6            ; 0       ; 3         ; 0    ; 0            ; 0          ; |Sistema|processador:CPU                                                                                                                               ; processador         ; work         ;
-;       |ULA:ALU|                              ; 1476 (337)          ; 33 (33)                   ; 0           ; 0          ; 6            ; 0       ; 3         ; 0    ; 0            ; 0          ; |Sistema|processador:CPU|ULA:ALU                                                                                                                       ; ULA                 ; work         ;
-;          |lpm_divide:Div0|                   ; 1111 (0)            ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Sistema|processador:CPU|ULA:ALU|lpm_divide:Div0                                                                                                       ; lpm_divide          ; work         ;
-;             |lpm_divide_8vl:auto_generated|  ; 1111 (0)            ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Sistema|processador:CPU|ULA:ALU|lpm_divide:Div0|lpm_divide_8vl:auto_generated                                                                         ; lpm_divide_8vl      ; work         ;
-;                |sign_div_unsign_anh:divider| ; 1111 (0)            ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Sistema|processador:CPU|ULA:ALU|lpm_divide:Div0|lpm_divide_8vl:auto_generated|sign_div_unsign_anh:divider                                             ; sign_div_unsign_anh ; work         ;
-;                   |alt_u_div_tke:divider|    ; 1111 (1110)         ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Sistema|processador:CPU|ULA:ALU|lpm_divide:Div0|lpm_divide_8vl:auto_generated|sign_div_unsign_anh:divider|alt_u_div_tke:divider                       ; alt_u_div_tke       ; work         ;
+;    |processador:CPU|                         ; 7802 (0)            ; 8565 (0)                  ; 2368        ; 0          ; 6            ; 0       ; 3         ; 0    ; 0            ; 0          ; |Sistema|processador:CPU                                                                                                                               ; processador         ; work         ;
+;       |ULA:ALU|                              ; 1491 (367)          ; 33 (33)                   ; 0           ; 0          ; 6            ; 0       ; 3         ; 0    ; 0            ; 0          ; |Sistema|processador:CPU|ULA:ALU                                                                                                                       ; ULA                 ; work         ;
+;          |lpm_divide:Div0|                   ; 1096 (0)            ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Sistema|processador:CPU|ULA:ALU|lpm_divide:Div0                                                                                                       ; lpm_divide          ; work         ;
+;             |lpm_divide_8vl:auto_generated|  ; 1096 (0)            ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Sistema|processador:CPU|ULA:ALU|lpm_divide:Div0|lpm_divide_8vl:auto_generated                                                                         ; lpm_divide_8vl      ; work         ;
+;                |sign_div_unsign_anh:divider| ; 1096 (0)            ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Sistema|processador:CPU|ULA:ALU|lpm_divide:Div0|lpm_divide_8vl:auto_generated|sign_div_unsign_anh:divider                                             ; sign_div_unsign_anh ; work         ;
+;                   |alt_u_div_tke:divider|    ; 1096 (1095)         ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Sistema|processador:CPU|ULA:ALU|lpm_divide:Div0|lpm_divide_8vl:auto_generated|sign_div_unsign_anh:divider|alt_u_div_tke:divider                       ; alt_u_div_tke       ; work         ;
 ;                      |add_sub_u3c:add_sub_1| ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Sistema|processador:CPU|ULA:ALU|lpm_divide:Div0|lpm_divide_8vl:auto_generated|sign_div_unsign_anh:divider|alt_u_div_tke:divider|add_sub_u3c:add_sub_1 ; add_sub_u3c         ; work         ;
 ;          |lpm_mult:Mult0|                    ; 28 (0)              ; 0 (0)                     ; 0           ; 0          ; 6            ; 0       ; 3         ; 0    ; 0            ; 0          ; |Sistema|processador:CPU|ULA:ALU|lpm_mult:Mult0                                                                                                        ; lpm_mult            ; work         ;
 ;             |mult_tns:auto_generated|        ; 28 (28)             ; 0 (0)                     ; 0           ; 0          ; 6            ; 0       ; 3         ; 0    ; 0            ; 0          ; |Sistema|processador:CPU|ULA:ALU|lpm_mult:Mult0|mult_tns:auto_generated                                                                                ; mult_tns            ; work         ;
@@ -379,16 +378,16 @@ https://fpgasoftware.intel.com/eula.
 ;             |altsyncram_bmh1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 1024        ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Sistema|processador:CPU|bancoReg:banco|altsyncram:registradores_rtl_0|altsyncram_bmh1:auto_generated                                                  ; altsyncram_bmh1     ; work         ;
 ;          |altsyncram:registradores_rtl_1|    ; 0 (0)               ; 0 (0)                     ; 1024        ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Sistema|processador:CPU|bancoReg:banco|altsyncram:registradores_rtl_1                                                                                 ; altsyncram          ; work         ;
 ;             |altsyncram_47g1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 1024        ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Sistema|processador:CPU|bancoReg:banco|altsyncram:registradores_rtl_1|altsyncram_47g1:auto_generated                                                  ; altsyncram_47g1     ; work         ;
-;       |ctrl_undd:Controle|                   ; 119 (89)            ; 31 (31)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Sistema|processador:CPU|ctrl_undd:Controle                                                                                                            ; ctrl_undd           ; work         ;
-;          |ULA_ctrl:ctrlULA|                  ; 30 (30)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Sistema|processador:CPU|ctrl_undd:Controle|ULA_ctrl:ctrlULA                                                                                           ; ULA_ctrl            ; work         ;
-;       |divisor:divFreq|                      ; 35 (35)             ; 28 (28)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Sistema|processador:CPU|divisor:divFreq                                                                                                               ; divisor             ; work         ;
-;       |memoria:MEM|                          ; 3234 (3234)         ; 4128 (4128)               ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Sistema|processador:CPU|memoria:MEM                                                                                                                   ; memoria             ; work         ;
+;       |ctrl_undd:Controle|                   ; 120 (89)            ; 31 (31)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Sistema|processador:CPU|ctrl_undd:Controle                                                                                                            ; ctrl_undd           ; work         ;
+;          |ULA_ctrl:ctrlULA|                  ; 31 (31)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Sistema|processador:CPU|ctrl_undd:Controle|ULA_ctrl:ctrlULA                                                                                           ; ULA_ctrl            ; work         ;
+;       |divisor:divFreq|                      ; 34 (34)             ; 28 (28)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Sistema|processador:CPU|divisor:divFreq                                                                                                               ; divisor             ; work         ;
+;       |memoria:MEM|                          ; 5831 (5831)         ; 8224 (8224)               ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Sistema|processador:CPU|memoria:MEM                                                                                                                   ; memoria             ; work         ;
 ;       |mux2_32b:MuxDadoMem|                  ; 32 (32)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Sistema|processador:CPU|mux2_32b:MuxDadoMem                                                                                                           ; mux2_32b            ; work         ;
-;       |mux2_32b:MuxEndMem|                   ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Sistema|processador:CPU|mux2_32b:MuxEndMem                                                                                                            ; mux2_32b            ; work         ;
+;       |mux2_32b:MuxEndMem|                   ; 8 (8)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Sistema|processador:CPU|mux2_32b:MuxEndMem                                                                                                            ; mux2_32b            ; work         ;
 ;       |mux2_32b:MuxIn|                       ; 32 (32)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Sistema|processador:CPU|mux2_32b:MuxIn                                                                                                                ; mux2_32b            ; work         ;
 ;       |mux2_32b:MuxPilha|                    ; 32 (32)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Sistema|processador:CPU|mux2_32b:MuxPilha                                                                                                             ; mux2_32b            ; work         ;
 ;       |mux2_32b:MuxReg2|                     ; 32 (32)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Sistema|processador:CPU|mux2_32b:MuxReg2                                                                                                              ; mux2_32b            ; work         ;
-;       |mux2_32b:MuxUlaA|                     ; 58 (58)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Sistema|processador:CPU|mux2_32b:MuxUlaA                                                                                                              ; mux2_32b            ; work         ;
+;       |mux2_32b:MuxUlaA|                     ; 57 (57)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Sistema|processador:CPU|mux2_32b:MuxUlaA                                                                                                              ; mux2_32b            ; work         ;
 ;       |mux2_5b:MuxReg1|                      ; 5 (5)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Sistema|processador:CPU|mux2_5b:MuxReg1                                                                                                               ; mux2_5b             ; work         ;
 ;       |mux4_32b:MuxUlaB|                     ; 32 (32)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Sistema|processador:CPU|mux4_32b:MuxUlaB                                                                                                              ; mux4_32b            ; work         ;
 ;       |registrador32b:B|                     ; 0 (0)               ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Sistema|processador:CPU|registrador32b:B                                                                                                              ; registrador32b      ; work         ;
@@ -452,12 +451,12 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 4469  ;
+; Total registers                              ; 8565  ;
 ; Number of registers using Synchronous Clear  ; 63    ;
 ; Number of registers using Synchronous Load   ; 38    ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 4228  ;
+; Number of registers using Clock Enable       ; 8324  ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -536,12 +535,12 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; 32:1               ; 8 bits    ; 168 LEs       ; 96 LEs               ; 72 LEs                 ; Yes        ; |Sistema|processador:CPU|ctrl_undd:Controle|SelMuxReg2                   ;
 ; 34:1               ; 2 bits    ; 44 LEs        ; 16 LEs               ; 28 LEs                 ; Yes        ; |Sistema|processador:CPU|ctrl_undd:Controle|prox_estado[4]               ;
 ; 34:1               ; 3 bits    ; 66 LEs        ; 39 LEs               ; 27 LEs                 ; Yes        ; |Sistema|processador:CPU|ctrl_undd:Controle|prox_estado[2]               ;
-; 21:1               ; 31 bits   ; 434 LEs       ; 186 LEs              ; 248 LEs                ; Yes        ; |Sistema|processador:CPU|ULA:ALU|saida[31]                               ;
+; 21:1               ; 31 bits   ; 434 LEs       ; 186 LEs              ; 248 LEs                ; Yes        ; |Sistema|processador:CPU|ULA:ALU|saida[3]                                ;
 ; 3:1                ; 17 bits   ; 34 LEs        ; 34 LEs               ; 0 LEs                  ; No         ; |Sistema|processador:CPU|mux4_32b:MuxUlaB|Mux9                           ;
 ; 4:1                ; 15 bits   ; 30 LEs        ; 30 LEs               ; 0 LEs                  ; No         ; |Sistema|processador:CPU|mux4_32b:MuxUlaB|Mux25                          ;
 ; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |Sistema|moduloSaida:ModOUT|n4[0]                                        ;
-; 3:1                ; 12 bits   ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |Sistema|moduloSaida:ModOUT|n2[0]                                        ;
-; 3:1                ; 25 bits   ; 50 LEs        ; 50 LEs               ; 0 LEs                  ; No         ; |Sistema|processador:CPU|mux2_32b:MuxUlaA|saida[11]                      ;
+; 3:1                ; 12 bits   ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |Sistema|moduloSaida:ModOUT|n1[3]                                        ;
+; 3:1                ; 24 bits   ; 48 LEs        ; 48 LEs               ; 0 LEs                  ; No         ; |Sistema|processador:CPU|mux2_32b:MuxUlaA|saida[13]                      ;
 ; 68:1               ; 4 bits    ; 180 LEs       ; 44 LEs               ; 136 LEs                ; No         ; |Sistema|processador:CPU|ctrl_undd:Controle|ULA_ctrl:ctrlULA|controle[3] ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------+
 
@@ -1384,15 +1383,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------+-------+----------+-----------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "processador:CPU|memoria:MEM"                                                                                                                         ;
-+----------+-------+----------+---------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port     ; Type  ; Severity ; Details                                                                                                                                           ;
-+----------+-------+----------+---------------------------------------------------------------------------------------------------------------------------------------------------+
-; endereco ; Input ; Warning  ; Input port expression (7 bits) is smaller than the input port (10 bits) it drives.  Extra input bit(s) "endereco[9..7]" will be connected to GND. ;
-+----------+-------+----------+---------------------------------------------------------------------------------------------------------------------------------------------------+
-
-
 +----------------------------------------------------------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "processador:CPU|stack:Pilha"                                                                                ;
 +---------+--------+----------+----------------------------------------------------------------------------------------------------------+
@@ -1409,30 +1399,30 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 56                          ;
-; cycloneiii_ff         ; 4469                        ;
-;     ENA               ; 4184                        ;
+; cycloneiii_ff         ; 8565                        ;
+;     ENA               ; 8280                        ;
 ;     ENA SCLR          ; 6                           ;
 ;     ENA SCLR SLD      ; 30                          ;
 ;     ENA SLD           ; 8                           ;
 ;     SCLR              ; 27                          ;
 ;     plain             ; 214                         ;
-; cycloneiii_lcell_comb ; 8284                        ;
+; cycloneiii_lcell_comb ; 10896                       ;
 ;     arith             ; 1578                        ;
 ;         1 data inputs ; 9                           ;
 ;         2 data inputs ; 67                          ;
 ;         3 data inputs ; 1502                        ;
-;     normal            ; 6706                        ;
+;     normal            ; 9318                        ;
 ;         0 data inputs ; 258                         ;
-;         1 data inputs ; 529                         ;
-;         2 data inputs ; 1313                        ;
-;         3 data inputs ; 343                         ;
-;         4 data inputs ; 4263                        ;
+;         1 data inputs ; 267                         ;
+;         2 data inputs ; 1274                        ;
+;         3 data inputs ; 545                         ;
+;         4 data inputs ; 6974                        ;
 ; cycloneiii_mac_mult   ; 3                           ;
 ; cycloneiii_mac_out    ; 3                           ;
 ; cycloneiii_ram_block  ; 96                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 125.50                      ;
-; Average LUT depth     ; 38.00                       ;
+; Max LUT depth         ; 122.50                      ;
+; Average LUT depth     ; 27.80                       ;
 +-----------------------+-----------------------------+
 
 
@@ -1441,7 +1431,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:15     ;
+; Top            ; 00:00:24     ;
 +----------------+--------------+
 
 
@@ -1451,7 +1441,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Tue Mar  2 11:59:59 2021
+    Info: Processing started: Sun Mar  7 15:14:08 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off teste -c teste
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -1720,7 +1710,7 @@ Warning (14284): Synthesized away the following node(s):
     Warning (14285): Synthesized away the following DSP element node(s):
         Warning (14320): Synthesized away node "processador:CPU|ULA:ALU|lpm_mult:Mult0|mult_tns:auto_generated|mac_mult7" File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/db/mult_tns.tdf Line: 67
         Warning (14320): Synthesized away node "processador:CPU|ULA:ALU|lpm_mult:Mult0|mult_tns:auto_generated|mac_out8" File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/db/mult_tns.tdf Line: 91
-Warning (12241): 4 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (12241): 3 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Info (13014): Ignored 84 buffer(s)
     Info (13019): Ignored 84 SOFT buffer(s)
 Warning (13012): Latch processador:CPU|ctrl_undd:Controle|ULA_ctrl:ctrlULA|controle[3] has unsafe behavior File: /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/ula_ctrl.v Line: 55
@@ -1893,17 +1883,17 @@ Info (17016): Found the following redundant logic cells in design
 Info (144001): Generated suppressed messages file /home/andrew/Documentos/Unifesp/Processador-AOC/Verilog/output_files/teste.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 12350 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 19320 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 11 input pins
     Info (21059): Implemented 45 output pins
-    Info (21061): Implemented 12192 logic cells
+    Info (21061): Implemented 19162 logic cells
     Info (21064): Implemented 96 RAM segments
     Info (21062): Implemented 6 DSP elements
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 25 warnings
-    Info: Peak virtual memory: 456 megabytes
-    Info: Processing ended: Tue Mar  2 12:00:29 2021
-    Info: Elapsed time: 00:00:30
-    Info: Total CPU time (on all processors): 00:00:48
+    Info: Peak virtual memory: 482 megabytes
+    Info: Processing ended: Sun Mar  7 15:14:47 2021
+    Info: Elapsed time: 00:00:39
+    Info: Total CPU time (on all processors): 00:00:57
 
 
 +------------------------------------------+
