@@ -3,35 +3,35 @@ Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1200mV 85C Model Setup 'processador:CPU|divisor:divFreq|div_clk'
-Slack : -123.902
-TNS   : -87056.123
-
-Type  : Slow 1200mV 85C Model Setup 'processador:CPU|ctrl_undd:Controle|OpULA[0]'
-Slack : -5.996
-TNS   : -23.723
+Slack : -122.999
+TNS   : -86419.665
 
 Type  : Slow 1200mV 85C Model Setup 'processador:CPU|ctrl_undd:Controle|controleOUT'
-Slack : -5.589
-TNS   : -152.913
+Slack : -6.034
+TNS   : -161.152
+
+Type  : Slow 1200mV 85C Model Setup 'processador:CPU|ctrl_undd:Controle|OpULA[0]'
+Slack : -4.030
+TNS   : -17.634
 
 Type  : Slow 1200mV 85C Model Setup 'realClk'
-Slack : -2.666
-TNS   : -67.682
+Slack : -2.807
+TNS   : -70.732
 
 Type  : Slow 1200mV 85C Model Hold 'processador:CPU|divisor:divFreq|div_clk'
-Slack : 0.341
+Slack : 0.340
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'realClk'
-Slack : 0.630
+Slack : 0.623
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'processador:CPU|ctrl_undd:Controle|OpULA[0]'
-Slack : 1.037
+Slack : 1.204
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'processador:CPU|ctrl_undd:Controle|controleOUT'
-Slack : 1.491
+Slack : 1.856
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'realClk'
@@ -47,39 +47,39 @@ Slack : -1.403
 TNS   : -44.896
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'processador:CPU|ctrl_undd:Controle|OpULA[0]'
-Slack : 0.403
+Slack : 0.434
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Setup 'processador:CPU|divisor:divFreq|div_clk'
-Slack : -112.384
-TNS   : -79696.671
-
-Type  : Slow 1200mV 0C Model Setup 'processador:CPU|ctrl_undd:Controle|OpULA[0]'
-Slack : -5.787
-TNS   : -22.796
+Slack : -111.406
+TNS   : -78924.626
 
 Type  : Slow 1200mV 0C Model Setup 'processador:CPU|ctrl_undd:Controle|controleOUT'
-Slack : -5.083
-TNS   : -139.143
+Slack : -5.558
+TNS   : -147.750
+
+Type  : Slow 1200mV 0C Model Setup 'processador:CPU|ctrl_undd:Controle|OpULA[0]'
+Slack : -3.904
+TNS   : -17.110
 
 Type  : Slow 1200mV 0C Model Setup 'realClk'
-Slack : -2.375
-TNS   : -60.133
+Slack : -2.514
+TNS   : -63.374
 
 Type  : Slow 1200mV 0C Model Hold 'processador:CPU|divisor:divFreq|div_clk'
-Slack : 0.306
+Slack : 0.304
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'realClk'
-Slack : 0.582
+Slack : 0.576
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'processador:CPU|ctrl_undd:Controle|OpULA[0]'
-Slack : 0.999
+Slack : 1.171
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'processador:CPU|ctrl_undd:Controle|controleOUT'
-Slack : 1.390
+Slack : 1.755
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'realClk'
@@ -95,44 +95,44 @@ Slack : -1.403
 TNS   : -44.896
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'processador:CPU|ctrl_undd:Controle|OpULA[0]'
-Slack : 0.437
+Slack : 0.381
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Setup 'processador:CPU|divisor:divFreq|div_clk'
-Slack : -50.382
-TNS   : -40449.892
-
-Type  : Fast 1200mV 0C Model Setup 'processador:CPU|ctrl_undd:Controle|OpULA[0]'
-Slack : -2.165
-TNS   : -8.050
+Slack : -49.820
+TNS   : -39743.414
 
 Type  : Fast 1200mV 0C Model Setup 'processador:CPU|ctrl_undd:Controle|controleOUT'
-Slack : -1.911
-TNS   : -50.223
+Slack : -2.143
+TNS   : -53.813
+
+Type  : Fast 1200mV 0C Model Setup 'processador:CPU|ctrl_undd:Controle|OpULA[0]'
+Slack : -1.331
+TNS   : -5.501
 
 Type  : Fast 1200mV 0C Model Setup 'realClk'
-Slack : -0.544
-TNS   : -11.810
+Slack : -0.596
+TNS   : -12.965
 
 Type  : Fast 1200mV 0C Model Hold 'processador:CPU|divisor:divFreq|div_clk'
-Slack : 0.147
+Slack : 0.148
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'realClk'
-Slack : 0.244
+Slack : 0.240
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'processador:CPU|ctrl_undd:Controle|OpULA[0]'
-Slack : 0.302
+Slack : 0.478
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'processador:CPU|ctrl_undd:Controle|controleOUT'
-Slack : 0.580
+Slack : 0.739
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'realClk'
 Slack : -3.000
-TNS   : -31.952
+TNS   : -31.826
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'processador:CPU|divisor:divFreq|div_clk'
 Slack : -1.000
@@ -143,7 +143,7 @@ Slack : -1.000
 TNS   : -32.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'processador:CPU|ctrl_undd:Controle|OpULA[0]'
-Slack : 0.326
+Slack : 0.312
 TNS   : 0.000
 
 ------------------------------------------------------------

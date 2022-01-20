@@ -1,10 +1,10 @@
-Analysis & Synthesis Status : Successful - Sun Mar  7 15:14:47 2021
+Analysis & Synthesis Status : Successful - Mon Jan 10 23:56:28 2022
 Quartus Prime Version : 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 Revision Name : teste
 Top-level Entity Name : Sistema
 Family : MAX 10
 Total logic elements : 19,060
-    Total combinational functions : 10,891
+    Total combinational functions : 10,837
     Dedicated logic registers : 8,565
 Total registers : 8565
 Total pins : 56
