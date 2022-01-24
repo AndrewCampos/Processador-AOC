@@ -47,7 +47,8 @@ module ctrl_undd(opcode,
 				  ESTADO4=5'b00100,  ESTADO5=5'b00101,  ESTADO6=5'b00110,  ESTADO7=5'b00111, 
 				  ESTADO8=5'b01000,  ESTADO9=5'b01001, ESTADO10=5'b01010, ESTADO11=5'b01011,
 				 ESTADO12=5'b01100, ESTADO13=5'b01101, ESTADO14=5'b01110, ESTADO15=5'b01111,
-				 ESTADO16=5'b10000, ESTADO17=5'b10001, ESTADO18=5'b10010, ESTADO19=5'b10011;
+				 ESTADO16=5'b10000, ESTADO17=5'b10001, ESTADO18=5'b10010, ESTADO19=5'b10011,
+				 ESTADO20=5'b10100;
 	
 	// Opcdode
 	parameter    R=6'b000000, addi=6'b000001, subi=6'b000010, divi=6'b000011, multi=6'b000100, andi=6'b000101,
@@ -117,7 +118,7 @@ module ctrl_undd(opcode,
 			case(opcode)
 			
 				out: begin
-					prox_estado <= ESTADO0; //out
+					prox_estado <= ESTADO20; //out
 				end
 				
 				in: begin
@@ -516,7 +517,7 @@ module ctrl_undd(opcode,
 		// controle
 			EscrevePC   <=  1'b0;
 			EscreveRI   <=  1'b0;
-			if(opcode == sti) EscreveReg  <=  1'b0;
+			if(opcode == sti || opcode == out) EscreveReg  <=  1'b0;
 			else EscreveReg  <=  1'b1;
 			EscreveMem  <=  1'b0;
 			controleIN  <=  1'b0;
@@ -630,6 +631,31 @@ module ctrl_undd(opcode,
 			SelMuxUlaB  <=  2'b00;
 			prox_estado <= ESTADO15;
 		end
+		
+		ESTADO20: begin
+		// controle
+			EscrevePC <= 1'b0;
+			EscreveRI   <=  1'b0;
+			EscreveReg  <=  1'b0;
+			EscreveMem  <=  1'b0;
+			controleIN  <=  1'b0;
+			controleOUT <=  1'b1;
+			OpULA       <= 2'b00;
+			pop         <=  1'b0;
+			push        <=  1'b0;
+		// mux
+			SelMuxPC    <= 2'b00;
+			SelMuxPilha <=  1'b0;
+			SelMuxDadoMem  <=  1'b0;
+			SelMuxEndMem   <=  1'b0;
+			SelMuxReg1  <=  1'b0;
+			SelMuxReg2  <=  1'b0;
+			SelMuxUlaA  <=  1'b0;
+			SelMuxUlaB  <= 2'b01;
+			SelMuxIn    <=  1'b0;
+			if (enter)
+				prox_estado <= ESTADO15;
+			end
 		endcase
 	end //fim always
 	
