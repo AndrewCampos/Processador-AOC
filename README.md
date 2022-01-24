@@ -1,4 +1,4 @@
-`v1.1.2-STABLE`
+`v1.2.2-STABLE`
 # Processador RISC Multiciclo 32bits
 
 Este repositório se trata de um projeto da disciplina Laboratório de Arquitetura e Organização de Computadores da UNIFESP SJC no ano de 2019, onde a proposta foi desenvolver a arquitetura e a organização de um processador, contando com conjunto de instruções, modos de endereçamento e caminho de dados do mesmo. O processador foi baseado no principio de processamento multiciclo, contendo um conjunto de instruções RISC e arquitetura Von Neumann, ou seja, apenas uma unidade de memória para manter tanto os dados quanto as instruções, usando como base a arquitetura MIPS (_Microprocessor without Interloked Pipeline Stages_). O projeto foi implementado na linguagem de descrição de _hardware_ Verilog e testado em um _kit_ FPGA.
