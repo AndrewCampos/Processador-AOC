@@ -1,28 +1,7 @@
-module ctrl_undd(opcode,
-					  funct,
-					  reset,
-					  enter,
-					  clk,
-					  estado,
-					  EscrevePC,
-					  EscreveRI,
-					  EscreveReg,
-					  EscreveMem,
-					  SelMuxEndMem,
-					  SelMuxDadoMem,
-					  SelMuxPilha,
-					  SelMuxReg1,
-					  SelMuxReg2,
-					  SelMuxUlaA,
-					  SelMuxUlaB,
-					  SelMuxPC,
-					  zero,
-					  controleULA,
-					  controleIN,
-					  controleOUT,
-					  SelMuxIn,
-					  pop,
-					  push);
+module ctrl_undd(opcode, funct, reset, enter, clk, estado, EscrevePC, EscreveRI, EscreveReg,
+	EscreveMem, SelMuxEndMem, SelMuxDadoMem, SelMuxPilha, SelMuxReg1, SelMuxReg2, SelMuxUlaA,
+	SelMuxUlaB, SelMuxPC, zero, controleULA, controleIN, controleOUT, controlePWM, SelMuxIn,
+	pop, push);
 
 	input clk, zero, enter, reset;
 	input [5:0] opcode;
@@ -30,18 +9,18 @@ module ctrl_undd(opcode,
 	output reg [4:0] estado;
 	reg [4:0] prox_estado;
 	reg SO;
-	 
+
 	//sinais de controle de memoria
-	output reg pop, push, EscrevePC, EscreveRI, EscreveReg, EscreveMem, controleIN, controleOUT;
+	output reg pop, push, EscrevePC, EscreveRI, EscreveReg, EscreveMem, controleIN, controleOUT, controlePWM;
 
 	//seletores de multiplexadores
 	output reg SelMuxEndMem, SelMuxDadoMem, SelMuxPilha, SelMuxReg1, SelMuxReg2, SelMuxUlaA, SelMuxIn;
 	output reg [1:0] SelMuxUlaB, SelMuxPC;
-	
+
 	//sinal de controle da ULA
 	reg [1:0]OpULA;
 	output [4:0] controleULA;
-	
+
 	// Estados da UC
 	parameter  ESTADO0=5'b00000,  ESTADO1=5'b00001,  ESTADO2=5'b00010,  ESTADO3=5'b00011,
 				  ESTADO4=5'b00100,  ESTADO5=5'b00101,  ESTADO6=5'b00110,  ESTADO7=5'b00111, 
@@ -49,7 +28,7 @@ module ctrl_undd(opcode,
 				 ESTADO12=5'b01100, ESTADO13=5'b01101, ESTADO14=5'b01110, ESTADO15=5'b01111,
 				 ESTADO16=5'b10000, ESTADO17=5'b10001, ESTADO18=5'b10010, ESTADO19=5'b10011,
 				 ESTADO20=5'b10100;
-	
+
 	// Opcdode
 	parameter    R=6'b000000, addi=6'b000001, subi=6'b000010, divi=6'b000011, multi=6'b000100, andi=6'b000101,
 				  ori=6'b000110, nori=6'b000111, slei=6'b001000, slti=6'b001001,   beq=6'b001010,  bne=6'b001011,
@@ -57,15 +36,14 @@ module ctrl_undd(opcode,
 				  hlt=6'b010010,   in=6'b010011,  out=6'b010100,  jmp=6'b010101,   jal=6'b010110,  jst=6'b010111,
 				 lstk=6'b011100, sstk=6'b011101;
 
-	
 	ULA_ctrl ctrlULA(.opcode(opcode),
 						  .funct(funct),
 						  .opULA(OpULA),
 						  .controle(controleULA),
 						  .clk(clk));
-	
+
 	always @(negedge clk) begin
-		
+
 		case(estado)
 		ESTADO0: begin //carrega RI
 		// controle
@@ -90,7 +68,7 @@ module ctrl_undd(opcode,
 			SelMuxIn    <=  1'b1;
 			prox_estado <= ESTADO1;
 		end	
-		
+
 		ESTADO1: begin //decodifica instrucao
 		// controle
 			if(opcode == hlt) EscrevePC <= 1'b0;
@@ -114,13 +92,13 @@ module ctrl_undd(opcode,
 			SelMuxUlaA  <=  1'b0;
 			SelMuxUlaB  <= 2'b01;
 			SelMuxIn    <=  1'b0;
-			
+
 			case(opcode)
 			
 				out: begin
 					prox_estado <= ESTADO20; //out
 				end
-				
+
 				in: begin
 					prox_estado <= ESTADO12; //in
 				end
@@ -182,7 +160,7 @@ module ctrl_undd(opcode,
 				end
 			endcase
 		end
-		
+
 		ESTADO2: begin //carrega ENDEREÇO na saida da ULA
 		// controle
 			EscrevePC   <=  1'b0;
@@ -206,7 +184,7 @@ module ctrl_undd(opcode,
 			SelMuxUlaA  <=  1'b1;
 			SelMuxUlaB  <= 2'b11;
 			SelMuxIn    <=  1'b0;
-		
+
 			case(opcode)
 				ldi: prox_estado <= ESTADO3;
 				
@@ -219,7 +197,7 @@ module ctrl_undd(opcode,
 				default: prox_estado <= ESTADO0;
 			endcase
 		end
-		
+
 		ESTADO3: begin //busca valor de dado dentro da memoria
 		// controle
 			EscrevePC   <=  1'b0;
@@ -243,7 +221,7 @@ module ctrl_undd(opcode,
 			SelMuxIn    <=  1'b0;
 			prox_estado <= ESTADO4;
 		end
-		
+
 		ESTADO4: begin //salva dado do registrador de dados no banco
 		// controle
 			EscrevePC   <=  1'b0;
@@ -267,7 +245,7 @@ module ctrl_undd(opcode,
 			SelMuxIn    <=  1'b0;
 			prox_estado <= ESTADO13;
 		end
-		
+
 		ESTADO5: begin //salva valor na memoria
 		// controle
 			EscrevePC   <=  1'b0;
@@ -292,7 +270,7 @@ module ctrl_undd(opcode,
 			SelMuxIn    <=  1'b0;
 			prox_estado <= ESTADO15;
 		end
-		
+
 		ESTADO6: begin //faz operacao entre A e B
 			EscrevePC   <=  1'b0;
 			EscreveRI   <=  1'b0;
@@ -315,7 +293,7 @@ module ctrl_undd(opcode,
 			SelMuxIn    <=  1'b0;
 			prox_estado <= ESTADO7;
 		end
-		
+
 		ESTADO7: begin //salva o resultado no banco
 			EscrevePC   <=  1'b0;
 			EscreveRI   <=  1'b0;
@@ -340,7 +318,7 @@ module ctrl_undd(opcode,
 			SelMuxIn    <=  1'b0;
 			prox_estado <= ESTADO0;
 		end
-		
+
 		ESTADO8: begin //calcula endereco de branch
 			prox_estado <= ESTADO10;
 			EscrevePC <= 1'b0;
@@ -363,7 +341,7 @@ module ctrl_undd(opcode,
 			SelMuxUlaB  <= 2'b00;
 			SelMuxIn    <=  1'b0;
 		end
-		
+
 		ESTADO9: begin //faz o jump
 			EscrevePC   <=  1'b1;
 			EscreveRI   <=  1'b0;
@@ -386,7 +364,7 @@ module ctrl_undd(opcode,
 			SelMuxIn    <=  1'b0;
 			prox_estado <= ESTADO13;
 		end		
-		
+
 		ESTADO10: begin //atualiza pc
 			if(zero == 1'b1) EscrevePC   <=  1'b1; // faz o branch?
 			else if (opcode == jst) EscrevePC   <=  1'b1; //jst
@@ -413,7 +391,7 @@ module ctrl_undd(opcode,
 			SelMuxIn    <=  1'b0;
 			prox_estado <= ESTADO0;
 		end		
-		
+
 		ESTADO11:begin //faz operacao entre A e Imm
 			EscrevePC   <=  1'b0;
 			EscreveRI   <=  1'b0;
@@ -436,7 +414,7 @@ module ctrl_undd(opcode,
 			SelMuxIn    <=  1'b0;
 			prox_estado <= ESTADO7;
 		end
-		
+
 		ESTADO12: begin //aguarda entrada de dados
 			EscrevePC   <=  1'b0;
 			EscreveRI   <=  1'b0;
@@ -461,7 +439,7 @@ module ctrl_undd(opcode,
 			if(enter)
 				prox_estado <= ESTADO15;
 		end
-		
+
 		ESTADO13: begin // finaliza jmp, sw e lw
 			if(opcode == jmp) EscrevePC <= 1'b1; //jmp
 			else if(opcode == jal) EscrevePC <= 1'b1; //jal
@@ -488,7 +466,7 @@ module ctrl_undd(opcode,
 			SelMuxIn    <=  1'b0;
 			prox_estado <= ESTADO0;
 		end
-		
+
 		ESTADO14: begin //paraliza o processador
 			EscrevePC   <=   1'b0;
 			EscreveRI   <=  1'b0;
@@ -510,9 +488,8 @@ module ctrl_undd(opcode,
 			SelMuxUlaA  <=   1'b0;
 			SelMuxUlaB  <=  2'b00;
 			prox_estado <= ESTADO14;
-			
 		end
-		
+
 		ESTADO15: begin
 		// controle
 			EscrevePC   <=  1'b0;
@@ -539,7 +516,7 @@ module ctrl_undd(opcode,
 			if(!enter)
 				prox_estado <= ESTADO0;
 		end
-		
+
 		ESTADO16: begin // Busca endereço no banco
 			EscrevePC   <=   1'b0;
 			EscreveRI   <=  1'b0;
@@ -562,7 +539,7 @@ module ctrl_undd(opcode,
 			SelMuxUlaB  <=  2'b00;
 			prox_estado <= ESTADO17;
 		end
-		
+
 		ESTADO17: begin // Salva endereço na pilha
 			EscrevePC   <=   1'b0;
 			EscreveRI   <=  1'b0;
@@ -585,7 +562,7 @@ module ctrl_undd(opcode,
 			SelMuxUlaB  <=  2'b00;
 			prox_estado <= ESTADO0;
 		end
-		
+
 		ESTADO18: begin // Carrega valor na saida da ula
 			EscrevePC   <=   1'b0;
 			EscreveRI   <=  1'b0;
@@ -608,7 +585,7 @@ module ctrl_undd(opcode,
 			SelMuxUlaB  <=  2'b00;
 			prox_estado <= ESTADO19;
 		end
-		
+
 		ESTADO19: begin // Descarrega a pilha na memoria
 			EscrevePC   <=   1'b0;
 			EscreveRI   <=  1'b0;
@@ -631,7 +608,7 @@ module ctrl_undd(opcode,
 			SelMuxUlaB  <=  2'b00;
 			prox_estado <= ESTADO15;
 		end
-		
+
 		ESTADO20: begin
 		// controle
 			EscrevePC <= 1'b0;
@@ -658,7 +635,7 @@ module ctrl_undd(opcode,
 			end
 		endcase
 	end //fim always
-	
+
 always @(posedge clk) begin
 		if(reset) estado <= ESTADO0;
 		else estado <= prox_estado;

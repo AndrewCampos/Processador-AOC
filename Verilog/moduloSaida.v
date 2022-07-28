@@ -1,8 +1,10 @@
-module moduloSaida(entrada, chaves, controleOUT, saida5, saida4, saida3, saida2, saida1,clk);
+module moduloSaida(clk, entrada, chaves, controleOUT, controlePWM, pwmOut,
+	saida5, saida4, saida3, saida2, saida1);
 
-	input clk, controleOUT;
+	input clk, controleOUT, controlePWM;
 	input [7:0] chaves;
 	input [31:0] entrada;
+	output pwmOut;
 	output [6:0] saida1, saida2, saida3, saida4, saida5;
 	reg [31:0] n1,  n2, n3, n4, n5;
 	reg [31:0] temp;
@@ -73,5 +75,12 @@ decodDisplay dispay4(n4[3:0],saida4);
 // decodfica display 4
 decodDisplay dispay5(n5[3:0],saida5);
 
-endmodule 
+// modulo pwm
+pwm pwm(
+	.clock(clk),
+	.atualiza(controlePWM),
+	.dutyCicleIn(entrada),
+	.sinal(pwmOut)
+);
 
+endmodule 
