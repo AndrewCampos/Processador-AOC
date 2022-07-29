@@ -193,7 +193,7 @@ ctrl_undd Controle(
 	.enter(chave),
 	.reset(rst),
 	.clk(clk),
-	//.estado(estado[3:0]),
+	// .estado(estado[4:0]),
 	.SelMuxPC(SelMuxPC),
 	.EscrevePC(EscrevePC),
 	.SelMuxPilha(SelMuxPilha),
@@ -210,6 +210,7 @@ ctrl_undd Controle(
 	.SelMuxIn(SelMuxIn),
 	.controleIN(controleIN),
 	.controleOUT(controleOUT),
+	.controlePWM(controlePWM),
 	.pop(pop),
 	.push(push)
 	);

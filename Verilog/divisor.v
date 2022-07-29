@@ -4,7 +4,7 @@ input clk, enter;
 output reg div_clk;
 reg [26:0] cont;
 
-parameter periodo = 27'd50_000;
+parameter periodo = 27'd5_000_000;
 
 always @( posedge clk ) begin
 	if (cont >= (periodo/27'd2)) div_clk <= 1'b0;

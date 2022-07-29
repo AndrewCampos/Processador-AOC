@@ -27,14 +27,14 @@ module ctrl_undd(opcode, funct, reset, enter, clk, estado, EscrevePC, EscreveRI,
 				  ESTADO8=5'b01000,  ESTADO9=5'b01001, ESTADO10=5'b01010, ESTADO11=5'b01011,
 				 ESTADO12=5'b01100, ESTADO13=5'b01101, ESTADO14=5'b01110, ESTADO15=5'b01111,
 				 ESTADO16=5'b10000, ESTADO17=5'b10001, ESTADO18=5'b10010, ESTADO19=5'b10011,
-				 ESTADO20=5'b10100;
+				 ESTADO20=5'b10100, ESTADO21=5'b10101;
 
 	// Opcdode
 	parameter    R=6'b000000, addi=6'b000001, subi=6'b000010, divi=6'b000011, multi=6'b000100, andi=6'b000101,
 				  ori=6'b000110, nori=6'b000111, slei=6'b001000, slti=6'b001001,   beq=6'b001010,  bne=6'b001011,
 				  blt=6'b001100,  bgt=6'b001101,  sti=6'b001110,  ldi=6'b001111,   str=6'b010000,  ldr=6'b010001,
 				  hlt=6'b010010,   in=6'b010011,  out=6'b010100,  jmp=6'b010101,   jal=6'b010110,  jst=6'b010111,
-				 lstk=6'b011100, sstk=6'b011101;
+				 lstk=6'b011100, sstk=6'b011101,  pwm=6'b011110;
 
 	ULA_ctrl ctrlULA(.opcode(opcode),
 						  .funct(funct),
@@ -53,6 +53,7 @@ module ctrl_undd(opcode, funct, reset, enter, clk, estado, EscrevePC, EscreveRI,
 			EscreveMem  <=  1'b0;
 			controleIN  <=  1'b0;
 			controleOUT <=  1'b0;
+			controlePWM <=  1'b0;
 			OpULA       <= 2'b01;
 			pop         <=  1'b0;
 			push        <=  1'b0;
@@ -79,6 +80,7 @@ module ctrl_undd(opcode, funct, reset, enter, clk, estado, EscrevePC, EscreveRI,
 			controleIN  <=  1'b0;
 			if(opcode == out) controleOUT <=  1'b1;
 			else controleOUT <=  1'b0;
+			controlePWM <=  1'b0;
 			OpULA       <= 2'b00;
 			pop         <=  1'b0;
 			push        <=  1'b0;
@@ -97,6 +99,10 @@ module ctrl_undd(opcode, funct, reset, enter, clk, estado, EscrevePC, EscreveRI,
 			
 				out: begin
 					prox_estado <= ESTADO20; //out
+				end
+
+				pwm: begin
+					prox_estado <= ESTADO21; //out
 				end
 
 				in: begin
@@ -169,6 +175,7 @@ module ctrl_undd(opcode, funct, reset, enter, clk, estado, EscrevePC, EscreveRI,
 			EscreveMem  <=  1'b0;
 			controleIN  <=  1'b0;
 			controleOUT <=  1'b0;
+			controlePWM <=  1'b0;
 			if(opcode == sti) OpULA <= 2'b11;
 			else if(opcode == ldi) OpULA <= 2'b11;
 			else OpULA  <= 2'b01;
@@ -206,6 +213,7 @@ module ctrl_undd(opcode, funct, reset, enter, clk, estado, EscrevePC, EscreveRI,
 			EscreveMem  <=  1'b0;
 			controleIN  <=  1'b0;
 			controleOUT <=  1'b0;
+			controlePWM <=  1'b0;
 			OpULA       <= 2'b00;
 			pop         <=  1'b0;
 			push        <=  1'b0;
@@ -230,6 +238,7 @@ module ctrl_undd(opcode, funct, reset, enter, clk, estado, EscrevePC, EscreveRI,
 			EscreveMem  <=  1'b0;
 			controleIN  <=  1'b0;
 			controleOUT <=  1'b0;
+			controlePWM <=  1'b0;
 			OpULA       <= 2'b00;
 			pop         <=  1'b0;
 			push        <=  1'b0;
@@ -254,6 +263,7 @@ module ctrl_undd(opcode, funct, reset, enter, clk, estado, EscrevePC, EscreveRI,
 			EscreveMem  <=  1'b1; // salva valor na memoria
 			controleIN  <=  1'b0;
 			controleOUT <=  1'b0;
+			controlePWM <=  1'b0;
 			OpULA       <= 2'b11;
 			pop         <=  1'b0;
 			push        <=  1'b0;
@@ -278,6 +288,7 @@ module ctrl_undd(opcode, funct, reset, enter, clk, estado, EscrevePC, EscreveRI,
 			EscreveMem  <=  1'b0;
 			controleIN  <=  1'b0;
 			controleOUT <=  1'b0;
+			controlePWM <=  1'b0;
 			OpULA       <= 2'b00;
 			pop         <=  1'b0;
 			push        <=  1'b0;
@@ -301,6 +312,7 @@ module ctrl_undd(opcode, funct, reset, enter, clk, estado, EscrevePC, EscreveRI,
 			EscreveMem  <=  1'b0;
 			controleIN  <=  1'b0;
 			controleOUT <=  1'b0;
+			controlePWM <=  1'b0;
 			OpULA       <= 2'b00;
 			pop         <=  1'b0;
 			push        <=  1'b0;
@@ -327,6 +339,7 @@ module ctrl_undd(opcode, funct, reset, enter, clk, estado, EscrevePC, EscreveRI,
 			EscreveMem  <=  1'b0;
 			controleIN  <=  1'b0;
 			controleOUT <=  1'b0;
+			controlePWM <=  1'b0;
 			OpULA       <= 2'b00;
 			pop         <=  1'b0;
 			push        <=  1'b0;
@@ -349,6 +362,7 @@ module ctrl_undd(opcode, funct, reset, enter, clk, estado, EscrevePC, EscreveRI,
 			EscreveMem  <=  1'b0;
 			controleIN  <=  1'b0;
 			controleOUT <=  1'b0;
+			controlePWM <=  1'b0;
 			OpULA       <= 2'b11;
 			pop         <=  1'b0;
 			push        <=  1'b0;
@@ -374,6 +388,7 @@ module ctrl_undd(opcode, funct, reset, enter, clk, estado, EscrevePC, EscreveRI,
 			EscreveMem  <=  1'b0;
 			controleIN  <=  1'b0;
 			controleOUT <=  1'b0;
+			controlePWM <=  1'b0;
 			OpULA       <= 2'b11;
 			if (opcode == jst) pop <=  1'b1; //jst
 			else pop    <=  1'b0;
@@ -399,6 +414,7 @@ module ctrl_undd(opcode, funct, reset, enter, clk, estado, EscrevePC, EscreveRI,
 			EscreveMem  <=  1'b0;
 			controleIN  <=  1'b0;
 			controleOUT <=  1'b0;
+			controlePWM <=  1'b0;
 			OpULA       <= 2'b00;
 			pop         <=  1'b0;
 			push        <=  1'b0;
@@ -422,6 +438,7 @@ module ctrl_undd(opcode, funct, reset, enter, clk, estado, EscrevePC, EscreveRI,
 			EscreveMem  <=  1'b0;
 			controleIN  <=  1'b1;
 			controleOUT <=  1'b0;
+			controlePWM <=  1'b0;
 			OpULA       <= 2'b00;
 			pop         <=  1'b0;
 			push        <=  1'b0;
@@ -450,6 +467,7 @@ module ctrl_undd(opcode, funct, reset, enter, clk, estado, EscrevePC, EscreveRI,
 			EscreveMem  <=  1'b0;
 			controleIN  <=  1'b0;
 			controleOUT <=  1'b0;
+			controlePWM <=  1'b0;
 			OpULA       <= 2'b00;
 			pop         <=  1'b0;
 			if(opcode == jal) push <=  1'b1;// jal
@@ -474,6 +492,7 @@ module ctrl_undd(opcode, funct, reset, enter, clk, estado, EscrevePC, EscreveRI,
 			EscreveMem  <=  1'b0;
 			controleIN  <=  1'b0;
 			controleOUT <=  1'b0;
+			controlePWM <=  1'b0;
 			OpULA       <=  2'b00;
 			pop         <=  1'b0;
 			push        <=  1'b0;
@@ -499,6 +518,7 @@ module ctrl_undd(opcode, funct, reset, enter, clk, estado, EscrevePC, EscreveRI,
 			EscreveMem  <=  1'b0;
 			controleIN  <=  1'b0;
 			controleOUT <=  1'b0;
+			controlePWM <=  1'b0;
 			OpULA       <= 2'b00;
 			if(opcode == sstk) pop <= 1'b1;
 			else pop <= 1'b0;
@@ -524,6 +544,7 @@ module ctrl_undd(opcode, funct, reset, enter, clk, estado, EscrevePC, EscreveRI,
 			EscreveMem  <=  1'b0;
 			controleIN  <=  1'b0;
 			controleOUT <=  1'b0;
+			controlePWM <=  1'b0;
 			OpULA       <=  2'b11;
 			pop         <=  1'b0;
 			push        <=  1'b0;
@@ -547,6 +568,7 @@ module ctrl_undd(opcode, funct, reset, enter, clk, estado, EscrevePC, EscreveRI,
 			EscreveMem  <=  1'b0;
 			controleIN  <=  1'b0;
 			controleOUT <=  1'b0;
+			controlePWM <=  1'b0;
 			OpULA       <=  2'b11;
 			pop         <=  1'b0;
 			push        <=  1'b1;
@@ -570,6 +592,7 @@ module ctrl_undd(opcode, funct, reset, enter, clk, estado, EscrevePC, EscreveRI,
 			EscreveMem  <=  1'b0;
 			controleIN  <=  1'b0;
 			controleOUT <=  1'b0;
+			controlePWM <=  1'b0;
 			OpULA       <=  2'b11;
 			pop         <=  1'b0;
 			push        <=  1'b0;
@@ -593,6 +616,7 @@ module ctrl_undd(opcode, funct, reset, enter, clk, estado, EscrevePC, EscreveRI,
 			EscreveMem  <=  1'b1;
 			controleIN  <=  1'b0;
 			controleOUT <=  1'b0;
+			controlePWM <=  1'b0;
 			OpULA       <=  2'b11;
 			pop         <=  1'b0;
 			push        <=  1'b0;
@@ -617,6 +641,7 @@ module ctrl_undd(opcode, funct, reset, enter, clk, estado, EscrevePC, EscreveRI,
 			EscreveMem  <=  1'b0;
 			controleIN  <=  1'b0;
 			controleOUT <=  1'b1;
+			controlePWM <=  1'b0;
 			OpULA       <= 2'b00;
 			pop         <=  1'b0;
 			push        <=  1'b0;
@@ -633,6 +658,31 @@ module ctrl_undd(opcode, funct, reset, enter, clk, estado, EscrevePC, EscreveRI,
 			if (enter)
 				prox_estado <= ESTADO15;
 			end
+
+		ESTADO21: begin
+			// controle
+			EscrevePC <= 1'b0;
+			EscreveRI   <=  1'b0;
+			EscreveReg  <=  1'b0;
+			EscreveMem  <=  1'b0;
+			controleIN  <=  1'b0;
+			controleOUT <=  1'b1;
+			controlePWM <=  1'b1;
+			OpULA       <= 2'b00;
+			pop         <=  1'b0;
+			push        <=  1'b0;
+		// mux
+			SelMuxPC    <= 2'b00;
+			SelMuxPilha <=  1'b0;
+			SelMuxDadoMem  <=  1'b0;
+			SelMuxEndMem   <=  1'b0;
+			SelMuxReg1  <=  1'b0;
+			SelMuxReg2  <=  1'b0;
+			SelMuxUlaA  <=  1'b0;
+			SelMuxUlaB  <= 2'b01;
+			SelMuxIn    <=  1'b0;
+			prox_estado <= ESTADO15;
+		end
 		endcase
 	end //fim always
 
