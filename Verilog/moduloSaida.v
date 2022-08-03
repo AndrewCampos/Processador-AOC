@@ -1,5 +1,5 @@
-module moduloSaida(clk, entrada, chaves, controleOUT, controlePWM, pwmOut,
-	saida5, saida4, saida3, saida2, saida1);
+module moduloSaida(clk, entrada, chaves, controleOUT, controlePWM,
+	pwmOut, saida5, saida4, saida3, saida2, saida1);
 
 	input clk, controleOUT, controlePWM;
 	input [7:0] chaves;
@@ -11,10 +11,10 @@ module moduloSaida(clk, entrada, chaves, controleOUT, controlePWM, pwmOut,
 	
 initial begin
 
-	n1 = 32'd15;
-	n2 = 32'd15;
-	n3 = 32'd15;
-	n4 = 32'd15;
+	n1 <= 32'd15;
+	n2 <= 32'd15;
+	n3 <= 32'd15;
+	n4 <= 32'd15;
 	n5 = 32'd15;
 
 end
@@ -22,46 +22,26 @@ end
 always @(*) begin
 	if(!controleOUT) begin
 		temp = entrada;
-			
-			if(temp > 32'd99999) begin
-				n1 <= 32'd14;
-				n2 <= 32'd14;
-				n3 <= 32'd14;
-				n4 <= 32'd14;
-				n5 <= 32'd14;
-			end
-			else begin
-				n1  <= temp % 32'd10;
-				temp = temp / 32'd10;
-				n2  <= temp % 32'd10;
-				temp = temp / 32'd10;
-				n3  <= temp % 32'd10;
-				temp = temp / 32'd10;
-				n4  <= temp % 32'd10;
-				temp = temp / 32'd10;
-				n5  <= temp % 32'd10;
-			end
-	end else begin
+	end else
 		temp = chaves;
 			
-			if(temp > 32'd99999) begin
-				n1 <= 32'd14;
-				n2 <= 32'd14;
-				n3 <= 32'd14;
-				n4 <= 32'd14;
-				n5 <= 32'd14;
-			end
-			else begin
-				n1  <= temp % 32'd10;
-				temp = temp / 32'd10;
-				n2  <= temp % 32'd10;
-				temp = temp / 32'd10;
-				n3  <= temp % 32'd10;
-				temp = temp / 32'd10;
-				n4  <= temp % 32'd10;
-				temp = temp / 32'd10;
-				n5  <= temp % 32'd10;
-			end
+	if(temp > 32'd99999) begin
+		n1 <= 32'd14;
+		n2 <= 32'd14;
+		n3 <= 32'd14;
+		n4 <= 32'd14;
+		n5 <= 32'd14;
+	end
+	else begin
+		n1  <= temp % 32'd10;
+		temp = temp / 32'd10;
+		n2  <= temp % 32'd10;
+		temp = temp / 32'd10;
+		n3  <= temp % 32'd10;
+		temp = temp / 32'd10;
+		n4  <= temp % 32'd10;
+		temp = temp / 32'd10;
+		n5  <= temp % 32'd10;
 	end
 end
 // decodfica display 1

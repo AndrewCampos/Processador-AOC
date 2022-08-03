@@ -1,23 +1,27 @@
-module Sistema(dadosIN, chave, rst, realClk, estado, pwmOut,
+module Sistema(dadosIN, chave, rst, realClk, estado, pwmOut, rx, enableUsart, clk,
 	disp5, disp4, disp3, disp2, disp1);
 
-input realClk, chave, rst;
+input realClk, chave, rst, rx;
 input [7:0] dadosIN;
-output pwmOut;
+output pwmOut, enableUsart;
 output [9:0] estado;
 output [0:6] disp5, disp4, disp3, disp2, disp1;
-wire controleIN, controlePWM;
-wire [31:0] bus;
+output wire clk;
+wire controleIN, controlePWM, controleUsart, dadoPronto, SelMuxUsart;
+wire [31:0] bus, dadoUsart, dados;
 
 processador CPU(
-	.dadosIN(dadosIN),
+	.dadosIN(dados),
 	.chave(chave),
+	.dadoPronto(dadoPronto),
 	.rst(rst),
-	.realClk(realClk),
+	.clk(clk),
 	.estado(estado),
 	.toOUT(bus),
 	.controleIN(controleIN),
-	.controlePWM(controlePWM)
+	.controlePWM(controlePWM),
+	.controleUsart(controleUsart),
+	.SelMuxUsart(SelMuxUsart)
 	);
 
 moduloSaida ModOUT(
@@ -32,6 +36,28 @@ moduloSaida ModOUT(
 	.saida3(disp3),
 	.saida4(disp4),
 	.saida5(disp5)
+	);
+
+divisor divFreq(
+	.clk(realClk),
+	.enter(chave),
+	.div_clk(clk)
+	);
+
+mux2_32b muxUsart(
+	.seletor(SelMuxUsart),
+	.entrada1({24'd0, dadosIN}),
+	.entrada2(dadoUsart),
+	.saida(dados)
+);
+
+usart usart(
+	.controle(controleUsart),
+	.Rx(rx),
+	.clk(clk),
+	.dado(dadoUsart),
+	.habilitar(enableUsart),
+	.dado_pronto(dadoPronto)
 	);
 
 endmodule

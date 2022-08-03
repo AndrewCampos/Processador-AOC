@@ -1,16 +1,17 @@
-module processador(dadosIN, chave, rst, realClk, estado, toOUT, controleIN, controlePWM);
+module processador(dadosIN, chave, dadoPronto, rst, clk, estado, toOUT,
+	controleIN, controlePWM, controleUsart, SelMuxUsart);
 
-input realClk, chave, rst;
-input [7:0] dadosIN;
+input clk, chave, rst, dadoPronto, SelMuxUsart;
+input [31:0] dadosIN;
 output [9:0] estado;
 output [31:0]toOUT;
-output controleIN, controlePWM;
+output controleIN, controlePWM, controleUsart;
 wire [31:0] Dado, ePilha, sPilha, sregB, sMEM, saidaEXT, sregA, ULA1, ULA2, sULA, valorPC, carregaDados, sValorPC, sregULA, endereco, dadosMEM, mem, instr, dadosEscrita, sA, sB;
 wire [4:0] regEscrita;
 
 // SINAIS DE CONTROLE
 //sinais de controle de memoria
-wire clk, enter, pop, push, EscrevePC, SetPC, LeMem, EscreveRI, EscreveReg, controleOUT, EscreveMem, ovrflw, zero;
+wire enter, pop, push, EscrevePC, SetPC, LeMem, EscreveRI, EscreveReg, controleOUT, EscreveMem, ovrflw, zero;
 
 //seletores de multiplexadores
 wire SelMuxEndMem, SelMuxDadoMem, SelReg1, SelReg2, SelMuxUlaA, SelMuxIn, SelMuxPilha;
@@ -25,7 +26,7 @@ registradorPC PC(
 	.controle(EscrevePC), 
 	.reset(rst),
 	.clk(clk),
-	.led(estado),
+	//.led(estado),
 	.entrada(valorPC),
 	.saida(sValorPC)
 	); // PC
@@ -73,7 +74,7 @@ memoria MEM(
 mux2_32b MuxIn(
 	.seletor(SelMuxIn),
 	.entrada1(carregaDados),
-	.entrada2({24'd0,dadosIN}),
+	.entrada2(dadosIN),
 	.saida(sMEM)
 	); // para r-mem
 
@@ -180,20 +181,16 @@ mux4_32b MuxPC(
 	); // para PC
 
 //CONTROLE
-divisor divFreq(
-	.clk(realClk),
-	.enter(chave),
-	.div_clk(clk)
-	);
 
 ctrl_undd Controle(
 	.opcode(instr[31:26]),
 	.funct(instr[5:0]),
 	.zero(zero),
 	.enter(chave),
+	.dadoPronto(dadoPronto),
 	.reset(rst),
 	.clk(clk),
-	// .estado(estado[4:0]),
+	 .estado(estado[4:0]),
 	.SelMuxPC(SelMuxPC),
 	.EscrevePC(EscrevePC),
 	.SelMuxPilha(SelMuxPilha),
@@ -208,9 +205,11 @@ ctrl_undd Controle(
 	.SelMuxUlaB(SelMuxUlaB),
 	.controleULA(controleULA),
 	.SelMuxIn(SelMuxIn),
+	.SelMuxUsart(SelMuxUsart),
 	.controleIN(controleIN),
 	.controleOUT(controleOUT),
 	.controlePWM(controlePWM),
+	.controleUsart(controleUsart),
 	.pop(pop),
 	.push(push)
 	);
