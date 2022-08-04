@@ -11,7 +11,8 @@ wire controleIN, controlePWM, controleUsart, dadoPronto, SelMuxUsart;
 wire [31:0] bus, dadoUsart, dados;
 
 processador CPU(
-	.dadosIN(dados),
+	.dadosIN({24'd0, dadosIN}),
+	.dadoUsart(dadoUsart),
 	.chave(chave),
 	.dadoPronto(dadoPronto),
 	.rst(rst),
@@ -43,13 +44,6 @@ divisor divFreq(
 	.enter(chave),
 	.div_clk(clk)
 	);
-
-mux2_32b muxUsart(
-	.seletor(SelMuxUsart),
-	.entrada1({24'd0, dadosIN}),
-	.entrada2(dadoUsart),
-	.saida(dados)
-);
 
 usart usart(
 	.controle(controleUsart),

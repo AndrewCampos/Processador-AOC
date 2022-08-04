@@ -1,8 +1,8 @@
-module processador(dadosIN, chave, dadoPronto, rst, clk, estado, toOUT,
+module processador(dadosIN, dadoUsart, chave, dadoPronto, rst, clk, estado, toOUT,
 	controleIN, controlePWM, controleUsart, SelMuxUsart);
 
 input clk, chave, rst, dadoPronto, SelMuxUsart;
-input [31:0] dadosIN;
+input [31:0] dadosIN, dadoUsart;
 output [9:0] estado;
 output [31:0]toOUT;
 output controleIN, controlePWM, controleUsart;
@@ -26,7 +26,7 @@ registradorPC PC(
 	.controle(EscrevePC), 
 	.reset(rst),
 	.clk(clk),
-	//.led(estado),
+	.led(estado),
 	.entrada(valorPC),
 	.saida(sValorPC)
 	); // PC
@@ -114,6 +114,8 @@ bancoReg banco(
 	.reg2(instr[20:16]),
 	.regF(regEscrita),
 	.dados(dadosEscrita),
+	.dadoUsart(dadoUsart),
+	.enableUsart(enableUsart),
 	.A(sA),
 	.B(sB),
 	.toOUT(toOUT)
@@ -190,7 +192,7 @@ ctrl_undd Controle(
 	.dadoPronto(dadoPronto),
 	.reset(rst),
 	.clk(clk),
-	 .estado(estado[4:0]),
+	// .estado(estado[4:0]),
 	.SelMuxPC(SelMuxPC),
 	.EscrevePC(EscrevePC),
 	.SelMuxPilha(SelMuxPilha),

@@ -1,8 +1,8 @@
-module bancoReg(escreve, out, clk, reg1, reg2, regF, dados, A, B, toOUT);
+module bancoReg(escreve, enableUsart, out, clk, reg1, reg2, regF, dados, dadoUsart, A, B, toOUT);
 
-	input clk, escreve, out;
+	input clk, escreve, out, enableUsart;
 	input [4:0] reg1, reg2, regF;
-	input	[31:0]dados;
+	input	[31:0] dados, dadoUsart;
 	output [31:0] A, B;
 	output reg [31:0] toOUT;
 	reg [31:0]registradores[31:0];
@@ -14,8 +14,10 @@ module bancoReg(escreve, out, clk, reg1, reg2, regF, dados, A, B, toOUT);
 	end 
 	
 always @(posedge clk) begin
-	if(escreve == 1'b1)
+	if(escreve == 1'b1 && enableUsart == 1'b0)
 		registradores[regF] <= dados;
+	else if (escreve == 1'b0 && enableUsart == 1'b0)
+		registradores[regF] <= dadoUsart;
 end 
 
 assign A = registradores[reg1];
